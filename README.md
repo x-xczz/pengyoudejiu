@@ -1,6 +1,8 @@
 # pengyoudejiu
 
-一个适用于 **Minecraft 1.20.1 / Forge 47.4.10 / Java 17** 的音乐唱片 Mod。
+**pengyoudejiu** 是一个基于 **Minecraft 1.20.1 / Forge** 开发的趣味音乐 Mod。它将《朋友的酒》加入游戏，制作成可在原版唱片机中播放的音乐唱片，并加入生物靠近与舞蹈效果，让你的 Minecraft 世界多一份热闹。
+
+开发环境：**Minecraft 1.20.1 / Forge 47.4.10 / Java 17**。
 
 - Mod 作者：**xc**
 - 唱片显示署名：**小助 — 朋友的酒**
