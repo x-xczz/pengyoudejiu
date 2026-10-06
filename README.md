@@ -1,107 +1,108 @@
-# pengyoudejiu
+# pengyoudejiu · 朋友的酒
+
+> 放上一张唱片，让附近的生物一起随着音乐跳舞。
 
 **pengyoudejiu** 是一个基于 **Minecraft 1.20.1 / Forge** 开发的趣味音乐 Mod。它将《朋友的酒》加入游戏，制作成可在原版唱片机中播放的音乐唱片，并加入生物靠近与舞蹈效果，让你的 Minecraft 世界多一份热闹。
 
-开发环境：**Minecraft 1.20.1 / Forge 47.4.10 / Java 17**。
+## 项目信息
 
-- Mod 作者：**xc**
-- 唱片显示署名：**小助 — 朋友的酒**
-- 内部 Mod ID：`examplemod`（为保留已有唱片和资源的兼容性，不作重命名）
-- 唱片 ID：`examplemod:dance_disc`
+| 项目 | 内容 |
+| --- | --- |
+| Mod 名称 | pengyoudejiu |
+| Mod 作者 | xc |
+| 当前版本 | 1.0.0 |
+| Minecraft 版本 | 1.20.1 |
+| 推荐 Forge 版本 | 47.4.10 |
+| Java 版本 | 17 |
+| 唱片显示署名 | 小助 — 朋友的酒 |
 
-## 功能
+这是一个独立的 Forge Mod，不依赖 KubeJS。本项目使用**原版唱片机**，不额外添加唱片机方块。
 
-将本 Mod 的唱片放入**原版唱片机**即可播放音乐。本项目不新增独立的唱片机方块。
+## 核心玩法
 
-- **32 格球形范围**内符合条件的生物通过正常寻路靠近唱片机，不瞬移、不穿墙。
-- 进入默认 **8 格舞蹈范围**后，生物脚底保持原位，模型竖直拉长、压缩并持续自转。
-- 取出唱片、破坏唱片机或播放自然结束时，舞蹈和吸引停止，原有 AI 恢复控制。
-- 支持多台唱片机，优先选择最近的有效播放源。
-- 原版唱片不会触发本 Mod 的吸引和舞蹈。
+### 🎵 专属音乐唱片
 
-唱片可在 `pengyoudejiu` 创造模式分页及原版“工具与实用物品”分页找到，也可使用命令：
+新增《朋友的酒》音乐唱片，配有对应的物品模型、贴图和音频资源。将唱片放进原版唱片机，即可开始播放。
+
+### 🐾 吸引附近生物
+
+播放期间，唱片机会吸引周围 **32 格球形范围**内符合条件的生物。生物通过正常寻路靠近，不会被瞬移，也不会穿墙。
+
+吸引需要生物所在区域已加载、AI 正常运行且存在可达路线；并非所有生物、所有状态都会响应，战斗、逃命和坐下的宠物等特殊情况存在保护。
+
+### 🌀 弹簧式舞蹈
+
+进入舞蹈范围后，生物模型会像弹簧一样不断**竖直拉长、压缩，同时自转**。
+
+- 默认舞蹈半径为 **8 格**，与 32 格吸引半径不同。
+- 舞蹈属于视觉效果，不改变生物的实际碰撞箱。
+- 舞蹈半径可通过服务端配置调整。
+
+### ⏹️ 随播放开始，随播放停止
+
+取出唱片、破坏唱片机或音乐自然播放结束后，对应播放源的吸引与舞蹈会停止。若附近仍有其他有效播放源，生物可能继续响应其他唱片机。
+
+原版唱片不会触发本 Mod 的专属吸引和舞蹈效果。
+
+## 安装方法
+
+1. 准备 Minecraft **1.20.1**，安装对应的 Forge，推荐 **47.4.10**。
+2. 将 `pengyoudejiu-1.0.0.jar` 放入游戏实例的 `mods` 文件夹。
+3. 启动游戏，在 Mod 列表中确认已加载 `pengyoudejiu`。
+4. 多人游戏需要**服务器和客户端均安装**本 Mod。
+
+> 本 Mod 为 Forge 版本，不能直接当作 Fabric Mod 或服务端插件使用。更新时请移除旧版 JAR，不要同时安装新旧两份。
+
+## 如何开始
+
+1. 进入创造模式，准备一个原版唱片机。
+2. 在 `pengyoudejiu` 分页或原版“工具与实用物品”分页找到唱片。
+3. 将唱片放入唱片机。
+4. 在附近放置牛、猪等生物，保持道路畅通，观察它们靠近并跳舞。
+5. 取出唱片，观察效果停止。
+
+也可以在允许作弊或拥有相应权限时使用命令获取唱片：
 
 ```mcfunction
 /give @s examplemod:dance_disc
 ```
 
-吸引仅作用于已加载、正在运行 AI 且有可达路线的生物；战斗、逃命、坐下的宠物等特殊状态存在保护。舞蹈不改变实际碰撞箱。详细限制和配置参见 [音乐唱片与舞蹈说明](docs/音乐唱片与舞蹈.md)。
+**为什么命令里是 `examplemod`？** 为保持已有唱片、资源和存档的兼容性，项目保留了原来的内部 Mod ID；对外显示名称仍为 `pengyoudejiu`。
 
-## 安装和升级
+## 开发与构建
 
-1. 安装 Minecraft 1.20.1 对应的 Forge；推荐使用本项目构建版本 **47.4.10**。
-2. 将 `pengyoudejiu-1.0.0.jar` 放入游戏的 `mods` 文件夹。
-3. 多人游戏中，服务器和客户端均安装本 Mod。
-4. 更新时完全退出游戏后替换旧版 JAR，不要同时放入旧 `examplemod` JAR 和新版 JAR。
-
-**从早期开发版升级前请备份世界。** 苹果糖和示例方块已经移除，旧世界中的这些物品或方块可能丢失，Forge 也可能提示缺失注册项。唱片 ID、声音 ID 和唱片相关配置文件名保持不变；本次清理不修改唱片功能。
-
-## 构建与开发
-
-使用 **JDK 17** 和仓库自带的 **Gradle Wrapper 8.8**。不要使用系统安装的 `gradle.bat`，也不要用不存在的 `run` 任务。
-
-Windows（在项目根目录执行）：
+项目使用 **Java 17** 和自带的 **Gradle Wrapper**。Windows 下在项目根目录执行：
 
 ```bat
+:: 构建 Mod
 gradlew.bat build
+
+:: 启动开发环境客户端
 gradlew.bat runClient
 ```
 
-Linux / macOS：
+构建完成后，JAR 文件位于：
 
-```sh
-chmod +x gradlew
-./gradlew build
-./gradlew runClient
+```text
+build/libs/pengyoudejiu-1.0.0.jar
 ```
 
-构建产物位于 `build/libs/pengyoudejiu-1.0.0.jar`。首次构建需要联网下载依赖。Forge Maven 证书或网络故障应通过检查网络、代理和 Java 信任库解决；仓库与 GitHub Actions 不永久关闭证书检查。本机已有缓存的临时离线方式见 [现有开发说明](docs/音乐唱片与舞蹈.md)。
+首次构建需要联网下载依赖。请使用项目自带的 `gradlew.bat`，而不是系统安装的 `gradle.bat`。
 
-## 验证
+## 当前版本说明
 
-运行原有唱片/吸引回归测试以及示例清理测试：
+当前版本专注于**音乐唱片、生物吸引和舞蹈**，已移除早期开发阶段的苹果糖和示例方块。
 
-```bat
-gradlew.bat runGameTestServer
-```
+如果从早期版本升级，请先备份世界：被移除的旧物品和方块可能消失，或触发缺失注册项提示。唱片相关的内部 ID 保持不变。
 
-音乐导入和资源检查需要 Node.js，建议 22 LTS：
+## 更多说明
 
-```sh
-node --test tests/music-import.test.cjs tests/cleanup.test.cjs
-```
+功能配置与实现说明请查看 [音乐唱片与舞蹈说明](docs/音乐唱片与舞蹈.md)，更多学习资料见 [项目文档入口](docs/README.md)。
 
-纯 Java 动画数学测试的执行方式见 [GitHub Actions 工作流](.github/workflows/build.yml)。服务端测试不包含客户端画面的人工观感验证。
+仓库提供 [GitHub Actions 自动构建与测试](.github/workflows/build.yml)。构建成功后可在对应运行记录中下载构建产物；工作流不会自动创建 Release。
 
-## 发布到 GitHub
+## 许可与声明
 
-仓库已经包含构建工作流：推送或提交 PR 后，自动执行构建和测试，并把构建成功的 JAR 保存为 Actions artifact；**不会自动发布 Release**。GitHub 云端运行结果需在实际推送后查看。
+仓库根目录保留了初始化时添加的 [MIT 许可证](LICENSE)。目前 Mod 元数据仍标记为 **All Rights Reserved（保留所有权利）**，与仓库许可证存在不一致，需由作者进一步统一；音乐及其他资源的授权范围也需单独明确。
 
-`.gitignore` 会忽略 IDE 文件、Gradle 缓存、构建产物、开发存档、日志和原始 MP3/MP4 素材。实际播放所需的 `dance_song.ogg`、唱片资源和 Gradle Wrapper **必须提交**。忽略原始素材不会删除本地文件。
-
-创建一个空的 GitHub 仓库后，可手动执行以下命令；提交前检查 `git status`，不要包含账号凭据、存档或无关文件：
-
-```sh
-git init
-git add .
-git status --short
-git commit -m "Prepare pengyoudejiu for GitHub"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/pengyoudejiu.git
-git push -u origin main
-```
-
-将 `YOUR_USERNAME` 替换为自己的 GitHub 用户名。如目录已经是 Git 仓库或已有 `origin`，先检查现有配置，不要重复添加远程。将构建的 JAR 上传到 GitHub Release，源码仓库无需提交 `build/`。
-
-## 目录与第三方声明
-
-- [使用和学习说明](docs/音乐唱片与舞蹈.md)
-- [项目文档入口](docs/README.md)
-- [Forge 1.20.1 离线文档](docs/forge-1.20.1/index.html)
-- `src/main/java/com/example/examplemod/`：Mod 入口及唱片、舞蹈、网络实现。
-- `src/main/resources/`：音频、唱片模型、贴图、语言和其他必要资源。
-- `tools/`、`tests/`：音乐导入、文档生成及自动化测试工具。
-
-现有 Mod 元数据中的许可仍为 **All Rights Reserved**；发布到公开仓库不等于已为原创代码和音乐选择开源许可。发布前请确认希望采用的代码/音乐许可及音频分发权。
-
-原 MDK 的 [LICENSE.txt](LICENSE.txt)、[CREDITS.txt](CREDITS.txt) 和原始说明保留，用于说明 Forge 等第三方内容的来源与许可，不能把它们误认为对原创音乐的统一授权。下载的 Forge 文档保留其自身 MIT 许可证。
+Forge 等第三方内容遵循各自的许可证。本项目并非 Mojang 或 Microsoft 的官方作品。
