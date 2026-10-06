@@ -1,0 +1,314 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Game Tests · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="config.html" title="misc/config.md">Configuration</a>
+<a href="keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a class="current" href="gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/misc/gametest/">查看官方原文（联网）</a></div><h1 id="game-tests">Game Tests</h1>
+<p>Game Tests are a way to run in-game unit tests. The system was designed to be scalable and in parallel to run large numbers of different tests efficiently. Testing object interactions and behaviors are simply a few of the many applications of this framework.</p>
+<h2 id="creating-a-game-test">Creating a Game Test</h2>
+<p>A standard Game Test follows three basic steps:</p>
+<ol>
+<li>A structure, or template, is loaded holding the scene on which the interaction or behavior is tested.</li>
+<li>A method conducts the logic to perform on the scene.</li>
+<li>The method logic executes. If a successful state is reached, then the test succeeds. Otherwise, the test fails and the result is stored within a lectern adjacent to the scene.</li>
+</ol>
+<p>As such, to create a Game Test, there must be an existing template holding the initial start state of the scene and a method which provides the logic of execution.</p>
+<h3 id="the-test-method">The Test Method</h3>
+<p>A Game Test method is a <code>Consumer&lt;GameTestHelper&gt;</code> reference, meaning it takes in a <code>GameTestHelper</code> and returns nothing. For a Game Test method to be recognized, it must have a <code>@GameTest</code> annotation:</p>
+<pre><code class="language-java">public class ExampleGameTests {
+  @GameTest
+  public static void exampleTest(GameTestHelper helper) {
+    // Do stuff
+  }
+}
+</code></pre>
+<p>The <code>@GameTest</code> annotation also contains members which configure how the game test should run.</p>
+<pre><code class="language-java">// In some class
+@GameTest(
+  setupTicks = 20L, // The test spends 20 ticks to set up for execution
+  required = false // The failure is logged but does not affect the execution of the batch
+)
+public static void exampleConfiguredTest(GameTestHelper helper) {
+  // Do stuff
+}
+</code></pre>
+<h4 id="relative-positioning">Relative Positioning</h4>
+<p>All <code>GameTestHelper</code> methods translate relative coordinates within the structure template scene to its absolute coordinates using the structure block&#39;s current location. To allow for easy conversion between relative and absolute positioning, <code>GameTestHelper#absolutePos</code> and <code>GameTestHelper#relativePos</code> can be used respectively.</p>
+<p>The relative position of a structure template can be obtained in-game by loading the structure via the <a href="#running-game-tests">test command</a>, placing the player at the wanted location, and finally running the <code>/test pos</code> command. This will grab the coordinates of the player relative to the closest structure within 200 blocks of the player. The command will export the relative position as a copyable text component in the chat to be used as a final local variable.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>The local variable generated by <code>/test pos</code> can specify its reference name by appending it to the end of the command:</p>
+<pre><code class="language-bash">/test pos &lt;var&gt; # Exports &#39;final BlockPos &lt;var&gt; = new BlockPos(...);&#39;
+</code></pre>
+</blockquote>
+<h4 id="successful-completion">Successful Completion</h4>
+<p>A Game Test method is responsible for one thing: marking the test was successful on a valid completion. If no success state was achieved before the timeout is reached (as defined by <code>GameTest#timeoutTicks</code>), then the test automatically fails.</p>
+<p>There are many abstracted methods within <code>GameTestHelper</code> which can be used to define a successful state; however, four are extremely important to be aware of.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>#succeed</code></td>
+<td align="left">The test is marked as successful.</td>
+</tr>
+<tr>
+<td align="center"><code>#succeedIf</code></td>
+<td align="left">The supplied <code>Runnable</code> is tested immediately and succeeds if no <code>GameTestAssertException</code> is thrown. If the test does not succeed on the immediate tick, then it is marked as a failure.</td>
+</tr>
+<tr>
+<td align="center"><code>#succeedWhen</code></td>
+<td align="left">The supplied <code>Runnable</code> is tested every tick until timeout and succeeds if the check on one of the ticks does not throw a <code>GameTestAssertException</code>.</td>
+</tr>
+<tr>
+<td align="center"><code>#succeedOnTickWhen</code></td>
+<td align="left">The supplied <code>Runnable</code> is tested on the specified tick and will succeed if no <code>GameTestAssertException</code> is thrown. If the <code>Runnable</code> succeeds on any other tick, then it is marked as a failure.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Game Tests are executed every tick until the test is marked as a success. As such, methods which schedule success on a given tick must be careful to always fail on any previous tick.</p>
+</blockquote>
+<h4 id="scheduling-actions">Scheduling Actions</h4>
+<p>Not all actions will occur when a test begins. Actions can be scheduled to occur at specific times or intervals:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>#runAtTickTime</code></td>
+<td align="left">The action is ran on the specified tick.</td>
+</tr>
+<tr>
+<td align="center"><code>#runAfterDelay</code></td>
+<td align="left">The action is ran <code>x</code> ticks after the current tick.</td>
+</tr>
+<tr>
+<td align="center"><code>#onEachTick</code></td>
+<td align="left">The action is ran every tick.</td>
+</tr>
+</tbody></table>
+<h4 id="assertions">Assertions</h4>
+<p>At any time during a Game Test, an assertion can be made to check if a given condition is true. There are numerous assertion methods within <code>GameTestHelper</code>; however, it simplifies to throwing a <code>GameTestAssertException</code> whenever the appropriate state is not met.</p>
+<h3 id="generated-test-methods">Generated Test Methods</h3>
+<p>If Game Test methods need to be generated dynamically, a test method generator can be created. These methods take in no parameters and return a collection of <code>TestFunction</code>s. For a test method generator to be recognized, it must have a <code>@GameTestGenerator</code> annotation:</p>
+<pre><code class="language-java">public class ExampleGameTests {
+  @GameTestGenerator
+  public static Collection&lt;TestFunction&gt; exampleTests() {
+    // Return a collection of TestFunctions
+  }
+}
+</code></pre>
+<h4 id="testfunction">TestFunction</h4>
+<p>A <code>TestFunction</code> is the boxed information held by the <code>@GameTest</code> annotation and the method running the test.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>Any methods annotated using <code>@GameTest</code> are translated into a <code>TestFunction</code> using <code>GameTestRegistry#turnMethodIntoTestFunction</code>. That method can be used as a reference for creating <code>TestFunction</code>s without the use of the annotation.</p>
+</blockquote>
+<h3 id="batching">Batching</h3>
+<p>Game Tests can be executed in batches instead of registration order. A test can be added to a batch by having the same supplied <code>GameTest#batch</code> string.</p>
+<p>On its own, batching does not provide anything useful. However, batching can be used to perform setup and teardown states on the current level the tests are running in. This is done by annotating a method with either <code>@BeforeBatch</code> for setup or <code>@AfterBatch</code> for takedown. The <code>#batch</code> methods must match the string supplied to the game test.</p>
+<p>Batch methods are <code>Consumer&lt;ServerLevel&gt;</code> references, meaning they take in a <code>ServerLevel</code> and return nothing:</p>
+<pre><code class="language-java">public class ExampleGameTests {
+  @BeforeBatch(batch = &quot;firstBatch&quot;)
+  public static void beforeTest(ServerLevel level) {
+    // Perform setup
+  }
+
+  @GameTest(batch = &quot;firstBatch&quot;)
+  public static void exampleTest2(GameTestHelper helper) {
+    // Do stuff
+  }
+}
+</code></pre>
+<h2 id="registering-a-game-test">Registering a Game Test</h2>
+<p>A Game Test must be registered to be ran in-game. There are two methods of doing so: via the <code>@GameTestHolder</code> annotation or <code>RegisterGameTestsEvent</code>. Both registration methods still require the test methods to be annotated with either <code>@GameTest</code>, <code>@GameTestGenerator</code>, <code>@BeforeBatch</code>, or <code>@AfterBatch</code>.</p>
+<h3 id="gametestholder">GameTestHolder</h3>
+<p>The <code>@GameTestHolder</code> annotation registers any test methods within the type (class, interface, enum, or record). <code>@GameTestHolder</code> contains a single method which has multiple uses. In this instance, the supplied <code>#value</code> must be the mod id of the mod; otherwise, the test will not run under default configurations.</p>
+<pre><code class="language-java">@GameTestHolder(MODID)
+public class ExampleGameTests {
+  // ...
+}
+</code></pre>
+<h3 id="registergametestsevent">RegisterGameTestsEvent</h3>
+<p><code>RegisterGameTestsEvent</code> can also register either classes or methods using <code>#register</code>. The event listener must be <a href="../concepts/events.html#creating-an-event-handler">added</a> to the mod event bus. Test methods registered this way must supply their mod id to <code>GameTest#templateNamespace</code> on every method annotated with <code>@GameTest</code>.</p>
+<pre><code class="language-java">// In some class
+public void registerTests(RegisterGameTestsEvent event) {
+  event.register(ExampleGameTests.class);
+}
+
+// In ExampleGameTests
+@GameTest(templateNamespace = MODID)
+public static void exampleTest3(GameTestHelper helper) {
+  // Perform setup
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>The value supplied to <code>GameTestHolder#value</code> and <code>GameTest#templateNamespace</code> can be different from the current mod id. The configuration within the <a href="#enabling-other-namespaces">buildscript</a> would need to be changed.</p>
+</blockquote>
+<h2 id="structure-templates">Structure Templates</h2>
+<p>Game Tests are performed within scenes loaded by structures, or templates. All templates define the dimensions of the scene and the initial data (blocks and entities) that will be loaded. The template must be stored as an <code>.nbt</code> file within <code>data/&lt;namespace&gt;/structures</code>.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>A structure template can be created and saved using a structure block.</p>
+</blockquote>
+<p>The location of the template is specified by a few factors:</p>
+<ul>
+<li>If the namespace of the template is specified.</li>
+<li>If the class should be prepended to the name of the template.</li>
+<li>If the name of the template is specified.</li>
+</ul>
+<p>The namespace of the template is determined by <code>GameTest#templateNamespace</code>, then <code>GameTestHolder#value</code> if not specified, then <code>minecraft</code> if neither is specified.</p>
+<p>The simple class name is not prepended to the name of the template if the <code>@PrefixGameTestTemplate</code> is applied to a class or method with the test annotations and set to <code>false</code>. Otherwise, the simple class name is made lowercase and prepended and followed by a dot before the template name.</p>
+<p>The name of the template is determined by <code>GameTest#template</code>. If not specified, then the lowercase name of the method is used instead.</p>
+<pre><code class="language-java">// Modid for all structures will be MODID
+@GameTestHolder(MODID)
+public class ExampleGameTests {
+
+  // Class name is prepended, template name is not specified
+  // Template Location at &#39;modid:examplegametests.exampletest&#39;
+  @GameTest
+  public static void exampleTest(GameTestHelper helper) { /*...*/ }
+
+  // Class name is not prepended, template name is not specified
+  // Template Location at &#39;modid:exampletest2&#39;
+  @PrefixGameTestTemplate(false)
+  @GameTest
+  public static void exampleTest2(GameTestHelper helper) { /*...*/ }
+
+  // Class name is prepended, template name is specified
+  // Template Location at &#39;modid:examplegametests.test_template&#39;
+  @GameTest(template = &quot;test_template&quot;)
+  public static void exampleTest3(GameTestHelper helper) { /*...*/ }
+
+  // Class name is not prepended, template name is specified
+  // Template Location at &#39;modid:test_template2&#39;
+  @PrefixGameTestTemplate(false)
+  @GameTest(template = &quot;test_template2&quot;)
+  public static void exampleTest4(GameTestHelper helper) { /*...*/ }
+}
+</code></pre>
+<h2 id="running-game-tests">Running Game Tests</h2>
+<p>Game Tests can be run using the <code>/test</code> command. The <code>test</code> command is highly configurable; however, only a few are of importance to running tests:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Subcommand</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>run</code></td>
+<td align="left">Runs the specified test: <code>run &lt;test_name&gt;</code>.</td>
+</tr>
+<tr>
+<td align="center"><code>runall</code></td>
+<td align="left">Runs all available tests.</td>
+</tr>
+<tr>
+<td align="center"><code>runthis</code></td>
+<td align="left">Runs the nearest test to the player within 15 blocks.</td>
+</tr>
+<tr>
+<td align="center"><code>runthese</code></td>
+<td align="left">Runs tests within 200 blocks of the player.</td>
+</tr>
+<tr>
+<td align="center"><code>runfailed</code></td>
+<td align="left">Runs all tests that failed in the previous run.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Subcommands follow the test command: <code>/test &lt;subcommand&gt;</code>.</p>
+</blockquote>
+<h2 id="buildscript-configurations">Buildscript Configurations</h2>
+<p>Game Tests provide additional configuration settings within a buildscript (the <code>build.gradle</code> file) to run and integrate into different settings.</p>
+<h3 id="enabling-other-namespaces">Enabling Other Namespaces</h3>
+<p>If the buildscript was <a href="../gettingstarted/index.html#simple-buildgradle-customizations">setup as recommended</a>, then only Game Tests under the current mod id would be enabled. To enable other namespaces to load Game Tests from, a run configuration must set the property <code>forge.enabledGameTestNamespaces</code> to a string specifying each namespace separated by a comma. If the property is empty or not set, then all namespaces will be loaded.</p>
+<pre><code class="language-gradle">// Inside a run configuration
+property &#39;forge.enabledGameTestNamespaces&#39;, &#39;modid1,modid2,modid3&#39;
+</code></pre>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>There must be no spaces in-between namespaces; otherwise, the namespace will not be loaded correctly.</p>
+</blockquote>
+<h3 id="game-test-server-run-configuration">Game Test Server Run Configuration</h3>
+<p>The Game Test Server is a special configuration which runs a build server. The build server returns an exit code of the number of required, failed Game Tests. All failed tests, whether required or optional, are logged. This server can be run using <code>gradlew runGameTestServer</code>.</p>
+<h3 id="enabling-game-tests-in-other-run-configurations">Enabling Game Tests in Other Run Configurations</h3>
+<p>By default, only the <code>client</code>, <code>server</code>, and <code>gameTestServer</code> run configurations have Game Tests enabled. If another run configuration should run Game Tests, then the <code>forge.enableGameTest</code> property must be set to <code>true</code>.</p>
+<pre><code class="language-gradle">// Inside a run configuration
+property &#39;forge.enableGameTest&#39;, &#39;true&#39;
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

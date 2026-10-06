@@ -1,0 +1,208 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Recipe Generation · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../index.html" title="datagen/index.md">Data Generators</a>
+<a href="../client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a class="current" href="recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/datagen/server/recipes/">查看官方原文（联网）</a></div><h1 id="recipe-generation">Recipe Generation</h1>
+<p>Recipes can be generated for a mod by subclassing <code>RecipeProvider</code> and implementing <code>#buildRecipes</code>. A recipe is supplied for data generation once a <code>FinishedRecipe</code> view is accepted by the consumer. <code>FinishedRecipe</code>s can either be created and supplied manually or, for convenience, created using a <code>RecipeBuilder</code>.</p>
+<p>After implementation, the provider must be <a href="../index.html#data-providers">added</a> to the <code>DataGenerator</code>.</p>
+<pre><code class="language-java">// On the MOD event bus
+@SubscribeEvent
+public void gatherData(GatherDataEvent event) {
+    event.getGenerator().addProvider(
+        // Tell generator to run only when server data are generating
+        event.includeServer(),
+        MyRecipeProvider::new
+    );
+}
+</code></pre>
+<h2 id="recipebuilder"><code>RecipeBuilder</code></h2>
+<p><code>RecipeBuilder</code> is a convenience implementation for creating <code>FinishedRecipe</code>s to generate. It provides basic definitions for unlocking, grouping, saving, and getting the result of a recipe. This is done through <code>#unlockedBy</code>, <code>#group</code>, <code>#save</code>, and <code>#getResult</code> respectively.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p><a href="../../resources/server/recipes/index.html#recipe-itemstack-result"><code>ItemStack</code> outputs</a> in recipes are not supported within vanilla recipe builders. A <code>FinishedRecipe</code> must be built in a different manner for existing vanilla recipe serializers to generate this data.</p>
+</blockquote>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>The item results being generated must have a valid <code>RecipeCategory</code> specified; otherwise, a <code>NullPointerException</code> will be thrown.</p>
+</blockquote>
+<p>All recipe builders except for [<code>SpecialRecipeBuilder</code>] require an advancement criteria to be specified. All recipes generate a criteria unlocking the recipe if the player has used the recipe previously. However, an additional criteria must be specified that allows the player to obtain the recipe without any prior knowledge. If any of the criteria specified is true, then the played will obtain the recipe for the recipe book.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>Recipe criteria commonly use <code>InventoryChangeTrigger</code> to unlock their recipe when certain items are present in the user&#39;s inventory.</p>
+</blockquote>
+<h3 id="shapedrecipebuilder">ShapedRecipeBuilder</h3>
+<p><code>ShapedRecipeBuilder</code> is used to generate shaped recipes. The builder can be initialized via <code>#shaped</code>. The recipe group, input symbol pattern, symbol definition of ingredients, and the recipe unlock criteria can be specified before saving.</p>
+<pre><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+ShapedRecipeBuilder builder = ShapedRecipeBuilder.shaped(RecipeCategory.MISC, result)
+  .pattern(&quot;a a&quot;) // Create recipe pattern
+  .define(&#39;a&#39;, item) // Define what the symbol represents
+  .unlockedBy(&quot;criteria&quot;, criteria) // How the recipe is unlocked
+  .save(writer); // Add data to builder
+</code></pre>
+<h4 id="additional-validation-checks">Additional Validation Checks</h4>
+<p>Shaped recipes have some additional validation checks performed before building:</p>
+<ul>
+<li>A pattern must be defined and take in more than one item.</li>
+<li>All pattern rows must be the same width.</li>
+<li>A symbol cannot be defined more than once.</li>
+<li>The space character (<code>&#39; &#39;</code>) is reserved for representing no item in a slot and, as such, cannot be defined.</li>
+<li>A pattern must use all symbols defined by the user.</li>
+</ul>
+<h3 id="shapelessrecipebuilder">ShapelessRecipeBuilder</h3>
+<p><code>ShapelessRecipeBuilder</code> is used to generate shapeless recipes. The builder can be initialized via <code>#shapeless</code>. The recipe group, input ingredients, and the recipe unlock criteria can be specified before saving.</p>
+<pre><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+ShapelessRecipeBuilder builder = ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, result)
+  .requires(item) // Add item to the recipe
+  .unlockedBy(&quot;criteria&quot;, criteria) // How the recipe is unlocked
+  .save(writer); // Add data to builder
+</code></pre>
+<h3 id="simplecookingrecipebuilder">SimpleCookingRecipeBuilder</h3>
+<p><code>SimpleCookingRecipeBuilder</code> is used to generate smelting, blasting, smoking, and campfire cooking recipes. Additionally, custom cooking recipes using the <code>SimpleCookingSerializer</code> can also be data generated using this builder. The builder can be initialized via <code>#smelting</code>, <code>#blasting</code>, <code>#smoking</code>, <code>#campfireCooking</code>, or <code>#cooking</code> respectively. The recipe group and the recipe unlock criteria can be specified before saving.</p>
+<pre><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SimpleCookingRecipeBuilder builder = SimpleCookingRecipeBuilder.smelting(input, RecipeCategory.MISC, result, experience, cookingTime)
+  .unlockedBy(&quot;criteria&quot;, criteria) // How the recipe is unlocked 
+  .save(writer); // Add data to builder
+</code></pre>
+<h3 id="singleitemrecipebuilder">SingleItemRecipeBuilder</h3>
+<p><code>SingleItemRecipeBuilder</code> is used to generate stonecutting recipes. Additionally, custom single item recipes using a serializer like <code>SingleItemRecipe$Serializer</code> can also be data generated using this builder. The builder can be initialized via <code>#stonecutting</code> or through the constructor respectively. The recipe group and the recipe unlock criteria can be specified before saving.</p>
+<pre><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SingleItemRecipeBuilder builder = SingleItemRecipeBuilder.stonecutting(input, RecipeCategory.MISC, result)
+  .unlockedBy(&quot;criteria&quot;, criteria) // How the recipe is unlocked
+  .save(writer); // Add data to builder
+</code></pre>
+<h2 id="non-recipebuilder-builders">Non-<code>RecipeBuilder</code> Builders</h2>
+<p>Some recipe builders do not implement <code>RecipeBuilder</code> due to lacking features used by all previously mentioned recipes.</p>
+<h3 id="smithingtransformrecipebuilder">SmithingTransformRecipeBuilder</h3>
+<p><code>SmithingTransformRecipeBuilder</code> is used to generate smithing recipes which transform an item. Additionally, custom recipes using a serializer like <code>SmithingTransformRecipe$Serializer</code> can also be data generated using this builder. The builder can be initialized via <code>#smithing</code> or through the constructor respectively. The recipe unlock criteria can be specified before saving.</p>
+<pre><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SmithingTransformRecipeBuilder builder = SmithingTransformRecipeBuilder.smithing(template, base, addition, RecipeCategory.MISC, result)
+  .unlocks(&quot;criteria&quot;, criteria) // How the recipe is unlocked
+  .save(writer, name); // Add data to builder
+</code></pre>
+<h3 id="smithingtrimrecipebuilder">SmithingTrimRecipeBuilder</h3>
+<p><code>SmithingTrimRecipeBuilder</code> is used to generate smithing recipes for armor trims. Additionally, custom upgrade recipes using a serializer like <code>SmithingTrimRecipe$Serializer</code> can also be data generated using this builder. The builder can be initialized via <code>#smithingTrim</code> or through the constructor respectively. The recipe unlock criteria can be specified before saving.</p>
+<pre><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SmithingTrimRecipe builder = SmithingTrimRecipe.smithingTrim(template, base, addition, RecipeCategory.MISC)
+  .unlocks(&quot;criteria&quot;, criteria) // How the recipe is unlocked
+  .save(writer, name); // Add data to builder
+</code></pre>
+<h3 id="specialrecipebuilder">SpecialRecipeBuilder</h3>
+<p><code>SpecialRecipeBuilder</code> is used to generate empty JSONs for dynamic recipes that cannot easily be constrained to the recipe JSON format (dying armor, firework, etc.). The builder can be initialized via <code>#special</code>.</p>
+<pre><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+SpecialRecipeBuilder.special(dynamicRecipeSerializer)
+  .save(writer, name); // Add data to builder
+</code></pre>
+<h2 id="conditional-recipes">Conditional Recipes</h2>
+<p><a href="../../resources/server/conditional.html">Conditional recipes</a> can also be data generated via <code>ConditionalRecipe$Builder</code>. The builder can be obtained using <code>#builder</code>.</p>
+<p>Conditions for each recipe can be specified by first calling <code>#addCondition</code> and then calling <code>#addRecipe</code> after all conditions have been specified. This process can be repeated as many times as the programmer would like.</p>
+<p>After all recipes have been specified, advancements can be added for each recipe at the end using <code>#generateAdvancement</code>. Alternatively, the conditional advancement can be set using <code>#setAdvancement</code>.</p>
+<pre><code class="language-java">// In RecipeProvider#buildRecipes(writer)
+ConditionalRecipe.builder()
+  // Add the conditions for the recipe
+  .addCondition(...)
+  // Add recipe to return when conditions are true
+  .addRecipe(...)
+
+  // Add the next conditions for the next recipe
+  .addCondition(...)
+  // Add next recipe to return when the next conditions are true
+  .addRecipe(...)
+
+  // Create conditional advancement which uses the conditions
+  // and unlocking advancement in the recipes above
+  .generateAdvancement()
+  .build(writer, name);
+</code></pre>
+<h3 id="iconditionbuilder">IConditionBuilder</h3>
+<p>To simplify adding conditions to conditional recipes without having to construct the instances of each condition instance manually, the extended <code>RecipeProvider</code> can implement <code>IConditionBuilder</code>. The interface adds methods to easily construct condition instances.</p>
+<pre><code class="language-java">// In ConditionalRecipe$Builder#addCondition
+(
+  // If either &#39;examplemod:example_item&#39;
+  // OR &#39;examplemod:example_item2&#39; exists
+  // AND
+  // NOT FALSE
+
+  // Methods are defined by IConditionBuilder
+  and( 
+    or(
+      itemExists(&quot;examplemod&quot;, &quot;example_item&quot;),
+      itemExists(&quot;examplemod&quot;, &quot;example_item2&quot;)
+    ),
+    not(
+      FALSE()
+    )
+  )
+)
+</code></pre>
+<h2 id="custom-recipe-serializers">Custom Recipe Serializers</h2>
+<p>Custom recipe serializers can be data generated by creating a builder that can construct a <code>FinishedRecipe</code>. The finished recipe encodes the recipe data and its unlocking advancement, when present, to JSON. Additionally, the name and serializer of the recipe is also specified to know where to write to and what can decode the object when loading. Once a <code>FinishedRecipe</code> is constructed, it simply needs to be passed to the <code>Consumer</code> supplied by <code>RecipeProvider#buildRecipes</code>.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p><code>FinishedRecipe</code>s are flexible enough that any object transformation can be data generated, not just items.</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

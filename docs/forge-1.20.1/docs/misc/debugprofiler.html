@@ -1,0 +1,118 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Debug Profiler · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="config.html" title="misc/config.md">Configuration</a>
+<a href="keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a class="current" href="debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/misc/debugprofiler/">查看官方原文（联网）</a></div><h1 id="debug-profiler">Debug Profiler</h1>
+<p>Minecraft provides a Debug Profiler that provides system data, current game settings, JVM data, level data, and sided tick information to find time consuming code. Considering things like <code>TickEvent</code>s and ticking <code>BlockEntities</code>, this can be very useful for modders and server owners that want to find a lag source.</p>
+<h2 id="using-the-debug-profiler">Using the Debug Profiler</h2>
+<p>The Debug Profiler is very simple to use. It requires the debug keybind <code>F3 + L</code> to start the profiler. After 10 seconds, it will automatically stop; however, it can be stopped earlier by pressing the keybind again.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Naturally, you can only profile code paths that are actually being reached. <code>Entities</code> and <code>BlockEntities</code> that you want to profile must exist in the level to show up in the results.</p>
+</blockquote>
+<p>After you have stopped the debugger, it will create a new zip within the <code>debug/profiling</code> subdirectory in your run directory.
+The file name will be formatted with the date and time as <code>yyyy-mm-dd_hh_mi_ss-WorldName-VersionNumber.zip</code></p>
+<h2 id="reading-a-profiling-result">Reading a Profiling result</h2>
+<p>Within each sided folder (<code>client</code> and <code>server</code>), you will find a <code>profiling.txt</code> file containing the result data. At the top, it first tells you how long in milliseconds it was running and how many ticks ran in that time.</p>
+<p>Below that, you will find information similar to the snippet below:</p>
+<pre><code>[00] levels - 96.70%/96.70%
+[01] |   Level Name - 99.76%/96.47%
+[02] |   |   tick - 99.31%/95.81%
+[03] |   |   |   entities - 47.72%/45.72%
+[04] |   |   |   |   regular - 98.32%/44.95%
+[04] |   |   |   |   blockEntities - 0.90%/0.41%
+[05] |   |   |   |   |   unspecified - 64.26%/0.26%
+[05] |   |   |   |   |   minecraft:furnace - 33.35%/0.14%
+[05] |   |   |   |   |   minecraft:chest - 2.39%/0.01%
+</code></pre>
+<p>Here is a small explanation of what each part means</p>
+<table>
+<thead>
+<tr>
+<th align="left">[02]</th>
+<th align="left">tick</th>
+<th align="left">99.31%</th>
+<th align="left">95.81%</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">The Depth of the section</td>
+<td align="left">The Name of the Section</td>
+<td align="left">The percentage of time it took in relation to it&#39;s parent. For Layer 0, it is the percentage of the time a tick takes. For Layer 1, it is the percentage of the time its parent takes.</td>
+<td align="left">The second percentage tells you how much time it took from the entire tick.</td>
+</tr>
+</tbody></table>
+<h2 id="profiling-your-own-code">Profiling your own code</h2>
+<p>The Debug Profiler has basic support for <code>Entity</code> and <code>BlockEntity</code>. If you would like to profile something else, you may need to manually create your sections like so:</p>
+<pre><code class="language-java">ProfilerFiller#push(yourSectionName : String);
+//The code you want to profile
+ProfilerFiller#pop();
+</code></pre>
+<p>You can obtain the <code>ProfilerFiller</code> instance from a <code>Level</code>, <code>MinecraftServer</code>, or <code>Minecraft</code> instance.
+Now you just need to search the results file for your section name.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

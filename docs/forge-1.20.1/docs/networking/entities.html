@@ -1,0 +1,92 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Entities · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="index.html" title="networking/index.md">Networking</a>
+<a href="simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a class="current" href="entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/networking/entities/">查看官方原文（联网）</a></div><h1 id="entities">Entities</h1>
+<p>In addition to regular network messages, there are various other systems provided to handle synchronizing entity data.</p>
+<h2 id="spawn-data">Spawn Data</h2>
+<p>In general, the spawning of modded entities is handled separately, by Forge.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>This means that simply extending a vanilla entity class may not inherit all its behavior. You may need to implement certain vanilla behaviors yourself.</p>
+</blockquote>
+<p>You can add extra data to the spawn packet Forge sends by implementing the following interface.</p>
+<h3 id="ientityadditionalspawndata">IEntityAdditionalSpawnData</h3>
+<p>If your entity has data that is needed on the client, but does not change over time, then it can be added to the entity spawn packet using this interface. <code>#writeSpawnData</code> and <code>#readSpawnData</code> control how the data should be encoded to/decoded from the network buffer.</p>
+<h2 id="dynamic-data">Dynamic Data</h2>
+<h3 id="data-parameters">Data Parameters</h3>
+<p>This is the main vanilla system for synchronizing entity data from the server to the client. As such, a number of vanilla examples are available to refer to.</p>
+<p>Firstly, you need a <code>EntityDataAccessor&lt;T&gt;</code> for the data you wish to keep synchronized. This should be stored as a <code>static final</code> field in your entity class, obtained by calling <code>SynchedEntityData#defineId</code> and passing the entity class and a serializer for that type of data. The available serializer implementations can be found as static constants within the <code>EntityDataSerializers</code> class.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>You should <strong>only</strong> create data parameters for your own entities, <em>within that entity&#39;s class</em>.
+Adding parameters to entities you do not control can cause the IDs used to send that data over the network to become desynchronized, causing difficult to debug crashes.</p>
+</blockquote>
+<p>Then, override <code>Entity#defineSynchedData</code> and call <code>this.entityData.define(...)</code> for each of your data parameters, passing the parameter and an initial value to use. Remember to always call the <code>super</code> method first!</p>
+<p>You can then get and set these values via your entity&#39;s <code>entityData</code> instance. Changes made will be synchronized to the client automatically.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

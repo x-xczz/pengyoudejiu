@@ -1,0 +1,141 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Block States · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="index.html" title="blocks/index.md">Blocks</a>
+<a class="current" href="states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/blocks/states/">查看官方原文（联网）</a></div><h1 id="block-states">Block States</h1>
+<h2 id="legacy-behavior">Legacy Behavior</h2>
+<p>In Minecraft 1.7 and previous versions, blocks which need to store placement or state data that did not have BlockEntities used <strong>metadata</strong>. Metadata was an extra number stored with the block, allowing different rotations, facings, or even completely separate behaviors within a block.</p>
+<p>However, the metadata system was confusing and limited, since it was stored as only a number alongside the block ID, and had no meaning except what was commented in the code. For example, to implement a block that can face a direction and be on either the upper or lower half of a block space (such as a stair): </p>
+<pre><code class="language-Java">switch (meta) {
+  case 0: { ... } // south and on the lower half of the block
+  case 1: { ... } // south on the upper side of the block
+  case 2: { ... } // north and on the lower half of the block
+  case 3: { ... } // north and on the upper half of the block
+  // ... etc. ...
+}
+</code></pre>
+<p>Because the numbers carry no meaning by themselves, no one could know what they represent unless they had access to the source code and comments.</p>
+<h2 id="introduction-of-states">Introduction of States</h2>
+<p>In Minecraft 1.8 and above, the metadata system, along with the block ID system, was deprecated and eventually replaced with the <strong>block state system</strong>. The block state system abstracts out the details of the block&#39;s properties from the other behaviors of the block.</p>
+<p>Each <em>property</em> of a block is described by an instance of <code>Property&lt;?&gt;</code>. Examples of block properties include instruments (<code>EnumProperty&lt;NoteBlockInstrument&gt;</code>), facing (<code>DirectionProperty</code>), poweredness (<code>Property&lt;Boolean&gt;</code>), etc. Each property has the value of the type <code>T</code> parametrized by <code>Property&lt;T&gt;</code>.</p>
+<p>A unique pair can be constructed from the <code>Block</code> and a map of the <code>Property&lt;?&gt;</code> to their associated values. This unique pair is called a <code>BlockState</code>.</p>
+<p>The previous system of meaningless metadata values were replaced by a system of block properties, which are easier to interpret and deal with. Previously, a stone button which is facing east and is powered or held down is represented by &quot;<code>minecraft:stone_button</code> with metadata <code>9</code>. Now, this is represented by &quot;<code>minecraft:stone_button[facing=east,powered=true]</code>&quot;.</p>
+<h2 id="proper-usage-of-block-states">Proper Usage of Block States</h2>
+<p>The <code>BlockState</code> system is a flexible and powerful system, but it also has limitations. <code>BlockState</code>s are immutable, and all combinations of their properties are generated on startup of the game. This means that having a <code>BlockState</code> with many properties and possible values will slow down the loading of the game, and befuddle anyone trying to make sense of your block logic.</p>
+<p>Not all blocks and situations require the usage of <code>BlockState</code>; only the most basic properties of a block should be put into a <code>BlockState</code>, and any other situation is better off with having a <code>BlockEntity</code> or being a separate <code>Block</code>. Always consider if you actually need to use blockstates for your purposes.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>A good rule of thumb is: <strong>if it has a different name, it should be a separate block</strong>.</p>
+</blockquote>
+<p>An example is making chair blocks: the <em>direction</em> of the chair should be a <em>property</em>, while the different <em>types of wood</em> should be separated into different blocks.
+An &quot;Oak Chair&quot; facing east (<code>oak_chair[facing=east]</code>) is different from a &quot;Spruce Chair&quot; facing west (<code>spruce_chair[facing=west]</code>).</p>
+<h2 id="implementing-block-states">Implementing Block States</h2>
+<p>In your Block class, create or reference <code>static final</code> <code>Property&lt;?&gt;</code> objects for every property that your Block has. You are free to make your own <code>Property&lt;?&gt;</code> implementations, but the means to do that are not covered in this article. The vanilla code provides several convenience implementations:</p>
+<ul>
+<li><code>IntegerProperty</code><ul>
+<li>Implements <code>Property&lt;Integer&gt;</code>. Defines a property that holds an integer value.</li>
+<li>Created by calling <code>IntegerProperty#create(String propertyName, int minimum, int maximum)</code>.</li>
+</ul>
+</li>
+<li><code>BooleanProperty</code><ul>
+<li>Implements <code>Property&lt;Boolean&gt;</code>. Defines a property that holds a <code>true</code> or <code>false</code> value.</li>
+<li>Created by calling <code>BooleanProperty#create(String propertyName)</code>.</li>
+</ul>
+</li>
+<li><code>EnumProperty&lt;E extends Enum&lt;E&gt;&gt;</code><ul>
+<li>Implements <code>Property&lt;E&gt;</code>. Defines a property that can take on the values of an Enum class.</li>
+<li>Created by calling <code>EnumProperty#create(String propertyName, Class&lt;E&gt; enumClass)</code>.</li>
+<li>It is also possible to use only a subset of the Enum values (e.g. 4 out of 16 <code>DyeColor</code>s). See the overloads of <code>EnumProperty#create</code>.</li>
+</ul>
+</li>
+<li><code>DirectionProperty</code><ul>
+<li>This is a convenience implementation of <code>EnumProperty&lt;Direction&gt;</code></li>
+<li>Several convenience predicates are also provided. For example, to get a property that represents the cardinal directions, call <code>DirectionProperty.create(&quot;&lt;name&gt;&quot;, Direction.Plane.HORIZONTAL)</code>; to get the X directions, <code>DirectionProperty.create(&quot;&lt;name&gt;&quot;, Direction.Axis.X)</code>.</li>
+</ul>
+</li>
+</ul>
+<p>The class <code>BlockStateProperties</code> contains shared vanilla properties which should be used or referenced whenever possible, in place of creating your own properties.</p>
+<p>When you have your desired <code>Property&lt;&gt;</code> objects, override <code>Block#createBlockStateDefinition(StateDefinition$Builder)</code> in your Block class. In that method, call <code>StateDefinition$Builder#add(...);</code>  with the parameters as every <code>Property&lt;?&gt;</code> you wish the block to have.</p>
+<p>Every block will also have a &quot;default&quot; state that is automatically chosen for you. You can change this &quot;default&quot; state by calling the <code>Block#registerDefaultState(BlockState)</code> method from your constructor. When your block is placed it will become this &quot;default&quot; state. An example from <code>DoorBlock</code>:</p>
+<pre><code class="language-Java">this.registerDefaultState(
+  this.stateDefinition.any()
+    .setValue(FACING, Direction.NORTH)
+    .setValue(OPEN, false)
+    .setValue(HINGE, DoorHingeSide.LEFT)
+    .setValue(POWERED, false)
+    .setValue(HALF, DoubleBlockHalf.LOWER)
+);
+</code></pre>
+<p>If you wish to change what <code>BlockState</code> is used when placing your block, you can overwrite <code>Block#getStateForPlacement(BlockPlaceContext)</code>. This can be used to, for example, set the direction of your block depending on where the player is standing when they place it.</p>
+<p>Because <code>BlockState</code>s are immutable, and all combinations of their properties are generated on startup of the game, calling <code>BlockState#setValue(Property&lt;T&gt;, T)</code> will simply go to the <code>Block</code>&#39;s <code>StateHolder</code> and request the <code>BlockState</code> with the set of values you want.</p>
+<p>Because all possible <code>BlockState</code>s are generated at startup, you are free and encouraged to use the reference equality operator (<code>==</code>) to check if two <code>BlockState</code>s are equal.</p>
+<h2 id="using-blockstates">Using <code>BlockState</code>&#39;s</h2>
+<p>You can get the value of a property by calling <code>BlockState#getValue(Property&lt;?&gt;)</code>, passing it the property you want to get the value of.
+If you want to get a <code>BlockState</code> with a different set of values, simply call <code>BlockState#setValue(Property&lt;T&gt;, T)</code> with the property and its value.</p>
+<p>You can get and place <code>BlockState</code>&#39;s in the level using <code>Level#setBlockAndUpdate(BlockPos, BlockState)</code> and <code>Level#getBlockState(BlockPos)</code>. If you are placing a <code>Block</code>, call <code>Block#defaultBlockState()</code> to get the &quot;default&quot; state, and use subsequent calls to <code>BlockState#setValue(Property&lt;T&gt;, T)</code> as stated above to achieve the desired state.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

@@ -1,0 +1,149 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Getting Started · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a class="current" href="index.html" title="forgedev/index.md">Getting Started</a>
+<a href="prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/forgedev/">查看官方原文（联网）</a></div><h1 id="getting-started">Getting Started</h1>
+<p>If you have decided to contribute to Forge, you will have to take some special steps to get started with developing. A simple mod development environment will not suffice to work with Forge&#39;s codebase directly. Instead, you can use the following guide to help you with your setup and get you started with improving Forge!</p>
+<h2 id="forking-and-cloning-the-repository">Forking and Cloning the Repository</h2>
+<p>Like most major open source projects you will find, Forge is hosted on <a href="https://www.github.com">GitHub</a>. If you have contributed to another project before, you will know this process already and can skip right ahead to the next section.</p>
+<p>For those who are beginners when it comes to collaboration via Git, here are two easy steps to get you started.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>This guide assumes that you already have a GitHub account set up. If you do not, visit their <a href="https://www.github.com/join">registration page</a> to create an account. Furthermore, this guide is not a tutorial for git&#39;s usage. Please consult different sources first if you are struggling to get it working.</p>
+</blockquote>
+<h3 id="forking">Forking</h3>
+<p>First of all, you have to &quot;fork&quot; the <a href="https://www.github.com/MinecraftForge/MinecraftForge">MinecraftForge repository</a> by clicking the &quot;Fork&quot; button in the upper right hand corner. If you are in an organization, select the account you want your fork to be hosted on.</p>
+<p>Forking the repository is necessary since not every GitHub user can have free access to every repository. Instead, you create a copy of the original repository to later contribute your changes via a so called Pull Request, which you will learn more about later.</p>
+<h3 id="cloning">Cloning</h3>
+<p>After forking the repository, it is time to get local access to actually make some changes. For this, you need to clone the repository onto your local machine.</p>
+<p>Using your favorite git client, simply clone your fork into a directory of your choice. As general example, here is a command line snippet that should work on all correctly configured systems and clones the repository into a directory called &quot;MinecraftForge&quot; under the current directory (note that you have to replace <code>&lt;User&gt;</code> with your username):</p>
+<p><code>git clone https://github.com/&lt;User&gt;/MinecraftForge</code></p>
+<h1 id="checking-out-the-correct-branch">Checking out the Correct Branch</h1>
+<p>Forking and cloning the repository are the only mandatory steps to develop for Forge. However, to ease the process of creating Pull Requests for you, it is best to work with branches.</p>
+<p>It is recommended to create and check out a branch for each PR you plan to submit. This way, you can always keep around the latest changes of Forge for new PRs while you still work on older patches.</p>
+<p>After completing this step, you are ready to go and set up your development environment.</p>
+<h2 id="setting-up-the-environment">Setting Up the Environment</h2>
+<p>Depending on your favorite IDE, there is a different set of recommended steps you have to follow to successfully set up a development environment.</p>
+<h3 id="eclipse">Eclipse</h3>
+<p>Due to the way Eclipse workspaces work, ForgeGradle can do most of the work involved to get you started with a Forge workspace.</p>
+<ol>
+<li>Open a terminal/command prompt and navigate to the directory of your cloned fork.</li>
+<li>Type <code>./gradlew setup</code> and hit enter. Wait until ForgeGradle is done.</li>
+<li>Type <code>./gradlew genEclipseRuns</code> and hit enter. Once again, wait until ForgeGradle is done.</li>
+<li>Open your Eclipse workspace and go to <code>File -&gt; Import -&gt; General -&gt; Existing Gradle Project</code>.</li>
+<li>Browse to the repo directory for the &quot;Project root directory&quot; option in the dialog that opens.</li>
+<li>Complete the import by clicking the &quot;Finish&quot; button.</li>
+</ol>
+<p>That is all it takes to get you up and running with Eclipse. There is no extra steps required to get the test mods running. Simply hit &quot;Run&quot; like in any other project and select the appropriate run configuration.</p>
+<h3 id="intellij-idea">IntelliJ IDEA</h3>
+<p>JetBrains&#39; flagship IDE comes with great integrated support for <a href="https://www.gradle.org">Gradle</a>: Forge&#39;s build system of choice. Due to some peculiarities of Minecraft mod development, however, there are additional steps required to get everything to work properly.</p>
+<h4 id="idea-2021-onwards">IDEA 2021 onwards</h4>
+<ol>
+<li>Start IntelliJ IDEA 2021.<ul>
+<li>If you already have another project open, close the project with the File -&gt; Close project option.</li>
+</ul>
+</li>
+<li>In the projects tab of the &quot;Welcome to IntelliJ IDEA&quot; window, click the &quot;Open&quot; button on the top right and select the MinecraftForge folder you cloned earlier.</li>
+<li>Click &quot;Trust Project&quot; if prompted.</li>
+<li>After IDEA is done importing the project and indexing its files, run the Gradle setup task. You can do this by:<ul>
+<li>Open the Gradle sidebar on the right hand side of your screen, then open the forge project tree, select Tasks, then other and double-click the <code>setup</code> task (may also appear as <code>MinecraftForge[Setup]</code>) found in Forge -&gt; Tasks -&gt; other -&gt; <code>setup</code>.</li>
+</ul>
+</li>
+<li>Generate the run configurations:<ul>
+<li>Open the Gradle sidebar on the right hand side of your screen, then open the forge project tree, select Tasks, then other and double-click the <code>genIntellijRuns</code> task (may also appear as <code>MinecraftForge[genIntellijRuns]</code>) found in Forge -&gt; Tasks -&gt; forgegradle runs -&gt; <code>genIntellijRuns</code>.</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>If you get a licensing error during build before making any changes, running the <code>updateLicenses</code> task may help. This task is found in Forge -&gt; Tasks -&gt; other as well.</li>
+</ul>
+<h4 id="idea-2019-2020">IDEA 2019-2020</h4>
+<p>There are a few minor differences between IDEA 2021 and these versions for setup.</p>
+<ol>
+<li>Import Forge&#39;s <code>build.gradle</code> as an IDEA project. For this, simply click <code>Import Project</code> from the <code>Welcome to IntelliJ IDEA</code> splash screen, then select the <code>build.gradle</code> file.</li>
+<li>After IDEA is done importing the project and indexing the files, run the Gradle setup task. Either:<ol>
+<li>Open the Gradle sidebar on the right hand side of your screen, then open the <code>forge</code> project tree, select <code>Tasks</code>, then <code>other</code> and double-click the <code>setup</code> task (may also appear as <code>MinecraftForge[Setup]</code>. Or alternatively:</li>
+<li>Tap the CTRL key twice, and type <code>gradle setup</code> in the <code>Run</code> command window that pops up.</li>
+</ol>
+</li>
+</ol>
+<p>You can then run Forge using the <code>forge_client</code> gradle task (<code>Tasks -&gt; fg_runs -&gt; forge_client</code>): right-click the task and select either <code>Run</code> or <code>Debug</code> as desired.</p>
+<p>You should now be able to work with your mod using the changes you introduce to the Forge and Vanilla codebase.</p>
+<h2 id="making-changes-and-pull-requests">Making Changes and Pull Requests</h2>
+<p>Once you have set up your development environment, it is time to make some changes to Forge&#39;s codebase. There are, however, some pitfalls you have to avoid when editing the project&#39;s code.</p>
+<p>The most important thing to note is that if you wish to edit Minecraft source code, you must only do so in the &quot;Forge&quot; sub-project. Any changes in the &quot;Clean&quot; project will mess with ForgeGradle and generating the patches. This can have disastrous consequences and might render your environment completely useless. If you wish to have a flawless experience, make sure you only edit code in the &quot;Forge&quot; project!</p>
+<h3 id="generating-patches">Generating Patches</h3>
+<p>After you have made changes to the code base and tested them thoroughly, you may go ahead and generate patches. This is only necessary if you work on the Minecraft code base (i.e. in the &quot;Forge&quot; project), but this step is vital for your changes to work elsewhere. Forge works by injecting only changed things into Vanilla Minecraft and hence needs those changes available in an appropriate format. Thankfully, ForgeGradle is capable of generating the changeset for you to commit it.</p>
+<p>To initiate the patch generation, simply run the <code>genPatches</code> Gradle task from your IDE or the command line. After its completion, you can commit all your changes (make sure you do not add any unnecessary files) and submit your Pull Request!</p>
+<h3 id="pull-requests">Pull Requests</h3>
+<p>The last step before your contribution is added to Forge is a Pull Request (PR in short). This is a formal request to incorporate your fork&#39;s changes into the live code base. Creating a PR is easy. Simply go to <a href="https://github.com/MinecraftForge/MinecraftForge/compare">this GitHub page</a> and follow the proposed steps. It is now that a good setup with branches pays off, since you are able to select precisely the changes you want to submit.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Pull Requests are bound to rules; not every request will blindly be accepted. Follow <a href="https://github.com/MinecraftForge/MinecraftForge/blob/1.13.x/CONTRIBUTING.md">this document</a> to get further information and to ensure the best quality of your PR! If you want to maximize the chances of your PR getting accepted, follow these <a href="./prguidelines.html">PR guidelines</a>!</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

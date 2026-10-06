@@ -1,0 +1,183 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sounds · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="particles.html" title="gameeffects/particles.md">Particles</a>
+<a class="current" href="sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/gameeffects/sounds/">查看官方原文（联网）</a></div><h1 id="sounds">Sounds</h1>
+<h2 id="terminology">Terminology</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sound Events</td>
+<td>Something that triggers a sound effect. Examples include <code>minecraft:block.anvil.hit</code> or <code>botania:spreader_fire</code>.</td>
+</tr>
+<tr>
+<td>Sound Category</td>
+<td>The category of the sound, for example <code>player</code>, <code>block</code> or simply <code>master</code>. The sliders in the sound settings GUI represent these categories.</td>
+</tr>
+<tr>
+<td>Sound File</td>
+<td>The literal file on disk that is played: an .ogg file.</td>
+</tr>
+</tbody></table>
+<h2 id="soundsjson"><code>sounds.json</code></h2>
+<p>This JSON defines sound events, and defines which sound files they play, the subtitle, etc. Sound events are identified with <a href="../concepts/resources.html#resourcelocation"><code>ResourceLocation</code></a>s. <code>sounds.json</code> should be located at the root of a resource namespace (<code>assets/&lt;namespace&gt;/sounds.json</code>), and it defines sound events in that namespace (<code>assets/&lt;namespace&gt;/sounds.json</code> defines sound events in the namespace <code>namespace</code>.).</p>
+<p>A full specification is available on the vanilla <a href="https://minecraft.wiki/w/Sounds.json">wiki</a>, but this example highlights the important parts:</p>
+<pre><code class="language-js">{
+  &quot;open_chest&quot;: {
+    &quot;subtitle&quot;: &quot;mymod.subtitle.open_chest&quot;,
+    &quot;sounds&quot;: [ &quot;mymod:open_chest_sound_file&quot; ]
+  },
+  &quot;epic_music&quot;: {
+    &quot;sounds&quot;: [
+      {
+        &quot;name&quot;: &quot;mymod:music/epic_music&quot;,
+        &quot;stream&quot;: true
+      }
+    ]
+  }
+}
+</code></pre>
+<p>Underneath the top-level object, each key corresponds to a sound event. Note that the namespace is not given, as it is taken from the namespace of the JSON itself. Each event specifies a localization key to be shown when subtitles are enabled. Finally, the actual sound files to be played are specified. Note that the value is an array; if multiple sound files are specified, the game will randomly choose one to play whenever the sound event is triggered.</p>
+<p>The two examples represent two different ways to specify a sound file. The <a href="https://minecraft.wiki/w/Sounds.json">wiki</a> has precise details, but generally, long sound files such as background music or music discs should use the second form, because the &quot;stream&quot; argument tells Minecraft to not load the entire sound file into memory but to stream it from disk. The second form can also specify the volume, pitch, and weight of a sound file.</p>
+<p>In all cases, the path to a sound file for namespace <code>namespace</code> and path <code>path</code> is <code>assets/&lt;namespace&gt;/sounds/&lt;path&gt;.ogg</code>. Therefore <code>mymod:open_chest_sound_file</code> points to <code>assets/mymod/sounds/open_chest_sound_file.ogg</code>, and <code>mymod:music/epic_music</code> points to <code>assets/mymod/sounds/music/epic_music.ogg</code>.</p>
+<p>A <code>sounds.json</code> can be <a href="../datagen/client/sounds.html">data generated</a>.</p>
+<h2 id="creating-sound-events">Creating Sound Events</h2>
+<p>In order to reference sounds on the server, a <code>SoundEvent</code> holding a corresponding entry in <code>sounds.json</code> must be created. This <code>SoundEvent</code> must then be <a href="../concepts/registries.html#methods-for-registering">registered</a>. Normally, the location used to create a sound event should be set as it&#39;s registry name.</p>
+<p>The <code>SoundEvent</code> acts as a reference to the sound and is passed around to play them. If a mod has an API, it should expose its <code>SoundEvent</code>s in the API.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>As long as a sound is registered within the <code>sounds.json</code>, it can still be referenced on the logical client regardless of whether there is a referencing <code>SoundEvent</code>.</p>
+</blockquote>
+<h2 id="playing-sounds">Playing Sounds</h2>
+<p>Vanilla has lots of methods for playing sounds, and it is unclear which to use at times.</p>
+<p>Note that each takes a <code>SoundEvent</code>, the ones registered above. Additionally, the terms <em>&quot;Server Behavior&quot;</em> and <em>&quot;Client Behavior&quot;</em> refer to the respective <a href="../concepts/sides.html"><strong>logical</strong> side</a>.</p>
+<h3 id="level"><code>Level</code></h3>
+<ol>
+<li><p><a name="level-playsound-pbecvp"></a> <code>playSound(Player, BlockPos, SoundEvent, SoundSource, volume, pitch)</code></p>
+<ul>
+<li>Simply forwards to <a href="#level-playsound-pxyzecvp">overload (2)</a>, adding 0.5 to each coordinate of the <code>BlockPos</code> given.</li>
+</ul>
+</li>
+<li><p><a name="level-playsound-pxyzecvp"></a> <code>playSound(Player, double x, double y, double z, SoundEvent, SoundSource, volume, pitch)</code></p>
+<ul>
+<li><strong>Client Behavior</strong>: If the passed in player is <em>the</em> client player, plays the sound event to the client player.</li>
+<li><strong>Server Behavior</strong>: Plays the sound event to everyone nearby <strong>except</strong> the passed in player. Player can be <code>null</code>.</li>
+<li><strong>Usage</strong>: The correspondence between the behaviors implies that these two methods are to be called from some player-initiated code that will be run on both logical sides at the same time: the logical client handles playing it to the user, and the logical server handles everyone else hearing it without re-playing it to the original user. They can also be used to play any sound in general at any position server-side by calling it on the logical server and passing in a <code>null</code> player, thus letting everyone hear it.</li>
+</ul>
+</li>
+<li><p><a name="level-playsound-xyzecvpd"></a> <code>playLocalSound(double x, double y, double z, SoundEvent, SoundSource, volume, pitch, distanceDelay)</code></p>
+<ul>
+<li><strong>Client Behavior</strong>: Just plays the sound event in the client level. If <code>distanceDelay</code> is <code>true</code>, then delays the sound based on how far it is from the player.</li>
+<li><strong>Server Behavior</strong>: Does nothing.</li>
+<li><strong>Usage</strong>: This method only works client-side, and thus is useful for sounds sent in custom packets, or other client-only effect-type sounds. Used for thunder.</li>
+</ul>
+</li>
+</ol>
+<h3 id="clientlevel"><code>ClientLevel</code></h3>
+<ol>
+<li><a name="clientlevel-playsound-becvpd"></a> <code>playLocalSound(BlockPos, SoundEvent, SoundSource, volume, pitch, distanceDelay)</code><ul>
+<li>Simply forwards to <code>Level</code>&#39;s <a href="#level-playsound-xyzecvpd">overload (3)</a>, adding 0.5 to each coordinate of the <code>BlockPos</code> given.</li>
+</ul>
+</li>
+</ol>
+<h3 id="entity"><code>Entity</code></h3>
+<ol>
+<li><a name="entity-playsound-evp"></a> <code>playSound(SoundEvent, volume, pitch)</code><ul>
+<li>Forwards to <code>Level</code>&#39;s <a href="#level-playsound-pxyzecvp">overload (2)</a>, passing in <code>null</code> as the player.</li>
+<li><strong>Client Behavior</strong>: Does nothing.</li>
+<li><strong>Server Behavior</strong>: Plays the sound event to everyone at this entity&#39;s position.</li>
+<li><strong>Usage</strong>: Emitting any sound from any non-player entity server-side.</li>
+</ul>
+</li>
+</ol>
+<h3 id="player"><code>Player</code></h3>
+<ol>
+<li><a name="player-playsound-evp"></a> <code>playSound(SoundEvent, volume, pitch)</code> (overriding the one in <a href="#entity-playsound-evp"><code>Entity</code></a>)<ul>
+<li>Forwards to <code>Level</code>&#39;s <a href="#level-playsound-pxyzecvp">overload (2)</a>, passing in <code>this</code> as the player.</li>
+<li><strong>Client Behavior</strong>: Does nothing, see override in <a href="#localplayer-playsound-evp"><code>LocalPlayer</code></a>.</li>
+<li><strong>Server Behavior</strong>: Plays the sound to everyone nearby <em>except</em> this player.</li>
+<li><strong>Usage</strong>: See <a href="#localplayer-playsound-evp"><code>LocalPlayer</code></a>.</li>
+</ul>
+</li>
+</ol>
+<h3 id="localplayer"><code>LocalPlayer</code></h3>
+<ol>
+<li><a name="localplayer-playsound-evp"></a> <code>playSound(SoundEvent, volume, pitch)</code> (overriding the one in <a href="#player-playsound-evp"><code>Player</code></a>)<ul>
+<li>Forwards to <code>Level</code>&#39;s <a href="#level-playsound-pxyzecvp">overload (2)</a>, passing in <code>this</code> as the player.</li>
+<li><strong>Client Behavior</strong>: Just plays the Sound Event.</li>
+<li><strong>Server Behavior</strong>: Method is client-only.</li>
+<li><strong>Usage</strong>: Just like the ones in <code>Level</code>, these two overrides in the player classes seem to be for code that runs together on both sides. The client handles playing the sound to the user, while the server handles everyone else hearing it without re-playing to the original user.</li>
+</ul>
+</li>
+</ol>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

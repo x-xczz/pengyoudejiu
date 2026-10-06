@@ -1,0 +1,187 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Advancements · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="index.html" title="resources/server/index.md">Datapacks</a>
+<a href="recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="tags.html" title="resources/server/tags.md">Tags</a>
+<a class="current" href="advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/server/advancements/">查看官方原文（联网）</a></div><h1 id="advancements">Advancements</h1>
+<p>Advancements are tasks that can be achieved by the player which may advance the progress of the game. Advancements can trigger based on any action the player may be directly involved in.</p>
+<p>All advancement implementations within vanilla are data driven via JSON. This means that a mod is not necessary to create a new advancement, only a <a href="https://minecraft.wiki/w/Data_pack">data pack</a>. A full list on how to create and put these advancements within the mod&#39;s <code>resources</code> can be found on the <a href="https://minecraft.wiki/w/Advancement/JSON_format">Minecraft Wiki</a>. Additionally, advancements can be <a href="./conditional.html#implementations">loaded conditionally and defaulted</a> depending on what information is present (mod loaded, item exists, etc.).</p>
+<h2 id="advancement-criteria">Advancement Criteria</h2>
+<p>To unlock an advancement, the specified criteria must be met. Criteria are tracked through triggers which execute when a certain action is performed: killing an entity, changing an inventory, breading animals, etc. Any time an advancement is loaded into the game, the criteria defined are read and added as listeners to the trigger. Afterwards a trigger function is called (usually named <code>#trigger</code>) which checks all listeners as to whether the current state meets the conditions of the advancement criteria. The criteria listeners for the advancement are only removed once the advancement has been obtained by completing all requirements.</p>
+<p>Requirements are defined as an array of string arrays representing the name of the criteria specified on the advancement. An advancement is completed once one string array of criteria has been met:</p>
+<pre><code class="language-js">// In some advancement JSON
+
+// List of defined criteria to meet
+&quot;criteria&quot;: {
+  &quot;example_criterion1&quot;: { /*...*/ },
+  &quot;example_criterion2&quot;: { /*...*/ },
+  &quot;example_criterion3&quot;: { /*...*/ },
+  &quot;example_criterion4&quot;: { /*...*/ }
+},
+
+// This advancement is only unlocked once
+// - Criteria 1 AND 2 have been met
+// OR
+// - Criteria 3 and 4 have been met
+&quot;requirements&quot;: [
+  [
+    &quot;example_criterion1&quot;,
+    &quot;example_criterion2&quot;
+  ],
+  [
+    &quot;example_criterion3&quot;,
+    &quot;example_criterion4&quot;
+  ]
+]
+</code></pre>
+<p>A list of criteria triggers defined by vanilla can be found in <code>CriteriaTriggers</code>. Additionally, the JSON formats are defined on the <a href="https://minecraft.wiki/w/Advancement/JSON_format#List_of_triggers">Minecraft Wiki</a>.</p>
+<h3 id="custom-criteria-triggers">Custom Criteria Triggers</h3>
+<p>Custom criteria triggers can be created by implementing <code>SimpleCriterionTrigger</code> for the created <code>AbstractCriterionTriggerInstance</code> subclass.</p>
+<h3 id="abstractcriteriontriggerinstance-subclass">AbstractCriterionTriggerInstance Subclass</h3>
+<p>The <code>AbstractCriterionTriggerInstance</code> represents a single criteria defined in the <code>criteria</code> object. Trigger instances are responsible for holding the defined conditions, returning whether the inputs match the condition, and writing the instance to JSON for data generation.</p>
+<p>Conditions are usually passed in through the constructor. The <code>AbstractCriterionTriggerInstance</code> super constructor requires the instance to define the registry name of the trigger and the conditions the player must meet as an <code>ContextAwarePredicate</code>. The registry name of the trigger should be supplied to the super directly while the conditions of the player should be a constructor parameter.</p>
+<pre><code class="language-java">// Where ID is the registry name of the trigger
+public ExampleTriggerInstance(ContextAwarePredicate player, ItemPredicate item) {
+  super(ID, player);
+  // Store the item condition that must be met
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Typically, trigger instances have a static constructor which allow these instances to be easily created for data generation. These static factory methods can also be statically imported instead of the class itself.</p>
+<pre><code class="language-java">public static ExampleTriggerInstance instance(ContextAwarePredicate player, ItemPredicate item) {
+  return new ExampleTriggerInstance(player, item);
+}
+</code></pre>
+</blockquote>
+<p>Additionally, the <code>#serializeToJson</code> method should be overridden. The method should add the conditions of the instance to the other JSON data.</p>
+<pre><code class="language-java">@Override
+public JsonObject serializeToJson(SerializationContext context) {
+  JsonObject obj = super.serializeToJson(context);
+  // Write conditions to json
+  return obj;
+}
+</code></pre>
+<p>Finally, a method should be added which takes in the current data state and returns whether the user has met the necessary conditions. The conditions of the player are already checked through <code>SimpleCriterionTrigger#trigger(ServerPlayer, Predicate)</code>. Most trigger instances call this method <code>#matches</code>.</p>
+<pre><code class="language-java">// This method is unique for each instance and is as such not overridden
+public boolean matches(ItemStack stack) {
+  // Since ItemPredicate matches a stack, a stack is the input
+  return this.item.matches(stack);
+}
+</code></pre>
+<h3 id="simplecriteriontrigger">SimpleCriterionTrigger</h3>
+<p>The <code>SimpleCriterionTrigger&lt;T&gt;</code> subclass, where <code>T</code> is the type of the trigger instance, is responsible for specifying the registry name of the trigger, creating a trigger instance, and a method to check trigger instances and run attached listeners on success.</p>
+<p>The registry name of the trigger is supplied to <code>#getId</code>. This should match the registry name supplied to the trigger instance.</p>
+<p>A trigger instance is created via <code>#createInstance</code>. This method reads a criteria from JSON.</p>
+<pre><code class="language-java">@Override
+public ExampleTriggerInstance createInstance(JsonObject json, ContextAwarePredicate player, DeserializationContext context) {
+  // Read conditions from JSON: item
+  return new ExampleTriggerInstance(player, item);
+}
+</code></pre>
+<p>Finally, a method is defined to check all trigger instances and run the listeners if their condition is met. This method takes in the <code>ServerPlayer</code> and whatever other data defined by the matching method in the <code>AbstractCriterionTriggerInstance</code> subclass. This method should internally call <code>SimpleCriterionTrigger#trigger</code> to properly handle checking all listeners. Most trigger instances call this method <code>#trigger</code>.</p>
+<pre><code class="language-java">// This method is unique for each trigger and is as such not overridden
+public void trigger(ServerPlayer player, ItemStack stack) {
+  this.trigger(player,
+    // The condition checker method within the AbstractCriterionTriggerInstance subclass
+    triggerInstance -&gt; triggerInstance.matches(stack)
+  );
+}
+</code></pre>
+<p>Afterwards, an instance should be registered using <code>CriteriaTriggers#register</code> during <code>FMLCommonSetupEvent</code>.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p><code>CriteriaTriggers#register</code> must be enqueued to the synchronous work queue via <code>FMLCommonSetupEvent#enqueueWork</code> as the method is not thread-safe.</p>
+</blockquote>
+<h3 id="calling-the-trigger">Calling the Trigger</h3>
+<p>Whenever the action being checked is performed, the <code>#trigger</code> method defined by the <code>SimpleCriterionTrigger</code> subclass should be called.</p>
+<pre><code class="language-java">// In some piece of code where the action is being performed
+// Where EXAMPLE_CRITERIA_TRIGGER is the custom criteria trigger
+public void performExampleAction(ServerPlayer player, ItemStack stack) {
+  // Run code to perform action
+  EXAMPLE_CRITERIA_TRIGGER.trigger(player, stack);
+}
+</code></pre>
+<h2 id="advancement-rewards">Advancement Rewards</h2>
+<p>When an advancement is completed, rewards may be given out. These can be a combination of experience points, loot tables, recipes for the recipe book, or a <a href="https://minecraft.wiki/w/Function_(Java_Edition)">function</a> executed as a creative player.</p>
+<pre><code class="language-js">// In some advancement JSON
+&quot;rewards&quot;: {
+  &quot;experience&quot;: 10,
+  &quot;loot&quot;: [
+    &quot;minecraft:example_loot_table&quot;,
+    &quot;minecraft:example_loot_table2&quot;
+    // ...
+  ],
+  &quot;recipes&quot;: [
+    &quot;minecraft:example_recipe&quot;,
+    &quot;minecraft:example_recipe2&quot;
+    // ...
+  ],
+  &quot;function&quot;: &quot;minecraft:example_function&quot;
+}
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

@@ -1,0 +1,7 @@
+{
+  "item.examplemod.dance_disc": "音乐唱片 · 舞动",
+  "item.examplemod.dance_disc.desc": "小助 — 朋友的酒",
+  "item.examplemod.dance_disc.hint": "在唱片机中播放，吸引附近生物靠近并跳舞",
+  "item.examplemod.dance_disc.missing_audio": "尚未导入原创音乐：当前仅演示舞蹈",
+  "subtitles.examplemod.dance_song": "原创舞曲播放中"
+}

@@ -1,0 +1,183 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Key Mappings · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="config.html" title="misc/config.md">Configuration</a>
+<a class="current" href="keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/misc/keymappings/">查看官方原文（联网）</a></div><h1 id="key-mappings">Key Mappings</h1>
+<p>A key mapping, or key binding, defines a particular action that should be tied to an input: mouse click, key press, etc. Each action defined by a key mapping can be checked whenever the client can take an input. Furthermore, each key mapping can be assigned to any input through the <a href="https://minecraft.wiki/w/Options#Controls">Controls option menu</a>.</p>
+<h2 id="registering-a-keymapping">Registering a <code>KeyMapping</code></h2>
+<p>A <code>KeyMapping</code> can be registered by listening to the <code>RegisterKeyMappingsEvent</code> on the <a href="../concepts/events.html#mod-event-bus"><strong>mod event bus</strong></a> only on the physical client and calling <code>#register</code>.</p>
+<pre><code class="language-java">// In some physical client only class
+
+// Key mapping is lazily initialized so it doesn&#39;t exist until it is registered
+public static final Lazy&lt;KeyMapping&gt; EXAMPLE_MAPPING = Lazy.of(() -&gt; /*...*/);
+
+// Event is on the mod event bus only on the physical client
+@SubscribeEvent
+public void registerBindings(RegisterKeyMappingsEvent event) {
+  event.register(EXAMPLE_MAPPING.get());
+}
+</code></pre>
+<h2 id="creating-a-keymapping">Creating a <code>KeyMapping</code></h2>
+<p>A <code>KeyMapping</code> can be created using it&#39;s constructor. The <code>KeyMapping</code> takes in a <a href="../concepts/internationalization.html#translatablecontents">translation key</a> defining the name of the mapping, the default input of the mapping, and the <a href="../concepts/internationalization.html#translatablecontents">translation key</a> defining the category the mapping will be put within in the <a href="https://minecraft.wiki/w/Options#Controls">Controls option menu</a>.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>A <code>KeyMapping</code> can be added to a custom category by providing a category <a href="../concepts/internationalization.html#translatablecontents">translation key</a> not provided by vanilla. Custom category translation keys should contain the mod id (e.g. <code>key.categories.examplemod.examplecategory</code>).</p>
+</blockquote>
+<h3 id="default-inputs">Default Inputs</h3>
+<p>Each key mapping has a default input associated with it. This is provided through <code>InputConstants$Key</code>. Each input consists of an <code>InputConstants$Type</code>, which defines what device is providing the input, and an integer, which defines the associated identifier of the input on the device.</p>
+<p>Vanilla provides three types of inputs: <code>KEYSYM</code>, which defines a keyboard through the provided <code>GLFW</code> key tokens, <code>SCANCODE</code>, which defines a keyboard through the platform-specific scancode, and <code>MOUSE</code>, which defines a mouse.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>It is highly recommended to use <code>KEYSYM</code> over <code>SCANCODE</code> for keyboards as <code>GLFW</code> key tokens are not tied to any particular system. You can read more on the <a href="https://www.glfw.org/docs/3.3/input_guide.html#input_key">GLFW docs</a>.</p>
+</blockquote>
+<p>The integer is dependent on the type provided. All input codes are defined in <code>GLFW</code>: <code>KEYSYM</code> tokens are prefixed with <code>GLFW_KEY_*</code> while <code>MOUSE</code> codes are prefixed with <code>GLFW_MOUSE_*</code>.</p>
+<pre><code class="language-java">new KeyMapping(
+  &quot;key.examplemod.example1&quot;, // Will be localized using this translation key
+  InputConstants.Type.KEYSYM, // Default mapping is on the keyboard
+  GLFW.GLFW_KEY_P, // Default key is P
+  &quot;key.categories.misc&quot; // Mapping will be in the misc category
+)
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>If the key mapping should not be mapped to a default, the input should be set to <code>InputConstants#UNKNOWN</code>. The vanilla constructor will require you to extract the input code via <code>InputConstants$Key#getValue</code> while the Forge constructor can be supplied the raw input field.</p>
+</blockquote>
+<h3 id="ikeyconflictcontext"><code>IKeyConflictContext</code></h3>
+<p>Not all mappings are used in every context. Some mappings are only used in a GUI, while others are only used purely in game. To avoid mappings of the same key used in different contexts conflicting with each other, an <code>IKeyConflictContext</code> can be assigned.</p>
+<p>Each conflict context contains two methods: <code>#isActive</code>, which defines if the mapping can be used in the current game state, and <code>#conflicts</code>, which defines whether the mapping conflicts with a key in the same or different conflict context.</p>
+<p>Currently, Forge defines three basic contexts through <code>KeyConflictContext</code>: <code>UNIVERSAL</code>, which is the default meaning the key can be used in every context, <code>GUI</code>, which means the mapping can only be used when a <code>Screen</code> is open, and <code>IN_GAME</code>, which means the mapping can only be used if a <code>Screen</code> is not open. New conflict contexts can be created by implementing <code>IKeyConflictContext</code>.</p>
+<pre><code class="language-java">new KeyMapping(
+  &quot;key.examplemod.example2&quot;,
+  KeyConflictContext.GUI, // Mapping can only be used when a screen is open
+  InputConstants.Type.MOUSE, // Default mapping is on the mouse
+  GLFW.GLFW_MOUSE_BUTTON_LEFT, // Default mouse input is the left mouse button
+  &quot;key.categories.examplemod.examplecategory&quot; // Mapping will be in the new example category
+)
+</code></pre>
+<h3 id="keymodifier"><code>KeyModifier</code></h3>
+<p>Modders may not want mappings to have the same behavior if a modifier key is held at the same (e.g. <code>G</code> vs <code>CTRL + G</code>). To remedy this, Forge adds an additional parameter to the constructor to take in a <code>KeyModifier</code> which can apply control (<code>KeyModifier#CONTROL</code>), shift (<code>KeyModifier#SHIFT</code>), or alt (<code>KeyModifier#ALT</code>) to any input. <code>KeyModifier#NONE</code> is the default and will apply no modifier.</p>
+<p>A modifier can be added in the <a href="https://minecraft.wiki/w/Options#Controls">controls option menu</a> by holding down the modifier key and the associated input.</p>
+<pre><code class="language-java">new KeyMapping(
+  &quot;key.examplemod.example3&quot;,
+  KeyConflictContext.UNIVERSAL,
+  KeyModifier.SHIFT, // Default mapping requires shift to be held down
+  InputConstants.Type.KEYSYM, // Default mapping is on the keyboard
+  GLFW.GLFW_KEY_G, // Default key is G
+  &quot;key.categories.misc&quot;
+)
+</code></pre>
+<h2 id="checking-a-keymapping">Checking a <code>KeyMapping</code></h2>
+<p>A <code>KeyMapping</code> can be checked to see whether it has been clicked. Depending on when, the mapping can be used in a conditional to apply the associated logic.</p>
+<h3 id="within-the-game">Within the Game</h3>
+<p>Within the game, a mapping should be checked by listening to <code>ClientTickEvent</code> on the <a href="../concepts/events.html#creating-an-event-handler"><strong>Forge event bus</strong></a> and checking <code>KeyMapping#consumeClick</code> within a while loop. <code>#consumeClick</code> will return <code>true</code> only the number of times the input was performed and not already previously handled, so it won&#39;t infinitely stall the game.</p>
+<pre><code class="language-java">// Event is on the Forge event bus only on the physical client
+public void onClientTick(ClientTickEvent event) {
+  if (event.phase == TickEvent.Phase.END) { // Only call code once as the tick event is called twice every tick
+    while (EXAMPLE_MAPPING.get().consumeClick()) {
+      // Execute logic to perform on click here
+    }
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>Do not use the <code>InputEvent</code>s as an alternative to <code>ClientTickEvent</code>. There are separate events for keyboard and mouse inputs only, so they wouldn&#39;t handle any additional inputs.</p>
+</blockquote>
+<h3 id="inside-a-gui">Inside a GUI</h3>
+<p>Within a GUI, a mapping can be checked within one of the <code>GuiEventListener</code> methods using <code>IForgeKeyMapping#isActiveAndMatches</code>. The most common methods which can be checked are <code>#keyPressed</code> and <code>#mouseClicked</code>. </p>
+<p><code>#keyPressed</code> takes in the <code>GLFW</code> key token, the platform-specific scan code, and a bitfield of the held down modifiers. A key can be checked against a mapping by creating the input using <code>InputConstants#getKey</code>. The modifiers are already checked within the mapping methods itself.</p>
+<pre><code class="language-java">// In some Screen subclass
+@Override
+public boolean keyPressed(int key, int scancode, int mods) {
+  if (EXAMPLE_MAPPING.get().isActiveAndMatches(InputConstants.getKey(key, scancode))) {
+    // Execute logic to perform on key press here
+    return true;
+  }
+  return super.keyPressed(x, y, button);
+} 
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>If you do not own the screen which you are trying to check a <strong>key</strong> for, you can listen to the <code>Pre</code> or <code>Post</code> events of <code>ScreenEvent$KeyPressed</code> on the <a href="../concepts/events.html#creating-an-event-handler"><strong>Forge event bus</strong></a> instead.</p>
+</blockquote>
+<p><code>#mouseClicked</code> takes in the mouse&#39;s x position, y position, and the button clicked. A mouse button can be checked against a mapping by creating the input using <code>InputConstants$Type#getOrCreate</code> with the <code>MOUSE</code> input.</p>
+<pre><code class="language-java">// In some Screen subclass
+@Override
+public boolean mouseClicked(double x, double y, int button) {
+  if (EXAMPLE_MAPPING.get().isActiveAndMatches(InputConstants.TYPE.MOUSE.getOrCreate(button))) {
+    // Execute logic to perform on mouse click here
+    return true;
+  }
+  return super.mouseClicked(x, y, button);
+} 
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>If you do not own the screen which you are trying to check a <strong>mouse</strong> for, you can listen to the <code>Pre</code> or <code>Post</code> events of <code>ScreenEvent$MouseButtonPressed</code> on the <a href="../concepts/events.html#creating-an-event-handler"><strong>Forge event bus</strong></a> instead.</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

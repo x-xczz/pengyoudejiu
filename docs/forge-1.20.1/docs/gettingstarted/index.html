@@ -1,0 +1,180 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Getting Started with Forge · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a class="current" href="index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/gettingstarted/">查看官方原文（联网）</a></div><h1 id="getting-started-with-forge">Getting Started with Forge</h1>
+<p>If you have never made a Forge mod before, this section will provide the minimum amount of information needed to setup a Forge development environment. The rest of the documentation is about where to go from here.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><p>An installation of the Java 17 Development Kit (JDK) and 64-bit Java Virtual Machine (JVM). Forge recommends and officially supports <a href="https://adoptium.net/temurin/releases?version=17" title="Eclipse Temurin 17 Prebuilt Binaries">Eclipse Temurin</a>.</p>
+<p>  !!! warning
+  Make sure you are using a 64-bit JVM. One way of checking is to run <code>java -version</code> in a terminal. Using a 32-bit JVM will cause some problems when using <a href="https://docs.minecraftforge.net/en/fg-6.x">ForgeGradle</a>.</p>
+</li>
+<li><p>Familiarity with an Integrated Development Environment (IDE).</p>
+<ul>
+<li>It is recommended to use an IDE with Gradle integration.</li>
+</ul>
+</li>
+</ul>
+<h2 id="from-zero-to-modding">From Zero to Modding</h2>
+<ol>
+<li><p>Download the Mod Developer Kit (MDK) from the <a href="https://files.minecraftforge.net" title="Forge Files distribution site">Forge file site</a> by clicking &#39;Mdk&#39; followed by the &#39;Skip&#39; button in the top right after waiting for a period of time. It is recommended to download the latest version of Forge whenever possible.</p>
+</li>
+<li><p>Extract the downloaded MDK into an empty directory. This will be your mod&#39;s directory, which should now contain some gradle files and a <code>src</code> subdirectory containing the example mod.</p>
+<p> !!! note
+ A number of files can be reused across different mods. These files are:
+
+ * the <code>gradle</code> subdirectory
+ * <code>build.gradle</code>
+ * <code>gradlew</code>
+ * <code>gradlew.bat</code>
+ * <code>settings.gradle</code>
+
+ The <code>src</code> subdirectory does not need to be copied across workspaces; however, you may need to refresh the Gradle project if the java (<code>src/main/java</code>) and resource (<code>src/main/resources</code>) are created later.</p>
+</li>
+<li><p>Open your selected IDE:</p>
+<ul>
+<li>Forge only explicitly supports development on Eclipse and IntelliJ IDEA, but there are additional run configurations for Visual Studio Code. Regardless, any environment, from Apache NetBeans to Vim / Emacs, can be used.</li>
+<li>Eclipse and IntelliJ IDEA&#39;s Gradle integration, both installed and enabled by default, will handle the rest of the initial workspace setup on import or open. This includes downloading the necessary packages from Mojang, MinecraftForge, etc. The &#39;Gradle for Java&#39; plugin is needed for Visual Studio Code to do the same.</li>
+<li>Gradle will need to be invoked to re-evaluate the project for almost all changes to its associated files (e.g., <code>build.gradle</code>, <code>settings.gradle</code>, etc.). Some IDEs come with &#39;Refresh&#39; buttons to do this; however, it can be done through the terminal via <code>gradlew</code>.</li>
+</ul>
+</li>
+<li><p>Generate run configurations for your selected IDE:</p>
+<ul>
+<li><strong>Eclipse</strong>: Run the <code>genEclipseRuns</code> task.</li>
+<li><strong>IntelliJ IDEA</strong>: Run the <code>genIntellijRuns</code> task. If a &quot;module not specified&quot; error occurs, set the <a href="https://docs.minecraftforge.net/en/fg-6.x/configuration/runs/"><code>ideaModule</code> property</a> to your &#39;main&#39; module (typically <code>${project.name}.main</code>).</li>
+<li><strong>Visual Studio Code</strong>: Run the <code>genVSCodeRuns</code> task.</li>
+<li><strong>Other IDEs</strong>: You can run the configurations directly using <code>gradle run*</code> (e.g., <code>runClient</code>, <code>runServer</code>, <code>runData</code>, <code>runGameTestServer</code>). These can also be used with the supported IDEs.</li>
+</ul>
+</li>
+</ol>
+<h2 id="customizing-your-mod-information">Customizing Your Mod Information</h2>
+<p>Edit the <code>build.gradle</code> file to customize how your mod is built (e.g., file name, artifact version, etc.).</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Do <strong>not</strong> edit the <code>settings.gradle</code> unless you know what you are doing. The file specifies the repository that <a href="https://docs.minecraftforge.net/en/fg-6.x">ForgeGradle</a> is uploaded to.</p>
+</blockquote>
+<h3 id="recommended-buildgradle-customizations">Recommended <code>build.gradle</code> Customizations</h3>
+<h4 id="mod-id-replacement">Mod Id Replacement</h4>
+<p>Replace all occurrences of <code>examplemod</code>, including <a href="./modfiles.html"><code>mods.toml</code> and the main mod file</a> with the mod id of your mod. This also includes changing the name of the file you build by setting <code>base.archivesName</code> (this is typically set to your mod id).</p>
+<pre><code class="language-gradle">// In some build.gradle
+base.archivesName = &#39;mymod&#39;
+</code></pre>
+<h4 id="group-id">Group Id</h4>
+<p>The <code>group</code> property should be set to your <a href="./structuring.html#packaging">top-level package</a>, which should either be a domain you own or your email address:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Value</th>
+<th align="left">Top-Level Package</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Domain</td>
+<td align="center">example.com</td>
+<td align="left"><code>com.example</code></td>
+</tr>
+<tr>
+<td align="center">Subdomain</td>
+<td align="center">example.github.io</td>
+<td align="left"><code>io.github.example</code></td>
+</tr>
+<tr>
+<td align="center">Email</td>
+<td align="center"><a href="mailto:example@gmail.com">example@gmail.com</a></td>
+<td align="left"><code>com.gmail.example</code></td>
+</tr>
+</tbody></table>
+<pre><code class="language-gradle">// In some build.gradle
+group = &#39;com.example&#39;
+</code></pre>
+<p>The packages within your java source (<code>src/main/java</code>) should also now conform to this structure, with an inner package representing the mod id:</p>
+<pre><code class="language-text">com
+- example (top-level package specified in group property)
+  - mymod (the mod id)
+    - MyMod.java (renamed ExampleMod.java)
+</code></pre>
+<h4 id="version">Version</h4>
+<p>Set the <code>version</code> property to the current version of your mod. We recommend using a <a href="./versioning.html">variation of Maven versioning</a>.</p>
+<pre><code class="language-gradle">// In some build.gradle
+version = &#39;1.20-1.0.0.0&#39;
+</code></pre>
+<h3 id="additional-configurations">Additional Configurations</h3>
+<p>Additional configurations can be found on the <a href="https://docs.minecraftforge.net/en/fg-6.x">ForgeGradle</a> docs.</p>
+<h2 id="building-and-testing-your-mod">Building and Testing Your Mod</h2>
+<ol>
+<li>To build your mod, run <code>gradlew build</code>. This will output a file in <code>build/libs</code> with the name <code>[archivesBaseName]-[version].jar</code>, by default. This file can be placed in the <code>mods</code> folder of a Forge-enabled Minecraft setup or distributed.</li>
+<li>To run your mod in a test environment, you can either use the generated run configurations or use the associated tasks (e.g. <code>gradlew runClient</code>). This will launch Minecraft from the run directory (default &#39;run&#39;) along with any source sets specified. The default MDK includes the <code>main</code> source set, so any code written in <code>src/main/java</code> will be applied.</li>
+<li>If you are running a dedicated server, whether through the run configuration or <code>gradlew runServer</code>, the server will initially shut down immediately. You will need to accept the Minecraft EULA by editing the <code>eula.txt</code> file in the run directory. Once accepted, the server will load, which can then be accessed via a direct connect to <code>localhost</code>.</li>
+</ol>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>You should always test your mod in a dedicated server environment. This includes <a href="../concepts/sides.html#writing-one-sided-mods">client-only mods</a> as they should not do anything when loaded on the server.</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

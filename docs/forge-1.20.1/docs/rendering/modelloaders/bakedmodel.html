@@ -1,0 +1,105 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>`BakedModel` · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a class="current" href="bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/rendering/modelloaders/bakedmodel/">查看官方原文（联网）</a></div><h1 id="bakedmodel"><code>BakedModel</code></h1>
+<p><code>BakedModel</code> is the result of calling <code>UnbakedModel#bake</code> for the vanilla model loader or <code>IUnbakedGeometry#bake</code> for custom model loaders. Unlike <code>UnbakedModel</code> or <code>IUnbakedGeometry</code>, which purely represents a shape without any concept of items or blocks, <code>BakedModel</code> is not as abstract. It represents geometry that has been optimized and reduced to a form where it is (almost) ready to go to the GPU. It can also process the state of an item or block to change the model.</p>
+<p>In a majority of cases, it is not really necessary to implement this interface manually. One can instead use one of the existing implementations.</p>
+<h3 id="getoverrides"><code>getOverrides</code></h3>
+<p>Returns the <a href="./itemoverrides.html"><code>ItemOverrides</code></a> to use for this model. This is only used if this model is being rendered as an item.</p>
+<h3 id="useambientocclusion"><code>useAmbientOcclusion</code></h3>
+<p>If the model is rendered as a block in the level, the block in question does not emit any light, and ambient occlusion is enabled. This causes the model to be rendered with <a href="https://en.wikipedia.org/wiki/Ambient_occlusion">ambient occlusion</a>.</p>
+<h3 id="isgui3d"><code>isGui3d</code></h3>
+<p>If the model is rendered as an item in an inventory, on the ground as an entity, on an item frame, etc., this makes the model look &quot;flat.&quot; In GUIs, this also disables the lighting.</p>
+<h3 id="iscustomrenderer"><code>isCustomRenderer</code></h3>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Unless you know what you&#39;re doing, just <code>return false</code> from this and continue on.</p>
+</blockquote>
+<p>When rendering this as an item, returning <code>true</code> causes the model to not be rendered, instead falling back to <code>BlockEntityWithoutLevelRenderer#renderByItem</code>. For certain vanilla items such as chests and banners, this method is hardcoded to copy data from the item into a <code>BlockEntity</code>, before using a <code>BlockEntityRenderer</code> to render that BE in place of the item. For all other items, it will use the <code>BlockEntityWithoutLevelRenderer</code> instance provided by <code>IClientItemExtensions#getCustomRenderer</code>. Refer to <a href="../../items/bewlr.html">BlockEntityWithoutLevelRenderer</a> page for more information.</p>
+<h3 id="getparticleicon"><code>getParticleIcon</code></h3>
+<p>Whatever texture should be used for the particles. For blocks, this shows when an entity falls on it, when it breaks, etc. For items, this shows when it breaks or when it&#39;s eaten.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>The vanilla method with no parameters has been deprecated in favor of <code>#getParticleIcon(ModelData)</code> since model data can have an effect on how a particular model might be rendered.</p>
+</blockquote>
+<h3 id="gettransforms"><s><code>getTransforms</code></s></h3>
+<p>Deprecated in favor of implementing <code>#applyTransform</code>. The default implementation is fine if <code>#applyTransform</code> is implemented. See <a href="./transform.html">Transform</a>.</p>
+<h3 id="applytransform"><code>applyTransform</code></h3>
+<p>See <a href="./transform.html">Transform</a>.</p>
+<h3 id="getquads"><code>getQuads</code></h3>
+<p>This is the main method of <code>BakedModel</code>. It returns a list of <code>BakedQuad</code>s: objects which contain the low-level vertex data that will be used to render the model. If the model is being rendered as a block, then the <code>BlockState</code> passed in is non-null. If the model is being rendered as an item, the <code>ItemOverrides</code> returned from <code>#getOverrides</code> is responsible for handling the state of the item, and the <code>BlockState</code> parameter will be <code>null</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>The origin point for the vertices in a <code>BakedQuad</code> is the bottom, northwest corner. Vertex coordinate values less than 0 or greater than 1 will position the vertex outside of the block. To avoid lighting issues, provide the vertices in counterclockwise order.</p>
+</blockquote>
+<p>The <code>Direction</code> passed in is used for face culling. If the block against the given side of another block being rendered is opaque, then the faces associated with that side are not rendered. If that parameter is <code>null</code>, all faces not associated with a side are returned (that will never be culled).</p>
+<p>The <code>rand</code> parameter is an instance of Random.</p>
+<p>It also takes in a non null <code>ModelData</code> instance. This can be used to define extra data when rendering the specific model via <code>ModelProperty</code>s. For example, one such property is <code>CompositeModel$Data</code>, which is used to store any additional submodel data for a model using the <code>forge:composite</code> model loader.</p>
+<p>Note that this method is called very often: once for every combination of non-culled face and supported block render layer (anywhere between 0 to 28 times) <em>per block in a level</em>. This method should be as fast as possible, and should probably cache heavily.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

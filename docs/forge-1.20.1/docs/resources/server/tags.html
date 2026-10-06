@@ -1,0 +1,172 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tags · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="index.html" title="resources/server/index.md">Datapacks</a>
+<a href="recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a class="current" href="tags.html" title="resources/server/tags.md">Tags</a>
+<a href="advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/server/tags/">查看官方原文（联网）</a></div><h1 id="tags">Tags</h1>
+<p>Tags are generalized sets of objects in the game used for grouping related things together and providing fast membership checks.</p>
+<h2 id="declaring-your-own-groupings">Declaring Your Own Groupings</h2>
+<p>Tags are declared in your mod&#39;s <a href="./index.html">datapack</a>. For example, a <code>TagKey&lt;Block&gt;</code> with a given identifier of  <code>modid:foo/tagname</code> will reference a tag at <code>/data/&lt;modid&gt;/tags/blocks/foo/tagname.json</code>. Tags for <code>Block</code>s, <code>Item</code>s, <code>EntityType</code>s, <code>Fluid</code>s, and <code>GameEvent</code>s use the plural forms for their folder location while all other registries use the singular version (<code>EntityType</code> uses the folder <code>entity_types</code> while <code>Potion</code> would use the folder <code>potion</code>).
+Similarly, you may append to or override tags declared in other domains, such as Vanilla, by declaring your own JSONs.
+For example, to add your own mod&#39;s saplings to the Vanilla sapling tag, you would specify it in <code>/data/minecraft/tags/blocks/saplings.json</code>, and Vanilla will merge everything into one tag at reload, if the <code>replace</code> option is false.
+If <code>replace</code> is true, then all entries before the json specifying <code>replace</code> will be removed.
+Values listed that are not present will cause the tag to error unless the value is listed using an <code>id</code> string and <code>required</code> boolean set to false, as in the following example:</p>
+<pre><code class="language-js">{
+  &quot;replace&quot;: false,
+  &quot;values&quot;: [
+    &quot;minecraft:gold_ingot&quot;,
+    &quot;mymod:my_ingot&quot;,
+    {
+      &quot;id&quot;: &quot;othermod:ingot_other&quot;,
+      &quot;required&quot;: false
+    }
+  ]
+}
+</code></pre>
+<p>See the <a href="https://minecraft.wiki/w/Tag#JSON_format">Vanilla wiki</a> for a description of the base syntax.</p>
+<p>There is also a Forge extension on the Vanilla syntax.
+You may declare a <code>remove</code> array of the same format as the <code>values</code> array. Any values listed here will be removed from the tag. This acts as a finer grained version of the Vanilla <code>replace</code> option.</p>
+<h2 id="using-tags-in-code">Using Tags In Code</h2>
+<p>Tags for all registries are automatically sent from the server to any remote clients on login and reload. <code>Block</code>s, <code>Item</code>s, <code>EntityType</code>s, <code>Fluid</code>s, and <code>GameEvent</code>s are special cased as they have <code>Holder</code>s allowing for available tags to be accessible through the object itself.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Intrusive <code>Holder</code>s may be removed in a future version of Minecraft. If they are, the below methods can be used instead to query the associated <code>Holder</code>s.</p>
+</blockquote>
+<h3 id="itagmanager">ITagManager</h3>
+<p>Forge wrapped registries provide an additional helper for creating and managing tags through <code>ITagManager</code> which can be obtained via <code>IForgeRegistry#tags</code>. Tags can be created using using <code>#createTagKey</code> or <code>#createOptionalTagKey</code>. Tags or registry objects can also be checked for either or using <code>#getTag</code> or <code>#getReverseTag</code> respectively.</p>
+<h4 id="custom-registries">Custom Registries</h4>
+<p>Custom registries can create tags when constructing their <code>DeferredRegister</code> via <code>#createTagKey</code> or <code>#createOptionalTagKey</code> respectively. Their tags or registry objects can then checked for either using the <code>IForgeRegistry</code> obtained by calling <code>DeferredRegister#makeRegistry</code>.</p>
+<h3 id="referencing-tags">Referencing Tags</h3>
+<p>There are four methods of creating a tag wrapper:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">For</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>*Tags#create</code></td>
+<td align="left"><code>BannerPattern</code>, <code>Biome</code>, <code>Block</code>, <code>CatVariant</code>, <code>DamageType</code>, <code>EntityType</code>, <code>FlatLevelGeneratorPreset</code>, <code>Fluid</code>, <code>GameEvent</code>, <code>Instrument</code>, <code>Item</code>, <code>PaintingVariant</code>, <code>PoiType</code>, <code>Structure</code>, and <code>WorldPreset</code> where <code>*</code> represents one of these types.</td>
+</tr>
+<tr>
+<td align="center"><code>ITagManager#createTagKey</code></td>
+<td align="left">Forge wrapped vanilla registries, registries can be obtained from <code>ForgeRegistries</code>.</td>
+</tr>
+<tr>
+<td align="center"><code>DeferredRegister#createTagKey</code></td>
+<td align="left">Custom forge registries.</td>
+</tr>
+<tr>
+<td align="center"><code>TagKey#create</code></td>
+<td align="left">Vanilla registries without forge wrappers, registries can be obtained from <code>Registry</code>.</td>
+</tr>
+</tbody></table>
+<p>Registry objects can check their tags or registry objects either through their <code>Holder</code> or through <code>ITag</code>/<code>IReverseTag</code> for vanilla or forge registry objects respectively.</p>
+<p>Vanilla registry objects can grab their associated holder using either <code>Registry#getHolder</code> or <code>Registry#getHolderOrThrow</code> and then compare if the registry object has a tag using <code>Holder#is</code>.</p>
+<p>Forge registry objects can grab their tag definition using either <code>ITagManager#getTag</code> or <code>ITagManager#getReverseTag</code> and then compare if a registry object has a tag using <code>ITag#contains</code> or <code>IReverseTag#containsTag</code> respectively.</p>
+<p>Tag-holding registry objects contain a method called <code>#is</code> in either their registry object or state-aware class to check whether the object belongs to a certain tag.</p>
+<p>As an example:</p>
+<pre><code class="language-java">public static final TagKey&lt;Item&gt; myItemTag = ItemTags.create(new ResourceLocation(&quot;mymod&quot;, &quot;myitemgroup&quot;));
+
+public static final TagKey&lt;Potion&gt; myPotionTag = ForgeRegistries.POTIONS.tags().createTagKey(new ResourceLocation(&quot;mymod&quot;, &quot;mypotiongroup&quot;));
+
+public static final TagKey&lt;VillagerType&gt; myVillagerTypeTag = TagKey.create(Registries.VILLAGER_TYPE, new ResourceLocation(&quot;mymod&quot;, &quot;myvillagertypegroup&quot;));
+
+// In some method:
+
+ItemStack stack = /*...*/;
+boolean isInItemGroup = stack.is(myItemTag);
+
+Potion potion = /*...*/;
+boolean isInPotionGroup  = ForgeRegistries.POTIONS.tags().getTag(myPotionTag).contains(potion);
+
+ResourceKey&lt;VillagerType&gt; villagerTypeKey = /*...*/;
+boolean isInVillagerTypeGroup = BuiltInRegistries.VILLAGER_TYPE.getHolder(villagerTypeKey).map(holder -&gt; holder.is(myVillagerTypeTag)).orElse(false);
+</code></pre>
+<h2 id="conventions">Conventions</h2>
+<p>There are several conventions that will help facilitate compatibility in the ecosystem:</p>
+<ul>
+<li>If there is a Vanilla tag that fits your block or item, add it to that tag. See the <a href="https://minecraft.wiki/w/Tag#List_of_tags">list of Vanilla tags</a>.</li>
+<li>If there is a Forge tag that fits your block or item, add it to that tag. The list of tags declared by Forge can be seen on <a href="https://github.com/MinecraftForge/MinecraftForge/tree/1.19.x/src/generated/resources/data/forge/tags">GitHub</a>.</li>
+<li>If there is a group of something you feel should be shared by the community, use the <code>forge</code> namespace instead of your mod id.</li>
+<li>Tag naming conventions should follow Vanilla conventions. In particular, item and block groupings are plural instead of singular (e.g. <code>minecraft:logs</code>, <code>minecraft:saplings</code>).</li>
+<li>Item tags should be sorted into subdirectories according to their type (e.g. <code>forge:ingots/iron</code>, <code>forge:nuggets/brass</code>, etc.).</li>
+</ul>
+<h2 id="migration-from-oredictionary">Migration from OreDictionary</h2>
+<ul>
+<li>For recipes, tags can be used directly in the vanilla recipe format (see below).</li>
+<li>For matching items in code, see the section above.</li>
+<li>If you are declaring a new type of item grouping, follow a couple naming conventions:<ul>
+<li>Use <code>domain:type/material</code>. When the name is a common one that all modders should adopt, use the <code>forge</code> domain.</li>
+<li>For example, brass ingots should be registered under the <code>forge:ingots/brass</code> tag and cobalt nuggets under the <code>forge:nuggets/cobalt</code> tag.</li>
+</ul>
+</li>
+</ul>
+<h2 id="using-tags-in-recipes-and-advancements">Using Tags in Recipes and Advancements</h2>
+<p>Tags are directly supported by Vanilla. See the respective Vanilla wiki pages for <a href="https://minecraft.wiki/w/Recipe#JSON_format">recipes</a> and <a href="https://minecraft.wiki/w/Advancement">advancements</a> for usage details.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

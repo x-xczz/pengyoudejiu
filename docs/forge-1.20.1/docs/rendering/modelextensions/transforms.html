@@ -1,0 +1,126 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Root Transforms · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a class="current" href="transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/rendering/modelextensions/transforms/">查看官方原文（联网）</a></div><h1 id="root-transforms">Root Transforms</h1>
+<p>Adding the <code>transform</code> entry at the top level of a model JSON suggests to the loader that a transformation should be applied to all geometry right before the rotations in the <a href="https://minecraft.wiki/w/Tutorials/Models#Block_states">blockstate</a> file in the case of a block model, and before the <a href="../modelloaders/transform.html">display transforms</a> in the case of an item model. The transformation is available through <code>IGeometryBakingContext#getRootTransform()</code> in <code>IUnbakedGeometry#bake()</code>.</p>
+<p>Custom model loaders may ignore this field entirely.</p>
+<p>The root transforms can be specified in two formats:</p>
+<ol>
+<li>A JSON object containing a singular <code>matrix</code> entry containing a raw transformation matrix in the form of a nested JSON array with the last row omitted (3*4 matrix, row major order). The matrix is the composition of the translation, left rotation, scale, right rotation and the transformation origin in that order. Example demonstrating the structure:<pre><code class="language-js">&quot;transform&quot;: {
+    &quot;matrix&quot;: [
+        [ 0, 0, 0, 0 ],
+        [ 0, 0, 0, 0 ],
+        [ 0, 0, 0, 0 ]
+    ]
+}
+</code></pre>
+</li>
+<li>A JSON object containing any combination of the following optional entries:<ul>
+<li><code>origin</code>: origin point used for the rotations and scaling</li>
+<li><code>translation</code>: relative translation</li>
+<li><code>rotation</code> or <code>left_rotation</code>: rotation around the translated origin to be applied before scaling</li>
+<li><code>scale</code>: scale relative to the translated origin</li>
+<li><code>right_rotation</code> or <code>post_rotation</code>: rotation around the translated origin to be applied after scaling</li>
+</ul>
+</li>
+</ol>
+<h2 id="element-wise-specification">Element-wise specification</h2>
+<p>If the transformation is specified as a combination of the entries mentioned in option 4, these entries will be applied in the order of <code>translation</code>, <code>left_rotation</code>, <code>scale</code>, <code>right_rotation</code>.<br>The transformation is moved to the specified origin as a last step.</p>
+<pre><code class="language-js">{
+    &quot;transform&quot;: {
+        &quot;origin&quot;: &quot;center&quot;,
+        &quot;translation&quot;: [ 0, 0.5, 0 ],
+        &quot;rotation&quot;: { &quot;y&quot;: 45 }
+    },
+    // ...
+}
+</code></pre>
+<p>The elements are expected to be defined as follows:</p>
+<h3 id="origin">Origin</h3>
+<p>The origin can be specified either as an array of 3 floating point values representing a three-dimensional vector: <code>[ x, y, z ]</code> or as one of the three default values:</p>
+<ul>
+<li><code>&quot;corner&quot;</code> (0, 0, 0)</li>
+<li><code>&quot;center&quot;</code> (.5, .5, .5)</li>
+<li><code>&quot;opposing-corner&quot;</code> (1, 1, 1)</li>
+</ul>
+<p>If the origin is not specified, it defaults to <code>&quot;opposing-corner&quot;</code>.</p>
+<h3 id="translation">Translation</h3>
+<p>The translation must be specified as an array of 3 floating point values representing a three-dimensional vector: <code>[ x, y, z ]</code> and defaults to (0, 0, 0) if not present.</p>
+<h3 id="left-and-right-rotation">Left and Right Rotation</h3>
+<p>The rotations can be specified in any one of the following four ways:</p>
+<ul>
+<li>Single JSON object with a single axis =&gt; rotation degree mapping: <code>{ &quot;x&quot;: 90 }</code></li>
+<li>Array of an arbitrary amount of JSON objects with the above format (applied in the order they are specified in): <code>[ { &quot;x&quot;: 90 }, { &quot;y&quot;: 45 }, { &quot;x&quot;: -22.5 } ]</code></li>
+<li>Array of 3 floating point values specifying the rotation in degrees around each axis: <code>[ 90, 180, 45 ]</code></li>
+<li>Array of 4 floating point values specifying a quaternion directly: <code>[ 0.38268346, 0, 0, 0.9238795 ]</code> (example equals 45 degrees around the X axis)</li>
+</ul>
+<p>If the respective rotation is not specified, it will default to no rotation.</p>
+<h3 id="scale">Scale</h3>
+<p>The scale must be specified as an array of 3 floating point values representing a three-dimensional vector: <code>[ x, y, z ]</code> and defaults to (1, 1, 1) if not present.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

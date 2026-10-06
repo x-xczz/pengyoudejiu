@@ -1,0 +1,183 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Capability System · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a class="current" href="capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/datastorage/capabilities/">查看官方原文（联网）</a></div><h1 id="the-capability-system">The Capability System</h1>
+<p>Capabilities allow exposing features in a dynamic and flexible way without having to resort to directly implementing many interfaces.</p>
+<p>In general terms, each capability provides a feature in the form of an interface.</p>
+<p>Forge adds capability support to BlockEntities, Entities, ItemStacks, Levels, and LevelChunks, which can be exposed either by attaching them through an event or by overriding the capability methods in your own implementations of the objects. This will be explained in more detail in the following sections.</p>
+<h2 id="forge-provided-capabilities">Forge-provided Capabilities</h2>
+<p>Forge provides three capabilities: <code>IItemHandler</code>, <code>IFluidHandler</code> and <code>IEnergyStorage</code></p>
+<p><code>IItemHandler</code> exposes an interface for handling inventory slots. It can be applied to BlockEntities (chests, machines, etc.), Entities (extra player slots, mob/creature inventories/bags), or ItemStacks (portable backpacks and such). It replaces the old <code>Container</code> and <code>WorldlyContainer</code> with an automation-friendly system.</p>
+<p><code>IFluidHandler</code> exposes an interface for handling fluid inventories. It can also be applied to BlockEntities, Entities, or ItemStacks.</p>
+<p><code>IEnergyStorage</code> exposes an interface for handling energy containers. It can be applied to BlockEntities, Entities, or ItemStacks. It is based on the RedstoneFlux API by TeamCoFH.</p>
+<h2 id="using-an-existing-capability">Using an Existing Capability</h2>
+<p>As mentioned earlier, BlockEntities, Entities, and ItemStacks implement the capability provider feature through the <code>ICapabilityProvider</code> interface. This interface adds the method <code>#getCapability</code>, which can be used to query the capabilities present in the associated provider objects.</p>
+<p>In order to obtain a capability, you will need to refer it by its unique instance. In the case of the <code>IItemHandler</code>, this capability is primarily stored in <code>ForgeCapabilities#ITEM_HANDLER</code>, but it is possible to get other instance references by using <code>CapabilityManager#get</code></p>
+<pre><code class="language-java">public static final Capability&lt;IItemHandler&gt; ITEM_HANDLER = CapabilityManager.get(new CapabilityToken&lt;&gt;(){});
+</code></pre>
+<p>When called, <code>CapabilityManager#get</code> provides a non-null capability for your associated type. The anonymous <code>CapabilityToken</code> allows Forge to keep a soft dependency system while still having the necessary generic information to get the correct capability.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Even if you have a non-null capability available to you at all times, it does not mean the capability itself is usable or registered yet. This can be checked via <code>Capability#isRegistered</code>.</p>
+</blockquote>
+<p>The <code>#getCapability</code> method has a second parameter, of type <code>Direction</code>, which can be used to request the specific instance for that one face. If passed <code>null</code>, it can be assumed that the request comes either from within the block or from some place where the side has no meaning, such as a different dimension. In this case a general capability instance that does not care about sides will be requested instead. The return type of <code>#getCapability</code> will correspond to a <code>LazyOptional</code> of the type declared in the capability passed to the method. For the Item Handler capability, this is <code>LazyOptional&lt;IItemHandler&gt;</code>. If the capability is not available for a particular provider, it will return an empty <code>LazyOptional</code> instead.</p>
+<h2 id="exposing-a-capability">Exposing a Capability</h2>
+<p>In order to expose a capability, you will first need an instance of the underlying capability type. Note that you should assign a separate instance to each object that keeps the capability, since the capability will most probably be tied to the containing object.</p>
+<p>In the case of <code>IItemHandler</code>, the default implementation uses the <code>ItemStackHandler</code> class, which has an optional argument in the constructor, to specify a number of slots. However, relying on the existence of these default implementations should be avoided, as the purpose of the capability system is to prevent loading errors in contexts where the capability is not present, so instantiation should be protected behind a check testing if the capability has been registered (see the remarks about <code>CapabilityManager#get</code> in the previous section).</p>
+<p>Once you have your own instance of the capability interface, you will want to notify users of the capability system that you expose this capability and provide a <code>LazyOptional</code> of the interface reference. This is done by overriding the <code>#getCapability</code> method, and comparing the capability instance with the capability you are exposing. If your machine has different slots based on which side is being queried, you can test this with the <code>side</code> parameter. For Entities and ItemStacks, this parameter can be ignored, but it is still possible to have side as a context, such as different armor slots on a player (<code>Direction#UP</code> exposing the player&#39;s helmet slot), or about the surrounding blocks in the inventory (<code>Direction#WEST</code> exposing the input slot of a furnace). Do not forget to fall back to <code>super</code>, otherwise existing attached capabilities will stop working.</p>
+<p>Capabilities must be invalidated at the end of the provider&#39;s lifecycle via <code>LazyOptional#invalidate</code>. For owned BlockEntities and Entities, the <code>LazyOptional</code> can be invalidated within <code>#invalidateCaps</code>. For non-owned providers, a runnable supplying the invalidation should be passed into <code>AttachCapabilitiesEvent#addListener</code>.</p>
+<pre><code class="language-java">// Somewhere in your BlockEntity subclass
+LazyOptional&lt;IItemHandler&gt; inventoryHandlerLazyOptional;
+
+// Supplied instance (e.g. () -&gt; inventoryHandler)
+// Ensure laziness as initialization should only happen when needed
+inventoryHandlerLazyOptional = LazyOptional.of(inventoryHandlerSupplier);
+
+@Override
+public &lt;T&gt; LazyOptional&lt;T&gt; getCapability(Capability&lt;T&gt; cap, Direction side) {
+  if (cap == ForgeCapabilities.ITEM_HANDLER) {
+    return inventoryHandlerLazyOptional.cast();
+  }
+  return super.getCapability(cap, side);
+}
+
+@Override
+public void invalidateCaps() {
+  super.invalidateCaps();
+  inventoryHandlerLazyOptional.invalidate();
+}
+</code></pre>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>If only one capability is exposed on a given object, you can use <code>Capability#orEmpty</code> as an alternative to the if/else statement.</p>
+<pre><code class="language-java">@Override
+public &lt;T&gt; LazyOptional&lt;T&gt; getCapability(Capability&lt;T&gt; cap, Direction side) {
+  return ForgeCapabilities.ITEM_HANDLER.orEmpty(cap, inventoryHandlerLazyOptional);
+}
+</code></pre>
+</blockquote>
+<p><code>Item</code>s are a special case since their capability providers are stored on an <code>ItemStack</code>. Instead, a provider should be attached through <code>Item#initCapabilities</code>. This should hold your capabilities for the lifecycle of the stack.</p>
+<p>It is strongly suggested that direct checks in code are used to test for capabilities instead of attempting to rely on maps or other data structures, since capability tests can be done by many objects every tick, and they need to be as fast as possible in order to avoid slowing down the game.</p>
+<h2 id="attaching-capabilities">Attaching Capabilities</h2>
+<p>As mentioned, attaching capabilities to existing providers, <code>Level</code>s, and <code>LevelChunk</code>s can be done using <code>AttachCapabilitiesEvent</code>. The same event is used for all objects that can provide capabilities. <code>AttachCapabilitiesEvent</code> has 5 valid generic types providing the following events:</p>
+<ul>
+<li><code>AttachCapabilitiesEvent&lt;Entity&gt;</code>: Fires only for entities.</li>
+<li><code>AttachCapabilitiesEvent&lt;BlockEntity&gt;</code>: Fires only for block entities.</li>
+<li><code>AttachCapabilitiesEvent&lt;ItemStack&gt;</code>: Fires only for item stacks.</li>
+<li><code>AttachCapabilitiesEvent&lt;Level&gt;</code>: Fires only for levels.</li>
+<li><code>AttachCapabilitiesEvent&lt;LevelChunk&gt;</code>: Fires only for level chunks.</li>
+</ul>
+<p>The generic type cannot be more specific than the above types. For example: If you want to attach capabilities to <code>Player</code>, you have to subscribe to the <code>AttachCapabilitiesEvent&lt;Entity&gt;</code>, and then determine that the provided object is an <code>Player</code> before attaching the capability.</p>
+<p>In all cases, the event has a method <code>#addCapability</code> which can be used to attach capabilities to the target object. Instead of adding capabilities themselves to the list, you add capability providers, which have the chance to return capabilities only from certain sides. While the provider only needs to implement <code>ICapabilityProvider</code>, if the capability needs to store data persistently, it is possible to implement <code>ICapabilitySerializable&lt;T extends Tag&gt;</code> which, on top of returning the capabilities, will provide tag save/load functions.</p>
+<p>For information on how to implement <code>ICapabilityProvider</code>, refer to the <a href="#exposing-a-capability">Exposing a Capability</a> section.</p>
+<h2 id="creating-your-own-capability">Creating Your Own Capability</h2>
+<p>A capability can be registered using one of two ways: <code>RegisterCapabilitiesEvent</code> or <code>@AutoRegisterCapability</code>.</p>
+<h3 id="registercapabilitiesevent">RegisterCapabilitiesEvent</h3>
+<p>A capability can be registered using <code>RegisterCapabilitiesEvent</code> by supplying the class of the capability type to the <code>#register</code> method. The event is <a href="../concepts/events.html#creating-an-event-handler">handled</a> on the mod event bus.</p>
+<pre><code class="language-java">@SubscribeEvent
+public void registerCaps(RegisterCapabilitiesEvent event) {
+  event.register(IExampleCapability.class);
+}
+</code></pre>
+<h3 id="autoregistercapability">@AutoRegisterCapability</h3>
+<p>A capability is registered using <code>@AutoRegisterCapability</code> by annotating the capability type.</p>
+<pre><code class="language-java">@AutoRegisterCapability
+public interface IExampleCapability {
+  // ...
+}
+</code></pre>
+<h2 id="persisting-levelchunk-and-blockentity-capabilities">Persisting LevelChunk and BlockEntity capabilities</h2>
+<p>Unlike Levels, Entities, and ItemStacks, LevelChunks and BlockEntities are only written to disk when they have been marked as dirty. A capability implementation with persistent state for a LevelChunk or a BlockEntity should therefore ensure that whenever its state changes, its owner is marked as dirty.</p>
+<p><code>ItemStackHandler</code>, commonly used for inventories in BlockEntities, has an overridable method <code>void onContentsChanged(int slot)</code> designed to be used to mark the BlockEntity as dirty.</p>
+<pre><code class="language-java">public class MyBlockEntity extends BlockEntity {
+
+  private final IItemHandler inventory = new ItemStackHandler(...) {
+    @Override
+    protected void onContentsChanged(int slot) {
+      super.onContentsChanged(slot);
+      setChanged();
+    }
+  }
+
+  // ...
+}
+</code></pre>
+<h2 id="synchronizing-data-with-clients">Synchronizing Data with Clients</h2>
+<p>By default, capability data is not sent to clients. In order to change this, the mods have to manage their own synchronization code using packets.</p>
+<p>There are three different situations in which you may want to send synchronization packets, all of them optional:</p>
+<ol>
+<li>When the entity spawns in the level, or the block is placed, you may want to share the initialization-assigned values with the clients.</li>
+<li>When the stored data changes, you may want to notify some or all of the watching clients.</li>
+<li>When a new client starts viewing the entity or block, you may want to notify it of the existing data.</li>
+</ol>
+<p>Refer to the <a href="../networking/index.html">Networking</a> page for more information on implementing network packets.</p>
+<h2 id="persisting-across-player-deaths">Persisting across Player Deaths</h2>
+<p>By default, the capability data does not persist on death. In order to change this, the data has to be manually copied when the player entity is cloned during the respawn process.</p>
+<p>This can be done via <code>PlayerEvent$Clone</code> by reading the data from the original entity and assigning it to the new entity. In this event, the <code>#isWasDeath</code> method can be used to distinguish between respawning after death and returning from the End. This is important because the data will already exist when returning from the End, so care has to be taken to not duplicate values in this case.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

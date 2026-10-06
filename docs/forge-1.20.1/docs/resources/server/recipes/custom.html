@@ -1,0 +1,174 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Custom Recipes · Forge 1.20.1</title><link rel="stylesheet" href="../../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../../items/index.html" title="items/index.md">Items</a>
+<a href="../../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../index.html" title="resources/server/index.md">Datapacks</a>
+<a href="index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a class="current" href="custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/server/recipes/custom/">查看官方原文（联网）</a></div><h1 id="custom-recipes">Custom Recipes</h1>
+<p>Every recipe definition is made up of three components: the <code>Recipe</code> implementation which holds the data and handles the execution logic with the provided inputs, the <code>RecipeType</code> which represents the category or context the recipe will be used in, and the <code>RecipeSerializer</code> which handles decoding and network communication of the recipe data. How one chooses to use the recipe is up to the implementor.</p>
+<h2 id="recipe">Recipe</h2>
+<p>The <code>Recipe</code> interface describes the recipe data and the execution logic. This includes matching the inputs and providing the associated result. As the recipe subsystem performs item transformations by default, the inputs are supplied through a <code>Container</code> subtype.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>The <code>Container</code>s passed into the recipe should be treated as if its contents were immutable. Any mutable operations should be performed on a copy of the input through <code>ItemStack#copy</code>.</p>
+</blockquote>
+<p>To be able to obtain a recipe instance from the manager, <code>#matches</code> must return true. This method checks against the provided container to see whether the associated inputs are valid. <code>Ingredient</code>s can be used for validation by calling <code>Ingredient#test</code>.</p>
+<p>If the recipe has been chosen, it is then built using <code>#assemble</code> which may use data from the inputs to create the result.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p><code>#assemble</code> should always produce a unique <code>ItemStack</code>. If unsure whether <code>#assemble</code> does so, call <code>ItemStack#copy</code> on the result before returning.</p>
+</blockquote>
+<p>Most of the other methods are purely for integration with the recipe book.</p>
+<pre><code class="language-java">public record ExampleRecipe(Ingredient input, int data, ItemStack output) implements Recipe&lt;Container&gt; {
+  // Implement methods here
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>While a record is used in the above example, it is not required to do so in your own implementation.</p>
+</blockquote>
+<h2 id="recipetype">RecipeType</h2>
+<p><code>RecipeType</code> is responsible for defining the category or context the recipe will be used within. For example, if a recipe was going to be smelted in a furnace, it would have a type of <code>RecipeType#SMELTING</code>. Being blasted in a blast furnace would have a type of <code>RecipeType#BLASTING</code>.</p>
+<p>If none of the existing types match what context the recipe will be used within, then a new <code>RecipeType</code> must be <a href="../../../concepts/registries.html#methods-for-registering">registered</a>.</p>
+<p>The <code>RecipeType</code> instance must then be returned by <code>Recipe#getType</code> in the new recipe subtype.</p>
+<pre><code class="language-java">// For some RegistryObject&lt;RecipeType&gt; EXAMPLE_TYPE
+// In ExampleRecipe
+@Override
+public RecipeType&lt;?&gt; getType() {
+  return EXAMPLE_TYPE.get();
+}
+</code></pre>
+<h2 id="recipeserializer">RecipeSerializer</h2>
+<p>A <code>RecipeSerializer</code> is responsible for decoding JSONs and communicating across the network for an associated <code>Recipe</code> subtype. Each recipe decoded by the serializer is saved as a unique instance within the <code>RecipeManager</code>. A <code>RecipeSerializer</code> must be <a href="../../../concepts/registries.html#methods-for-registering">registered</a>.</p>
+<p>Only three methods need to be implemented for a <code>RecipeSerializer</code>:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">fromJson</td>
+<td align="left">Decodes a JSON into the <code>Recipe</code> subtype.</td>
+</tr>
+<tr>
+<td align="center">toNetwork</td>
+<td align="left">Encodes a <code>Recipe</code> to the buffer to send to the client. The recipe identifier does not need to be encoded.</td>
+</tr>
+<tr>
+<td align="center">fromNetwork</td>
+<td align="left">Decodes a <code>Recipe</code> from the buffer sent from the server. The recipe identifier does not need to be decoded.</td>
+</tr>
+</tbody></table>
+<p>The <code>RecipeSerializer</code> instance must then be returned by <code>Recipe#getSerializer</code> in the new recipe subtype.</p>
+<pre><code class="language-java">// For some RegistryObject&lt;RecipeSerializer&gt; EXAMPLE_SERIALIZER
+// In ExampleRecipe
+@Override
+public RecipeSerializer&lt;?&gt; getSerializer() {
+  return EXAMPLE_SERIALIZER.get();
+}
+</code></pre>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>There are some useful methods to make reading and writing data for recipes easier. <code>Ingredient</code>s can use <code>#fromJson</code>, <code>#toNetwork</code>, and <code>#fromNetwork</code> while <code>ItemStack</code>s can use <code>CraftingHelper#getItemStack</code>, <code>FriendlyByteBuf#writeItem</code>, and <code>FriendlyByteBuf#readItem</code>.</p>
+</blockquote>
+<h2 id="building-the-json">Building the JSON</h2>
+<p>Custom Recipe JSONs are stored in the same place as other <a href="https://minecraft.wiki/w/Recipe#JSON_format">recipes</a>. The specified <code>type</code> should represent the registry name of the <strong>recipe serializer</strong>. Any additional data is specified by the serializer during decoding.</p>
+<pre><code class="language-js">{
+  // The custom serializer registry name
+  &quot;type&quot;: &quot;examplemod:example_serializer&quot;,
+  &quot;input&quot;: {
+    // Some ingredient input
+  },
+  &quot;data&quot;: 0, // Some data wanted for the recipe
+  &quot;output&quot;: {
+    // Some stack output
+  }
+}
+</code></pre>
+<h2 id="non-item-logic">Non-Item Logic</h2>
+<p>If items are not used as part of the input or result of a recipe, then the normal methods provided in <a href="./index.html#recipe-manager"><code>RecipeManager</code></a> will not be useful. Instead, an additional method for testing a recipe&#39;s validity and/or supplying the result should be added to the custom <code>Recipe</code> instance. From there, all the recipes for that specific <code>RecipeType</code> can be obtained via <code>RecipeManager#getAllRecipesFor</code> and then checked and/or supplied the result using the newly implemented methods.</p>
+<pre><code class="language-java">// In some Recipe subimplementation ExampleRecipe
+
+// Checks the block at the position to see if it matches the stored data
+boolean matches(Level level, BlockPos pos);
+
+// Creates the block state to set the block at the specified position to
+BlockState assemble(RegistryAccess access);
+
+// In some manager class
+public Optional&lt;ExampleRecipe&gt; getRecipeFor(Level level, BlockPos pos) {
+  return level.getRecipeManager()
+    .getAllRecipesFor(exampleRecipeType) // Gets all recipes
+    .stream() // Looks through all recipes for types
+    .filter(recipe -&gt; recipe.matches(level, pos)) // Checks if the recipe inputs are valid
+    .findFirst(); // Finds the first recipe whose inputs match
+}
+</code></pre>
+<h2 id="data-generation">Data Generation</h2>
+<p>All custom recipes, regardless of input or output data, can be created into a <code>FinishedRecipe</code> for <a href="../../../datagen/server/recipes.html#custom-recipe-serializers">data generation</a> using the <code>RecipeProvider</code>.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

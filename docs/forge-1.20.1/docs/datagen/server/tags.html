@@ -1,0 +1,236 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tag Generation · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../index.html" title="datagen/index.md">Data Generators</a>
+<a href="../client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a class="current" href="tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/datagen/server/tags/">查看官方原文（联网）</a></div><h1 id="tag-generation">Tag Generation</h1>
+<p><a href="../../resources/server/tags.html">Tags</a> can be generated for a mod by subclassing <code>TagsProvider</code> and implementing <code>#addTags</code>. After implementation, the provider must be <a href="../index.html#data-providers">added</a> to the <code>DataGenerator</code>.</p>
+<pre><code class="language-java">// On the MOD event bus
+@SubscribeEvent
+public void gatherData(GatherDataEvent event) {
+    event.getGenerator().addProvider(
+        // Tell generator to run only when server data are generating
+        event.includeServer(),
+        // Extends net.minecraftforge.common.data.BlockTagsProvider
+        output -&gt; new MyBlockTagsProvider(
+          output,
+          event.getLookupProvider(),
+          MOD_ID,
+          event.getExistingFileHelper()
+        )
+    );
+}
+</code></pre>
+<h2 id="tagsprovider"><code>TagsProvider</code></h2>
+<p>The tags provider has two methods used for generating tags: creating a tag with objects and other tags via <code>#tag</code>, or using tags from other object types to generate the tag data via <code>#getOrCreateRawBuilder</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Typically, a provider will not call <code>#getOrCreateRawBuilder</code> directly unless a registry contains a representation of objects from a different registry (blocks have item representations to obtain the blocks in the inventory).</p>
+</blockquote>
+<p>When <code>#tag</code> is called, a <code>TagAppender</code> is created which acts as a chainable consumer of elements to add to the tag:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>add</code></td>
+<td align="left">Adds an object to a tag through its resource key.</td>
+</tr>
+<tr>
+<td align="center"><code>addOptional</code></td>
+<td align="left">Adds an object to a tag through its name. If the object is not present, then the object will be skipped when loading.</td>
+</tr>
+<tr>
+<td align="center"><code>addTag</code></td>
+<td align="left">Adds a tag to a tag through its tag key. All elements within the inner tag are now a part of the outer tag.</td>
+</tr>
+<tr>
+<td align="center"><code>addOptionalTag</code></td>
+<td align="left">Adds a tag to a tag through its name. If the tag is not present, then the tag will be skipped when loading.</td>
+</tr>
+<tr>
+<td align="center"><code>replace</code></td>
+<td align="left">When <code>true</code>, all previously loaded entries added to this tag from other datapacks will be discarded. If a datapack is loaded after this one, then it will still append the entries to the tag.</td>
+</tr>
+<tr>
+<td align="center"><code>remove</code></td>
+<td align="left">Removes an object or tag from a tag through its name or key.</td>
+</tr>
+</tbody></table>
+<pre><code class="language-java">// In some TagProvider#addTags
+this.tag(EXAMPLE_TAG)
+  .add(EXAMPLE_OBJECT) // Adds an object to the tag
+  .addOptional(new ResourceLocation(&quot;othermod&quot;, &quot;other_object&quot;)) // Adds an object from another mod to the tag
+
+this.tag(EXAMPLE_TAG_2)
+  .addTag(EXAMPLE_TAG) // Adds a tag to the tag
+  .remove(EXAMPLE_OBJECT) // Removes an object from this tag
+</code></pre>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>If the mod&#39;s tags softly depends on another mod&#39;s tags (the other mod may or may not be present at runtime), the other mods&#39; tags should be referenced using the optional methods.</p>
+</blockquote>
+<h3 id="existing-providers">Existing Providers</h3>
+<p>Minecraft contains a few tag providers for certain registries that can be subclassed instead. Additionally, some providers contain additional helper methods to more easily create tags.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Registry Object Type</th>
+<th align="left">Tag Provider</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>Block</code></td>
+<td align="left"><code>BlockTagsProvider</code>*</td>
+</tr>
+<tr>
+<td align="center"><code>Item</code></td>
+<td align="left"><code>ItemTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>EntityType</code></td>
+<td align="left"><code>EntityTypeTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>Fluid</code></td>
+<td align="left"><code>FluidTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>GameEvent</code></td>
+<td align="left"><code>GameEventTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>Biome</code></td>
+<td align="left"><code>BiomeTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>FlatLevelGeneratorPreset</code></td>
+<td align="left"><code>FlatLevelGeneratorPresetTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>WorldPreset</code></td>
+<td align="left"><code>WorldPresetTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>Structure</code></td>
+<td align="left"><code>StructureTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>PoiType</code></td>
+<td align="left"><code>PoiTypeTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>BannerPattern</code></td>
+<td align="left"><code>BannerPatternTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>CatVariant</code></td>
+<td align="left"><code>CatVariantTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>PaintingVariant</code></td>
+<td align="left"><code>PaintingVariantTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>Instrument</code></td>
+<td align="left"><code>InstrumentTagsProvider</code></td>
+</tr>
+<tr>
+<td align="center"><code>DamageType</code></td>
+<td align="left"><code>DamageTypeTagsProvider</code></td>
+</tr>
+</tbody></table>
+<p>* <code>BlockTagsProvider</code> is a Forge added <code>TagsProvider</code>.</p>
+<h4 id="itemtagsprovidercopy"><code>ItemTagsProvider#copy</code></h4>
+<p>Blocks have item representations to obtain them in the inventory. As such, many of the block tags can also be an item tag. To easily generate item tags to have the same entries as block tags, the <code>#copy</code> method can be used which takes in the block tag to copy from and the item tag to copy to.</p>
+<pre><code class="language-java">//In ItemTagsProvider#addTags
+this.copy(EXAMPLE_BLOCK_TAG, EXAMPLE_ITEM_TAG);
+</code></pre>
+<h2 id="custom-tag-providers">Custom Tag Providers</h2>
+<p>A custom tag provider can be created via a <code>TagsProvider</code> subclass which takes in the registry key to generate tags for.</p>
+<pre><code class="language-java">public RecipeTypeTagsProvider(PackOutput output, CompletableFuture&lt;HolderLookup.Provider&gt; registries, ExistingFileHelper fileHelper) {
+  super(output, Registries.RECIPE_TYPE, registries, MOD_ID, fileHelper);
+}
+</code></pre>
+<h3 id="intrinsic-holder-tags-providers">Intrinsic Holder Tags Providers</h3>
+<p>One special type of <code>TagProvider</code>s are <code>IntrinsicHolderTagsProvider</code>s. When creating a tag using this provider via <code>#tag</code>, the object itself can be used to add itself to the tag via <code>#add</code>. To do so, a function is provided within the constructor to turn an object into its <code>ResourceKey</code>.</p>
+<pre><code class="language-java">// Subtype of `IntrinsicHolderTagsProvider`
+public AttributeTagsProvider(PackOutput output, CompletableFuture&lt;HolderLookup.Provider&gt; registries, ExistingFileHelper fileHelper) {
+  super(
+    output,
+    ForgeRegistries.Keys.ATTRIBUTES,
+    registries,
+    attribute -&gt; ForgeRegistries.ATTRIBUTES.getResourceKey(attribute).get(),
+    MOD_ID,
+    fileHelper
+  );
+}
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

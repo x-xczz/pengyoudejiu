@@ -1,0 +1,156 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Loot Tables · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="index.html" title="resources/server/index.md">Datapacks</a>
+<a href="recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a class="current" href="loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="tags.html" title="resources/server/tags.md">Tags</a>
+<a href="advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/server/loottables/">查看官方原文（联网）</a></div><h1 id="loot-tables">Loot Tables</h1>
+<p>Loot tables are logic files which dictate what should happen when various actions or scenarios occur. Although the vanilla system deals purely with item generation, the system can be expanded to perform any number of defined actions.</p>
+<h2 id="data-driven-tables">Data-Driven Tables</h2>
+<p>Most loot tables within vanilla are data driven via JSON. This means that a mod is not necessary to create a new loot table, only a <a href="https://minecraft.wiki/w/Data_pack">Data pack</a>. A full list on how to create and put these loot tables within the mod&#39;s <code>resources</code> folder can be found on the <a href="https://minecraft.wiki/w/Loot_table">Minecraft Wiki</a>.</p>
+<h2 id="using-a-loot-table">Using a Loot Table</h2>
+<p>A loot table is referenced by its <code>ResourceLocation</code> which points to <code>data/&lt;namespace&gt;/loot_tables/&lt;path&gt;.json</code>. The <code>LootTable</code> associated with the reference can be obtained using <code>LootDataResolver#getLootTable</code>, where <code>LootDataResolver</code> can be obtained via <code>MinecraftServer#getLootData</code>.</p>
+<p>A loot table is always generated with given parameters. The <code>LootParams</code> contains the level the table is generated in, luck for better generation, the <code>LootContextParam</code>s which define scenario context, and any dynamic information that should occur on activation. The <code>LootParams</code> can be created using the constructor of the <code>LootParams$Builder</code> builder, and built via <code>LootParams$Builder#create</code> by passing in the <code>LootContextParamSet</code>.</p>
+<p>A loot table may also have some context. The <code>LootContext</code> takes in the built <code>LootParams</code> and can set some random seeded instance. The context is created via the builder <code>LootContext$Builder</code> and built using <code>LootContext$Builder#create</code> by passing in a nullable <code>ResourceLocation</code> representing the random instance to use.</p>
+<p>A <code>LootTable</code> can be used to generate <code>ItemStack</code>s using one of the available methods which may take in a <code>LootParams</code> or a <code>LootContext</code>:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>getRandomItemsRaw</code></td>
+<td align="left">Consumes the items generated by the loot table.</td>
+</tr>
+<tr>
+<td align="center"><code>getRandomItems</code></td>
+<td align="left">Returns the items generated by the loot table.</td>
+</tr>
+<tr>
+<td align="center"><code>fill</code></td>
+<td align="left">Fills a container with the generated loot table.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Loot tables were built for generating items, so the methods expect some handling for the <code>ItemStack</code>s.</p>
+</blockquote>
+<h2 id="additional-features">Additional Features</h2>
+<p>Forge provides some additional behavior to loot tables for greater control of the system.</p>
+<h3 id="loottableloadevent"><code>LootTableLoadEvent</code></h3>
+<p><code>LootTableLoadEvent</code> is an <a href="../../concepts/events.html#creating-an-event-handler">event</a> fired on the Forge event bus which is fired whenever a loot table is loaded. If the event is canceled, then an empty loot table will be loaded instead.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Do <strong>not</strong> modify a loot table&#39;s drops through this event. Those modifications should be done using <a href="./glm.html">global loot modifiers</a>.</p>
+</blockquote>
+<h3 id="loot-pool-names">Loot Pool Names</h3>
+<p>Loot pools can be named using the <code>name</code> key. Any non-named loot pool will be the hash code of the pool prefixed by <code>custom#</code>.</p>
+<pre><code class="language-js">// For some loot pool
+{
+  &quot;name&quot;: &quot;example_pool&quot;, // Pool will be named &#39;example_pool&#39;
+  &quot;rolls&quot;: {
+    // ...
+  },
+  &quot;entries&quot;: {
+    // ...
+  }
+}
+</code></pre>
+<h3 id="looting-modifiers">Looting Modifiers</h3>
+<p>Loot tables are now affected by the <code>LootingLevelEvent</code>, on the Forge event bus, in addition to the looting enchantment.</p>
+<h3 id="additional-context-parameters">Additional Context Parameters</h3>
+<p>Forge extends certain parameter sets to account for missing contexts which may be applicable. <code>LootContextParamSets#CHEST</code> now allows for a <code>LootContextParams#KILLER_ENTITY</code> as chest minecarts are entities which can be broken (or &#39;killed&#39;). <code>LootContextParamSets#FISHING</code> also allows for a <code>LootContextParams#KILLER_ENTITY</code> since the fishing hook is also an entity which is retracted (or &#39;killed&#39;) when the player retrieves it.</p>
+<h3 id="multiple-items-on-smelting">Multiple Items on Smelting</h3>
+<p>When using the <code>SmeltItemFunction</code>, a smelted recipe will now return the actual number of items from the result instead of a single smelted item (e.g. if a smelting recipe returns 3 items and there are 3 drops, then the result would be 9 smelted items instead of 3).</p>
+<h3 id="loot-table-id-condition">Loot Table Id Condition</h3>
+<p>Forge adds an additional <code>LootItemCondition</code> which allows certain items to generate for a specific table. This is typically used within <a href="./glm.html">global loot modifiers</a>.</p>
+<pre><code class="language-js">// In some loot pool or pool entry
+{
+  &quot;conditions&quot;: [
+    {
+      &quot;condition&quot;: &quot;forge:loot_table_id&quot;,
+      // Will apply when the loot table is for dirt
+      &quot;loot_table_id&quot;: &quot;minecraft:blocks/dirt&quot;
+    }
+  ]
+}
+</code></pre>
+<h3 id="can-tool-perform-action-condition">Can Tool Perform Action Condition</h3>
+<p>Forge adds an additional <code>LootItemCondition</code> which checks whether the given <code>LootContextParams#TOOL</code> can perform the specified <code>ToolAction</code>.</p>
+<pre><code class="language-js">// In some loot pool or pool entry
+{
+  &quot;conditions&quot;: [
+    {
+      &quot;condition&quot;: &quot;forge:can_tool_perform_action&quot;,
+      // Will apply when the tool can strip a log like an axe
+      &quot;action&quot;: &quot;axe_strip&quot;
+    }
+  ]
+}
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

@@ -1,0 +1,7 @@
+{
+  "item.examplemod.dance_disc": "Music Disc - Dance",
+  "item.examplemod.dance_disc.desc": "小助 — 朋友的酒",
+  "item.examplemod.dance_disc.hint": "Play in a jukebox to attract nearby mobs and make them dance",
+  "item.examplemod.dance_disc.missing_audio": "Music not imported: silent dance preview only",
+  "subtitles.examplemod.dance_song": "Original dance track plays"
+}

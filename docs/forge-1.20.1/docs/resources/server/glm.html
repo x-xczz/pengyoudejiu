@@ -1,0 +1,180 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Global Loot Modifiers · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="index.html" title="resources/server/index.md">Datapacks</a>
+<a href="recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a class="current" href="glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="tags.html" title="resources/server/tags.md">Tags</a>
+<a href="advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/server/glm/">查看官方原文（联网）</a></div><h1 id="global-loot-modifiers">Global Loot Modifiers</h1>
+<p>Global Loot Modifiers are a data-driven method of handling modification of harvested drops without the need to overwrite dozens to hundreds of vanilla loot tables or to handle effects that would require interactions with another mod&#39;s loot tables without knowing what mods may be loaded. Global Loot Modifiers are also stacking, rather than last-load-wins, similar to tags.</p>
+<h2 id="registering-a-global-loot-modifier">Registering a Global Loot Modifier</h2>
+<p>You will need 4 things:</p>
+<ol>
+<li>Create a <code>global_loot_modifiers.json</code>.<ul>
+<li>This will tell Forge about your modifiers and works similar to <a href="./tags.html">tags</a>.</li>
+</ul>
+</li>
+<li>A serialized json representing your modifier.<ul>
+<li>This will contain all of the data about your modification and allows data packs to tweak your effect.</li>
+</ul>
+</li>
+<li>A class that extends <code>IGlobalLootModifier</code>.<ul>
+<li>The operational code that makes your modifier work. Most modders can extend <code>LootModifier</code> as it supplies base functionality.</li>
+</ul>
+</li>
+<li>Finally, a codec to encode and decode your operational class.<ul>
+<li>This is <a href="../../concepts/registries.html#methods-for-registering">registered</a> as any other <code>IForgeRegistryEntry</code>.</li>
+</ul>
+</li>
+</ol>
+<h2 id="the-global_loot_modifiersjson">The <code>global_loot_modifiers.json</code></h2>
+<p>The <code>global_loot_modifiers.json</code> represents all loot modifiers to be loaded into the game. This file <strong>MUST</strong> be placed within <code>data/forge/loot_modifiers/global_loot_modifiers.json</code>.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p><code>global_loot_modifiers.json</code> will only be read in the <code>forge</code> namespace. The file will be neglected if it is under the mod&#39;s namespace.</p>
+</blockquote>
+<p><code>entries</code> is an <em>ordered list</em> of the modifiers that will be loaded. The <a href="../../concepts/resources.html#ResourceLocation">ResourceLocation</a>s specified points to their associated entry within <code>data/&lt;namespace&gt;/loot_modifiers/&lt;path&gt;.json</code>. This is primarily relevant to data pack makers for resolving conflicts between modifiers from separate mods.</p>
+<p><code>replace</code>, when <code>true</code>, changes the behavior from appending loot modifiers to the global list to replacing the global list entries entirely. Modders will want to use <code>false</code> for compatibility with other mod implementations. Datapack makers may want to specify their overrides with <code>true</code>.</p>
+<pre><code class="language-js">{
+  &quot;replace&quot;: false, // Must be present
+  &quot;entries&quot;: [
+    // Represents a loot modifier in &#39;data/examplemod/loot_modifiers/example_glm.json&#39;
+    &quot;examplemod:example_glm&quot;,
+    &quot;examplemod:example_glm2&quot;
+    // ...
+  ]
+}
+</code></pre>
+<h2 id="the-serialized-json">The Serialized JSON</h2>
+<p>This file contains all of the potential variables related to your modifier, including the conditions that must be met prior to modifying any loot. Avoid hard-coded values wherever possible so that data pack makers can adjust balance if they wish to.</p>
+<p><code>type</code> represents the registry name of the <a href="#the-loot-modifier-codec">codec</a> used to read the associated JSON file. This must always be present.</p>
+<p><code>conditions</code> should represent the loot table conditions for this modifier to activate. Conditions should avoid being hardcoded to allow datapack creators as much flexibility to adjust the criteria. This must also be always present.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Although <code>conditions</code> should represent what is needed for the modifier to activate, this is only the case if using the bundled Forge classes. If using <code>LootModifier</code> as a subclass, all conditions will be <strong>ANDed</strong> together and checked to see if the modifier should be applied.</p>
+</blockquote>
+<p>Any additional properties read by the serializer and defined by the modifier can also be specified.</p>
+<pre><code class="language-js">// Within data/examplemod/loot_modifiers/example_glm.json
+{
+  &quot;type&quot;: &quot;examplemod:example_loot_modifier&quot;,
+  &quot;conditions&quot;: [
+    // Normal loot table conditions
+    // ...
+  ],
+  &quot;prop1&quot;: &quot;val1&quot;,
+  &quot;prop2&quot;: 10,
+  &quot;prop3&quot;: &quot;minecraft:dirt&quot;
+}
+</code></pre>
+<h2 id="igloballootmodifier"><code>IGlobalLootModifier</code></h2>
+<p>To supply the functionality a global loot modifier specifies, a <code>IGlobalLootModifier</code> implementation must be specified. These are instances generated each time a serializer decodes the information from JSON and supplies it into this object.</p>
+<p>There are two methods that needs to be defined in order to create a new modifier: <code>#apply</code> and <code>#codec</code>. <code>#apply</code> takes in the current loot that will be generated along with the context information such as the currently level or additional defined parameters. It returns the list of drops to generate.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>The returned list of drops from any one modifier is fed into other modifiers in the order they are registered. As such, modified loot can be modified by another loot modifier.</p>
+</blockquote>
+<p><code>#codec</code> returns the registered <a href="#the-loot-modifier-codec">codec</a> used to encode and decode the modifier to/from JSON.</p>
+<h3 id="the-lootmodifier-subclass">The <code>LootModifier</code> Subclass</h3>
+<p><code>LootModifier</code> is an abstract implementation of <code>IGlobalLootModifier</code> to provide the base functionality which most modders can easily extend and implement. This expands upon the existing interface by defining the <code>#apply</code> method to check the conditions to determine whether or not to modify the generated loot.</p>
+<p>There are two things of note within the subclass implementation: the constructor which must take in an array of <code>LootItemCondition</code>s and the <code>#doApply</code> method.</p>
+<p>The array of <code>LootItemCondition</code>s define the list of conditions that must be true before the loot can be modified. The supplied conditions are <strong>ANDed</strong> together, meaning that all conditions must be true.</p>
+<p>The <code>#doApply</code> method works the same as the <code>#apply</code> method except that it only executes once all conditions return true.</p>
+<pre><code class="language-java">public class ExampleModifier extends LootModifier {
+
+  public ExampleModifier(LootItemCondition[] conditionsIn, String prop1, int prop2, Item prop3) {
+    super(conditionsIn);
+    // Store the rest of the parameters
+  }
+
+  @NotNull
+  @Override
+  protected ObjectArrayList&lt;ItemStack&gt; doApply(ObjectArrayList&lt;ItemStack&gt; generatedLoot, LootContext context) {
+    // Modify the loot and return the new drops
+  }
+
+  @Override
+  public Codec&lt;? extends IGlobalLootModifier&gt; codec() {
+    // Return the codec used to encode and decode this modifier
+  }
+}
+</code></pre>
+<h2 id="the-loot-modifier-codec">The Loot Modifier Codec</h2>
+<p>The connector between the JSON and the <code>IGlobalLootModifier</code> instance is a <a href="../../datastorage/codecs.html"><code>Codec&lt;T&gt;</code></a>, where <code>T</code> represents the type of the <code>IGlobalLootModifier</code> to use.</p>
+<p>For ease of convenience, a loot conditions codec has been provided for an easy addition to a record-like codec via <code>LootModifier#codecStart</code>. This is utilized for <a href="../../datagen/server/glm.html">data generation</a> of the associated loot modifier.</p>
+<pre><code class="language-java">// For some DeferredRegister&lt;Codec&lt;? extends IGlobalLootModifier&gt;&gt; REGISTRAR
+public static final RegistryObject&lt;Codec&lt;ExampleModifier&gt;&gt; = REGISTRAR.register(&quot;example_codec&quot;, () -&gt;
+  RecordCodecBuilder.create(
+    inst -&gt; LootModifier.codecStart(inst).and(
+      inst.group(
+        Codec.STRING.fieldOf(&quot;prop1&quot;).forGetter(m -&gt; m.prop1),
+        Codec.INT.fieldOf(&quot;prop2&quot;).forGetter(m -&gt; m.prop2),
+        ForgeRegistries.ITEMS.getCodec().fieldOf(&quot;prop3&quot;).forGetter(m -&gt; m.prop3)
+      )
+    ).apply(inst, ExampleModifier::new)
+  )
+);
+</code></pre>
+<p><a href="https://github.com/MinecraftForge/MinecraftForge/blob/1.20.1/src/test/java/net/minecraftforge/debug/gameplay/loot/GlobalLootModifiersTest.java">Examples</a> can be found on the Forge Git repository, including silk touch and smelting effects.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

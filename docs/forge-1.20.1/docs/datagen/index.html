@@ -1,0 +1,130 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Data Generators · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a class="current" href="index.html" title="datagen/index.md">Data Generators</a>
+<a href="client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/datagen/">查看官方原文（联网）</a></div><h1 id="data-generators">Data Generators</h1>
+<p>Data generators are a way to programmatically generate the assets and data of mods. It allows the definition of the contents of these files in the code and their automatic generation, without worrying about the specifics.</p>
+<p>The data generator system is loaded by the main class <code>net.minecraft.data.Main</code>. Different command-line arguments can be passed to customize which mods&#39; data are gathered, what existing files are considered, etc. The class responsible for data generation is <code>net.minecraft.data.DataGenerator</code>.</p>
+<p>The default configurations in the MDK <code>build.gradle</code> adds the <code>runData</code> task for running the data generators.</p>
+<h2 id="existing-files">Existing Files</h2>
+<p>All references to textures or other data files not generated for data generation must reference existing files on the system. This is to ensure that all referenced textures are in the correct places, so typos can be found and corrected. </p>
+<p><code>ExistingFileHelper</code> is the class responsible for validating the existence of those data files. An instance can be retrieved from  <code>GatherDataEvent#getExistingFileHelper</code>.</p>
+<p>The <code>--existing &lt;folderpath&gt;</code> argument allows the specified folder and its subfolders to be used when validating the existence of files. Additionally, the <code>--existing-mod &lt;modid&gt;</code> argument allows the resources of a loaded mod to be used for validation. By default, only the vanilla datapack and resources are available to the <code>ExistingFileHelper</code>.</p>
+<h2 id="generator-modes">Generator Modes</h2>
+<p>The data generator can be configured to run 4 different data generations, which are configured from the command-line parameters, and can be checked from <code>GatherDataEvent#include***</code> methods.</p>
+<ul>
+<li><strong>Client Assets</strong><ul>
+<li>Generates client-only files in <code>assets</code>: block/item models, blockstate JSONs, language files, etc.</li>
+<li><strong><code>--client</code></strong>, <code>#includeClient</code></li>
+</ul>
+</li>
+<li><strong>Server Data</strong><ul>
+<li>Generates server-only files in <code>data</code>: recipes, advancements, tags, etc.</li>
+<li><strong><code>--server</code></strong>, <code>#includeServer</code></li>
+</ul>
+</li>
+<li><strong>Development Tools</strong><ul>
+<li>Runs some development tools: converting SNBT to NBT and vice-versa, etc.</li>
+<li><strong><code>--dev</code></strong>, <code>#includeDev</code></li>
+</ul>
+</li>
+<li><strong>Reports</strong><ul>
+<li>Dumps all registered blocks, items, commands, etc.</li>
+<li><strong><code>--reports</code></strong>, <code>#includeReports</code></li>
+</ul>
+</li>
+</ul>
+<p>All of the generators can be included using <code>--all</code>.</p>
+<h2 id="data-providers">Data Providers</h2>
+<p>Data providers are the classes that actually define what data will be generated and provided. All data providers implement <code>DataProvider</code>. Minecraft has abstract implementations for most assets and data, so modders need only to extend and override the specified method.</p>
+<p>The <code>GatherDataEvent</code> is fired on the mod event bus when the data generator is being created, and the <code>DataGenerator</code> can be obtained from the event. Create and register data providers using <code>DataGenerator#addProvider</code>.</p>
+<h3 id="client-assets">Client Assets</h3>
+<ul>
+<li><a href="./client/localization.html"><code>net.minecraftforge.common.data.LanguageProvider</code></a> - for <a href="https://minecraft.wiki/w/Language">language strings</a>; implement <code>#addTranslations</code></li>
+<li><a href="./client/sounds.html"><code>net.minecraftforge.common.data.SoundDefinitionsProvider</code></a> - for <a href="https://minecraft.wiki/w/Sounds.json"><code>sounds.json</code></a>; implement <code>#registerSounds</code></li>
+<li><a href="./client/modelproviders.html"><code>net.minecraftforge.client.model.generators.ModelProvider&lt;?&gt;</code></a> - for <a href="../resources/client/models/index.html">models</a>; implement <code>#registerModels</code><ul>
+<li><a href="./client/modelproviders.html#itemmodelprovider"><code>ItemModelProvider</code></a> - for item models</li>
+<li><a href="./client/modelproviders.html#blockmodelprovider"><code>BlockModelProvider</code></a> - for block models</li>
+</ul>
+</li>
+<li><a href="./client/modelproviders.html#block-state-provider"><code>net.minecraftforge.client.model.generators.BlockStateProvider</code></a> - for blockstate JSONs and their block and item models; implement <code>#registerStatesAndModels</code></li>
+</ul>
+<h3 id="server-data">Server Data</h3>
+<p><strong>These classes are under the <code>net.minecraftforge.common.data</code> package</strong>:</p>
+<ul>
+<li><a href="./server/glm.html"><code>GlobalLootModifierProvider</code></a> - for <a href="../resources/server/glm.html">global loot modifiers</a>; implement <code>#start</code></li>
+<li><a href="./server/datapackregistries.html"><code>DatapackBuiltinEntriesProvider</code></a> for datapack registry objects; pass in <code>RegistrySetBuilder</code> to the constructor</li>
+</ul>
+<p><strong>These classes are under the <code>net.minecraft.data</code> package</strong>:</p>
+<ul>
+<li><a href="./server/loottables.html"><code>loot.LootTableProvider</code></a> - for <a href="../resources/server/loottables.html">loot tables</a>; pass in <code>LootTableProvider$SubProviderEntry</code>s to the constructor</li>
+<li><a href="./server/recipes.html"><code>recipes.RecipeProvider</code></a> - for <a href="../resources/server/recipes/index.html">recipes</a> and their unlocking advancements; implement <code>#buildRecipes</code></li>
+<li><a href="./server/tags.html"><code>tags.TagsProvider</code></a> - for <a href="../resources/server/tags.html">tags</a>; implement <code>#addTags</code></li>
+<li><a href="./server/advancements.html"><code>advancements.AdvancementProvider</code></a> - for <a href="../resources/server/advancements.html">advancements</a>; pass in <code>AdvancementSubProvider</code>s to the constructor</li>
+</ul>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

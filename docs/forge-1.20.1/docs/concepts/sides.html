@@ -1,0 +1,143 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sides in Minecraft · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="registries.html" title="concepts/registries.md">Registries</a>
+<a class="current" href="sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="events.html" title="concepts/events.md">Events</a>
+<a href="lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="resources.html" title="concepts/resources.md">Resources</a>
+<a href="internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/concepts/sides/">查看官方原文（联网）</a></div><h1 id="sides-in-minecraft">Sides in Minecraft</h1>
+<p>A very important concept to understand when modding Minecraft are the two sides: <em>client</em> and <em>server</em>. There are many, many common misconceptions and mistakes regarding siding, which can lead to bugs that might not crash the game, but can rather have unintended and often unpredictable effects.</p>
+<h2 id="different-kinds-of-sides">Different Kinds of Sides</h2>
+<p>When we say &quot;client&quot; or &quot;server&quot;, it usually follows with a fairly intuitive understanding of what part of the game we are talking about. After all, a client is what the user interacts with, and a server is where the user connects for a multiplayer game. Easy, right?</p>
+<p>As it turns out, there can be some ambiguity even with two such terms. Here we disambiguate the four possible meanings of &quot;client&quot; and &quot;server&quot;:</p>
+<ul>
+<li>Physical client - The <em>physical client</em> is the entire program that runs whenever you launch Minecraft from the launcher. All threads, processes, and services that run during the game&#39;s graphical, interactable lifetime are part of the physical client.</li>
+<li>Physical server - Often known as the dedicated server, the <em>physical server</em> is the entire program that runs whenever you launch any sort of <code>minecraft_server.jar</code> that does not bring up a playable GUI.</li>
+<li>Logical server - The <em>logical server</em> is what runs game logic: mob spawning, weather, updating inventories, health, AI, and all other game mechanics. The logical server is present within a physical server, but it also can run inside a physical client together with a logical client, as a single player world. The logical server always runs in a thread named the <code>Server Thread</code>.</li>
+<li>Logical client - The <em>logical client</em> is what accepts input from the player and relays it to the logical server. In addition, it also receives information from the logical server and makes it available graphically to the player. The logical client runs in the <code>Render Thread</code>, though often several other threads are spawned to handle things like audio and chunk render batching.</li>
+</ul>
+<p>In the MinecraftForge codebase, the physical side is represented by an enum called <code>Dist</code>, while the logical side is represented by an enum called <code>LogicalSide</code>.</p>
+<h2 id="performing-side-specific-operations">Performing Side-Specific Operations</h2>
+<h3 id="levelisclientside"><code>Level#isClientSide</code></h3>
+<p>This boolean check will be your most used way to check sides. Querying this field on a <code>Level</code> object establishes the  <strong>logical</strong> side the level belongs to. That is, if this field is <code>true</code>, the level is currently running on the logical client. If the field is <code>false</code>, the level is running on the logical server. It follows that the physical server will always contain <code>false</code> in this field, but we cannot assume that <code>false</code> implies a physical server, since this field can also be <code>false</code> for the logical server inside a physical client (in other words, a single player world).</p>
+<p>Use this check whenever you need to determine if game logic and other mechanics should be run. For example, if you want to damage the player every time they click your block, or have your machine process dirt into diamonds, you should only do so after ensuring <code>#isClientSide</code> is <code>false</code>. Applying game logic to the logical client can cause desynchronization (ghost entities, desynchronized stats, etc.) in the best case, and crashes in the worst case.</p>
+<p>This check should be used as your go-to default. Aside from <code>DistExecutor</code>, rarely will you need the other ways of determining side and adjusting behavior.</p>
+<h3 id="distexecutor"><code>DistExecutor</code></h3>
+<p>Considering the use of a single &quot;universal&quot; jar for client and server mods, and the separation of the physical sides into two jars, an important question comes to mind: How do we use code that is only present on one physical side? All code in <code>net.minecraft.client</code> is only present on the physical client. If any class you write references those names in any way, they will crash the game when that respective class is loaded in an environment where those names do not exist. A very common mistake in beginners is to call <code>Minecraft.getInstance().&lt;doStuff&gt;()</code> in block or block entity classes, which will crash any physical server as soon as the class is loaded.</p>
+<p>How do we resolve this? Luckily, FML has <code>DistExecutor</code>, which provides various methods to run different methods on different physical sides, or a single method only on one side.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>It is important to understand that FML checks based on the <strong>physical</strong> side. A single player world (logical server + logical client within a physical client) will always use <code>Dist.CLIENT</code>!</p>
+</blockquote>
+<p><code>DistExecutor</code> works by taking in a supplied supplier executing a method, effectively preventing classloading by taking advantage of the <a href="https://docs.oracle.com/javase/specs/jvms/se17/html/jvms-6.html#jvms-6.5.invokedynamic"><code>invokedynamic</code> JVM instruction</a>. The executed method should be static and within a different class. Additionally, if no parameters are present for the static method, a method reference should be used instead of a supplier executing a method.</p>
+<p>There are two main methods within <code>DistExecutor</code>: <code>#runWhenOn</code> and <code>#callWhenOn</code>. The methods take in the physical side the executing method should run on and the supplied executing method which either runs or returns a result respectively.</p>
+<p>These two methods are subdivided further into <code>#safe*</code> and <code>#unsafe*</code> variants. Safe and unsafe variants are misnomers for their purposes. The main difference is that when in a development environment, the <code>#safe*</code> methods will validate that the supplied executing method is a lambda returning a method reference to another class with an error being thrown otherwise. Within the production environment, <code>#safe*</code> and <code>#unsafe*</code> are functionally the same.</p>
+<pre><code class="language-java">// In a client class: ExampleClass
+public static void unsafeRunMethodExample(Object param1, Object param2) {
+  // ...
+}
+
+public static Object safeCallMethodExample() {
+  // ...
+}
+
+// In some common class
+DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -&gt; ExampleClass.unsafeRunMethodExample(var1, var2));
+
+DistExecutor.safeCallWhenOn(Dist.CLIENT, () -&gt; ExampleClass::safeCallMethodExample);
+</code></pre>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>Due to a change in how <code>invokedynamic</code> works in Java 9+, all <code>#safe*</code> variants of the <code>DistExecutor</code> methods throw the original exception wrapped within a <code>BootstrapMethodError</code> in the development environment. <code>#unsafe*</code> variants or a check to <a href="#fmlenvironmentdist-and-onlyin"><code>FMLEnvironment#dist</code></a> should be used instead.</p>
+</blockquote>
+<h3 id="thread-groups">Thread Groups</h3>
+<p>If <code>Thread.currentThread().getThreadGroup() == SidedThreadGroups.SERVER</code> is true, it is likely the current thread is on the logical server. Otherwise, it is likely on the logical client. This is useful to retrieve the <strong>logical</strong> side when you do not have access to a <code>Level</code> object to check <code>isClientSide</code>. It <em>guesses</em> which logical side you are on by looking at the group of the currently running thread. Because it is a guess, this method should only be used when other options have been exhausted. In nearly every case, you should prefer checking <code>Level#isClientSide</code>.</p>
+<h3 id="fmlenvironmentdist-and-onlyin"><code>FMLEnvironment#dist</code> and <code>@OnlyIn</code></h3>
+<p><code>FMLEnvironment#dist</code> holds the <strong>physical</strong> side your code is running on. Since it is determined at startup, it does not rely on guessing to return its result. The number of use cases for this is limited, however.</p>
+<p>Annotating a method or field with the <code>@OnlyIn(Dist)</code> annotation indicates to the loader that the respective member should be completely stripped out of the definition not on the specified <strong>physical</strong> side. Usually, these are only seen when browsing through the decompiled Minecraft code, indicating methods that the Mojang obfuscator stripped out. There is <strong>NO</strong> reason for using this annotation directly. Use <code>DistExecutor</code> or a check on <code>FMLEnvironment#dist</code> instead.</p>
+<h2 id="common-mistakes">Common Mistakes</h2>
+<h3 id="reaching-across-logical-sides">Reaching Across Logical Sides</h3>
+<p>Whenever you want to send information from one logical side to another, you must <strong>always</strong> use network packets. It is incredibly tempting, when in a single player scenario, to directly transfer data from the logical server to the logical client.</p>
+<p>This is actually very commonly inadvertently done through static fields. Since the logical client and logical server share the same JVM in a single player scenario, both threads writing to and reading from static fields will cause all sorts of race conditions and the classical issues associated with threading.</p>
+<p>This mistake can also be made explicitly by accessing physical client-only classes such as <code>Minecraft</code> from common code that runs or can run on the logical server. This mistake is easy to miss for beginners who debug in a physical client. The code will work there, but it will immediately crash on a physical server.</p>
+<h2 id="writing-one-sided-mods">Writing One-Sided Mods</h2>
+<p>In recent versions, Minecraft Forge has removed a &quot;sidedness&quot; attribute from the mods.toml. This means that your mods are expected to work whether they are loaded on the physical client or the physical server. So for one-sided mods, you would typically register your event handlers inside a <code>DistExecutor#safeRunWhenOn</code> or <code>DistExecutor#unsafeRunWhenOn</code> instead of directly calling the relevant registration methods in your mod constructor. Basically, if your mod is loaded on the wrong side, it should simply do nothing, listen to no events, and so on. A one-sided mod by nature should not register blocks, items, ... since they would need to be available on the other side, too.</p>
+<p>Additionally, if your mod is one-sided, it typically does not forbid the user from joining a server that is lacking that mod. Therefore, you should set the <code>displayTest</code> property in your <a href="../gettingstarted/modfiles.html#modstoml">mods.toml</a> to whatever value is necessary.</p>
+<pre><code class="language-toml">[[mods]]
+  # ...
+
+  # MATCH_VERSION means that your mod will cause a red X if the versions on client and server differ. This is the default behaviour and should be what you choose if you have server and client elements to your mod.
+  # IGNORE_SERVER_VERSION means that your mod will not cause a red X if it&#39;s present on the server but not on the client. This is what you should use if you&#39;re a server only mod.
+  # IGNORE_ALL_VERSION means that your mod will not cause a red X if it&#39;s present on the client or the server. This is a special case and should only be used if your mod has no server component.
+  # NONE means that no display test is set on your mod. You need to do this yourself, see IExtensionPoint.DisplayTest for more information. You can define any scheme you wish with this value.
+  # IMPORTANT NOTE: this is NOT an instruction as to which environments (CLIENT or DEDICATED SERVER) your mod loads on. Your mod should load (and maybe do nothing!) whereever it finds itself.
+  displayTest=&quot;IGNORE_ALL_VERSION&quot; # MATCH_VERSION is the default if nothing is specified (#optional)
+</code></pre>
+<p>If a custom display test is to be used, then the <code>displayTest</code> option should be set to <code>NONE</code>, and an <code>IExtensionPoint$DisplayTest</code> extension should be registered:</p>
+<pre><code class="language-java">//Make sure the mod being absent on the other network side does not cause the client to display the server as incompatible
+ModLoadingContext.get().registerExtensionPoint(IExtensionPoint.DisplayTest.class, () -&gt; new IExtensionPoint.DisplayTest(() -&gt; NetworkConstants.IGNORESERVERONLY, (a, b) -&gt; true));
+</code></pre>
+<p>This tells the client that it should ignore the server version being absent, and the server that it should not tell the client this mod should be present. So this snippet works both for client- and server-only-sided mods.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

@@ -1,0 +1,119 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Item Properties · Forge 1.20.1</title><link rel="stylesheet" href="../../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../../items/index.html" title="items/index.md">Items</a>
+<a href="../../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="index.html" title="resources/client/models/index.md">Models</a>
+<a href="tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a class="current" href="itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../../server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../../server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../../server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../../server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../../server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../../server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../../server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../../server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../../server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../../server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/client/models/itemproperties/">查看官方原文（联网）</a></div><h1 id="item-properties">Item Properties</h1>
+<p>Item properties are a way for the &quot;properties&quot; of items to be exposed to the model system. An example is the bow, where the most important property is how far the bow has been pulled. This information is then used to choose a model for the bow, creating an animation for pulling it.</p>
+<p>An item property assigns a certain <code>float</code> value to every <code>ItemStack</code> it is registered for, and vanilla item model definitions can use these values to define &quot;overrides&quot;, where an item defaults to a certain model, but if an override matches, it overrides the model and uses another. They are useful mainly because they are continuous. For example, bows use item properties to define their pull animation. The item models are decided by the &#39;float&#39; number predicates, it is not limited but generally between <code>0.0F</code> and <code>1.0F</code>. This allows resource packs to add as many models as they want for the bow pulling animation along that spectrum, instead of being stuck with four &quot;slots&quot; for their models in the animation. The same is true of the compass and clock.</p>
+<h2 id="adding-properties-to-items">Adding Properties to Items</h2>
+<p><code>ItemProperties#register</code> is used to add a property to a certain item. The <code>Item</code> parameter is the item the property is being attached to (e.g. <code>ExampleItems#APPLE</code>). The <code>ResourceLocation</code> parameter is the name given to the property (e.g. <code>new ResourceLocation(&quot;pull&quot;)</code>). The <code>ItemPropertyFunction</code> is a functional interface that takes the <code>ItemStack</code>, the <code>ClientLevel</code> it is in (may be null), the <code>LivingEntity</code> that holds it (may be null), and the <code>int</code> containing the id of the holding entity (may be <code>0</code>), returning the <code>float</code> value for the property. For modded item properties, it is recommended that the mod id of the mod is used as the namespace (e.g. <code>examplemod:property</code> and not just <code>property</code>, as that really means <code>minecraft:property</code>). These should be done in <code>FMLClientSetupEvent</code>.
+There&#39;s also another method <code>ItemProperties#registerGeneric</code> that is used to add properties to all items, and it does not take <code>Item</code> as its parameter since all items will apply this property.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Use <code>FMLClientSetupEvent#enqueueWork</code> to proceed with the tasks, since the data structures in <code>ItemProperties</code> are not thread-safe.</p>
+</blockquote>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p><code>ItemPropertyFunction</code> is deprecated by Mojang in favor of using the subinterface <code>ClampedItemPropertyFunction</code> which clamps the result between <code>0</code> and <code>1</code>.</p>
+</blockquote>
+<h2 id="using-overrides">Using Overrides</h2>
+<p>The format of an override can be seen on the <a href="https://minecraft.wiki/w/Tutorials/Models#Item_models">wiki</a>, and a good example can be found in <code>model/item/bow.json</code>. For reference, here is a hypothetical example of an item with an <code>examplemod:power</code> property. If the values have no match, the default is the current model, but if there are multiple matches, the last match in the list will be selected.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>A predicate applies to all values <em>greater than or equal to</em> the given value.</p>
+</blockquote>
+<pre><code class="language-js">{
+  &quot;parent&quot;: &quot;item/generated&quot;,
+  &quot;textures&quot;: {
+    // Default
+    &quot;layer0&quot;: &quot;examplemod:items/example_partial&quot;
+  },
+  &quot;overrides&quot;: [
+    {
+      // power &gt;= .75
+      &quot;predicate&quot;: {
+        &quot;examplemod:power&quot;: 0.75
+      },
+      &quot;model&quot;: &quot;examplemod:item/example_powered&quot;
+    }
+  ]
+}
+</code></pre>
+<p>And here is a hypothetical snippet from the supporting code. Unlike the older versions (lower than 1.16.x), this needs to be done on client side only because <code>ItemProperties</code> does not exist on server.</p>
+<pre><code class="language-java">private void setup(final FMLClientSetupEvent event)
+{
+  event.enqueueWork(() -&gt;
+  {
+    ItemProperties.register(ExampleItems.APPLE, 
+      new ResourceLocation(ExampleMod.MODID, &quot;pulling&quot;), (stack, level, living, id) -&gt; {
+        return living != null &amp;&amp; living.isUsingItem() &amp;&amp; living.getUseItem() == stack ? 1.0F : 0.0F;
+      });
+  });
+}
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

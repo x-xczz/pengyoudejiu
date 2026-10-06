@@ -1,0 +1,355 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Screens · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="menus.html" title="gui/menus.md">Menus</a>
+<a class="current" href="screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/gui/screens/">查看官方原文（联网）</a></div><h1 id="screens">Screens</h1>
+<p>Screens are typically the base of all Graphical User Interfaces (GUIs) in Minecraft: taking in user input, verifying it on the server, and syncing the resulting action back to the client. They can be combined with <a href="./menus.html">menus</a> to create an communication network for inventory-like views, or they can be standalone which modders can handle through their own <a href="../networking/index.html">network</a> implementations.</p>
+<p>Screens are made up of numerous parts, making it difficult to fully understand what a &#39;screen&#39; actually is in Minecraft. As such, this document will go over each of the screen&#39;s components and how it is applied before discussing the screen itself.</p>
+<h2 id="relative-coordinates">Relative Coordinates</h2>
+<p>Whenever anything is rendered, there needs to be some identifier which specifies where it will appear. With numerous abstractions, most of Minecraft&#39;s rendering calls takes in an x, y, and z value in a coordinate plane. X values increase from left to right, y from top to bottom, and z from far to near. However, the coordinates are not fixed to a specified range. They can change depending on the size of the screen and the scale at which is specified within the options. As such, extra care must be taken to make sure the values of the coordinates while rendering scale properly to the changeable screen size.</p>
+<p>Information on how to relativize your coordinates will be within the <a href="#the-screen-subtype">screen</a> section.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>If you choose to use fixed coordinates or incorrectly scale the screen, the rendered objects may look strange or misplaced. An easy way to check if you relativized your coordinates correctly is to click the &#39;Gui Scale&#39; button in your video settings. This value is used as the divisor to the width and height of your display when determining the scale at which a GUI should render.</p>
+</blockquote>
+<h2 id="gui-graphics">Gui Graphics</h2>
+<p>Any GUI rendered by Minecraft is typically done using <code>GuiGraphics</code>. <code>GuiGraphics</code> is the first parameter to almost all rendering methods; it contains basic methods to render commonly used objects. These fall into five categories: colored rectangles, strings, and textures, items, and tooltips. There is also an additional method for rendering a snippet of a component (<code>#enableScissor</code> / <code>#disableScissor</code>). <code>GuiGraphics</code> also exposes the <code>PoseStack</code> which applies the transformations necessary to properly render where the component should be rendered. Additionally, colors are in the <a href="https://en.wikipedia.org/wiki/RGBA_color_model#ARGB32">ARGB</a> format.</p>
+<h3 id="colored-rectangles">Colored Rectangles</h3>
+<p>Colored rectangles are drawn through a position color shader. There are three types of colored rectangles that can be drawn.</p>
+<p>First, there is a colored horizontal and vertical one-pixel wide line, <code>#hLine</code> and <code>#vLine</code> respectively. <code>#hLine</code> takes in two x coordinates defining the left and right (inclusively), the top y coordinate, and the color. <code>#vLine</code> takes in the left x coordinate, two y coordinates defining the top and bottom (inclusively), and the color.</p>
+<p>Second, there is the <code>#fill</code> method, which draws a rectangle to the screen. The line methods internally call this method. This takes in the left x coordinate, the top y coordinate, the right x coordinate, the bottom y coordinate, and the color.</p>
+<p>Finally, there is the <code>#fillGradient</code> method, which draws a rectangle with a vertical gradient. This takes in the right x coordinate, the bottom y coordinate, the left x coordinate, the top y coordinate, the z coordinate, and the bottom and top colors.</p>
+<h3 id="strings">Strings</h3>
+<p>Strings are drawn through its <code>Font</code>, typically consisting of their own shaders for normal, see through, and offset mode. There are two alignment of strings that can be rendered, each with a back shadow: a left-aligned string (<code>#drawString</code>) and a center-aligned string (<code>#drawCenteredString</code>). These both take in the font the string will be rendered in, the string to draw, the x coordinate representing the left or center of the string respectively, the top y coordinate, and the color.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Strings should typically be passed in as <a href="../concepts/internationalization.html#translatablecontents"><code>Component</code>s</a> as they handle a variety of usecases, including the two other overloads of the method.</p>
+</blockquote>
+<h3 id="textures">Textures</h3>
+<p>Textures are drawn through blitting, hence the method name <code>#blit</code>, which, for this purpose, copies the bits of an image and draws them directly to the screen. These are drawn through a position texture shader. While there are many different <code>#blit</code> overloads, we will only discuss two static <code>#blit</code>s.</p>
+<p>The first static <code>#blit</code> takes in six integers and assumes the texture being rendered is on a 256 x 256 PNG file. It takes in the left x and top y screen coordinate, the left x and top y coordinate within the PNG, and the width and height of the image to render.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>The size of the PNG file must be specified so that the coordinates can be normalized to obtain the associated UV values.</p>
+</blockquote>
+<p>The static <code>#blit</code> which the first calls expands this to nine integers, only assuming the image is on a PNG file. It takes in the left x and top y screen coordinate, the z coordinate (referred to as the blit offset), the left x and top y coordinate within the PNG, the width and height of the image to render, and the width and height of the PNG file.</p>
+<h4 id="blit-offset">Blit Offset</h4>
+<p>The z coordinate when rendering a texture is typically set to the blit offset. The offset is responsible for properly layering renders when viewing a screen. Renders with a smaller z coordinate are rendered in the background and vice versa where renders with a larger z coordinate are rendered in the foreground. The z offset can be set directly on the <code>PoseStack</code> itself via <code>#translate</code>. Some basic offset logic is applied internally in some methods of <code>GuiGraphics</code> (e.g. item rendering).</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>When setting the blit offset, you must reset it after rendering your object. Otherwise, other objects within the screen may be rendered in an incorrect layer causing graphical issues. It is recommended to push the current pose before translating and then popping after all rendering at the offset is completed.</p>
+</blockquote>
+<h2 id="renderable">Renderable</h2>
+<p><code>Renderable</code>s are essentially objects that are rendered. These include screens, buttons, chat boxes, lists, etc. <code>Renderable</code>s only have one method: <code>#render</code>. This takes in the <code>GuiGraphics</code> used to render things to the screen, the x and y positions of the mouse scaled to the relative screen size, and the tick delta (how many ticks have passed since the last frame).</p>
+<p>Some common renderables are screens and &#39;widgets&#39;: interactable elements which typically render on the screen such as <code>Button</code>, its subtype <code>ImageButton</code>, and <code>EditBox</code> which is used to input text on the screen.</p>
+<h2 id="guieventlistener">GuiEventListener</h2>
+<p>Any screen rendered in Minecraft implements <code>GuiEventListener</code>. <code>GuiEventListener</code>s are responsible for handling user interaction with the screen. These include inputs from the mouse (movement, clicked, released, dragged, scrolled, mouseover) and keyboard (pressed, released, typed). Each method returns whether the associated action affected the screen successfully. Widgets like buttons, chat boxes, lists, etc. also implement this interface.</p>
+<h3 id="containereventhandler">ContainerEventHandler</h3>
+<p>Almost synonymous with <code>GuiEventListener</code>s are their subtype: <code>ContainerEventHandler</code>s. These are responsible for handling user interaction on screens which contain widgets, managing which is currently focused and how the associated interactions are applied. <code>ContainerEventHandler</code>s add three additional features: interactable children, dragging, and focusing.</p>
+<p>Event handlers hold children which are used to determine the interaction order of elements. During the mouse event handlers (excluding dragging), the first child in the list that the mouse hovers over has their logic executed.</p>
+<p>Dragging an element with the mouse, implemented via <code>#mouseClicked</code> and <code>#mouseReleased</code>, provides more precisely executed logic.</p>
+<p>Focusing allows for a specific child to be checked first and handled during an event&#39;s execution, such as during keyboard events or dragging the mouse. Focus is typically set through <code>#setFocused</code>. In addition, interactable children can be cycled using <code>#nextFocusPath</code>, selecting the child based upon the <code>FocusNavigationEvent</code> passed in.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Screens implement <code>ContainerEventHandler</code> through <code>AbstractContainerEventHandler</code>, which adds in the setter and getter logic for dragging and focusing children.</p>
+</blockquote>
+<h2 id="narratableentry">NarratableEntry</h2>
+<p><code>NarratableEntry</code>s are elements which can be spoken about through Minecraft&#39;s accessibility narration feature. Each element can provide different narration depending on what is hovered or selected, prioritized typically by focus, hovering, and then all other cases.</p>
+<p><code>NarratableEntry</code>s have three methods: one which determines the priority of the element (<code>#narrationPriority</code>), one which determines whether to speak the narration (<code>#isActive</code>), and finally one which supplies the narration to its associated output, spoken or read (<code>#updateNarration</code>). </p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>All widgets from Minecraft are <code>NarratableEntry</code>s, so it typically does not need to be manually implemented if using an available subtype.</p>
+</blockquote>
+<h2 id="the-screen-subtype">The Screen Subtype</h2>
+<p>With all of the above knowledge, a basic screen can be constructed. To make it easier to understand, the components of a screen will be mentioned in the order they are typically encountered.</p>
+<p>First, all screens take in a <code>Component</code> which represents the title of the screen. This component is typically drawn to the screen by one of its subtypes. It is only used in the base screen for the narration message.</p>
+<pre><code class="language-java">// In some Screen subclass
+public MyScreen(Component title) {
+    super(title);
+}
+</code></pre>
+<h3 id="initialization">Initialization</h3>
+<p>Once a screen has been initialized, the <code>#init</code> method is called. The <code>#init</code> method sets the initial settings inside the screen from the <code>ItemRenderer</code> and <code>Minecraft</code> instance to the relative width and height as scaled by the game. Any setup such as adding widgets or precomputing relative coordinates should be done in this method. If the game window is resized, the screen will be reinitialized by calling the <code>#init</code> method.</p>
+<p>There are three ways to add a widget to a screen, each serving a separate purpose:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>#addWidget</code></td>
+<td align="left">Adds a widget that is interactable and narrated, but not rendered.</td>
+</tr>
+<tr>
+<td align="center"><code>#addRenderableOnly</code></td>
+<td align="left">Adds a widget that will only be rendered; it is not interactable or narrated.</td>
+</tr>
+<tr>
+<td align="center"><code>#addRenderableWidget</code></td>
+<td align="left">Adds a widget that is interactable, narrated, and rendered.</td>
+</tr>
+</tbody></table>
+<p>Typically, <code>#addRenderableWidget</code> will be used most often.</p>
+<pre><code class="language-java">// In some Screen subclass
+@Override
+protected void init() {
+    super.init();
+
+    // Add widgets and precomputed values
+    this.addRenderableWidget(new EditBox(/* ... */));
+}
+</code></pre>
+<h3 id="ticking-screens">Ticking Screens</h3>
+<p>Screens also tick using the <code>#tick</code> method to perform some level of client side logic for rendering purposes. The most common example is the <code>EditBox</code> for the blinking cursor.</p>
+<pre><code class="language-java">// In some Screen subclass
+@Override
+public void tick() {
+    super.tick();
+
+    // Add ticking logic for EditBox in editBox
+    this.editBox.tick();
+}
+</code></pre>
+<h3 id="input-handling">Input Handling</h3>
+<p>Since screens are subtypes of <code>GuiEventListener</code>s, the input handlers can also be overridden, such as for handling logic on a specific <a href="../misc/keymappings.html#inside-a-gui">key press</a>.</p>
+<h3 id="rendering-the-screen">Rendering the Screen</h3>
+<p>Finally, screens are rendered through the <code>#render</code> method provided by being a <code>Renderable</code> subtype. As mentioned, the <code>#render</code> method draws the everything the screen has to render every frame, such as the background, widgets, tooltips, etc. By default, the <code>#render</code> method only renders the widgets to the screen.</p>
+<p>The two most common things rendered within a screen that is typically not handled by a subtype is the background and the tooltips.</p>
+<p>The background can be rendered using <code>#renderBackground</code>, with one method taking in a v Offset for the options background whenever a screen is rendered when the level behind it cannot be.</p>
+<p>Tooltips are rendered through <code>GuiGraphics#renderTooltip</code> or <code>GuiGraphics#renderComponentTooltip</code> which can take in the text components being rendered, an optional custom tooltip component, and the x / y relative coordinates on where the tooltip should be rendered on the screen.</p>
+<pre><code class="language-java">// In some Screen subclass
+
+// mouseX and mouseY indicate the scaled coordinates of where the cursor is in on the screen
+@Override
+public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+    // Background is typically rendered first
+    this.renderBackground(graphics);
+
+    // Render things here before widgets (background textures)
+
+    // Then the widgets if this is a direct child of the Screen
+    super.render(graphics, mouseX, mouseY, partialTick);
+
+    // Render things after widgets (tooltips)
+}
+</code></pre>
+<h3 id="closing-the-screen">Closing the Screen</h3>
+<p>When a screen is closed, two methods handle the teardown: <code>#onClose</code> and <code>#removed</code>.</p>
+<p><code>#onClose</code> is called whenever the user makes an input to close the current screen. This method is typically used as a callback to destroy and save any internal processes in the screen itself. This includes sending packets to the server.</p>
+<p><code>#removed</code> is called just before the screen changes and is released to the garbage collector. This handles anything that hasn&#39;t been reset back to its initial state before the screen was opened.</p>
+<pre><code class="language-java">// In some Screen subclass
+
+@Override
+public void onClose() {
+    // Stop any handlers here
+
+    // Call last in case it interferes with the override
+    super.onClose();
+}
+
+@Override
+public void removed() {
+    // Reset initial states here
+
+    // Call last in case it interferes with the override
+    super.removed()
+;}
+</code></pre>
+<h2 id="abstractcontainerscreen"><code>AbstractContainerScreen</code></h2>
+<p>If a screen is directly attached to a <a href="./menus.html">menu</a>, then an <code>AbstractContainerScreen</code> should be subclassed instead. An <code>AbstractContainerScreen</code> acts as the renderer and input handler of a menu and contains logic for syncing and interacting with slots. As such, only two methods typically need to be overridden or implemented to have a working container screen. Once again, to make it easier to understand, the components of a container screen will be mentioned in the order they are typically encountered.</p>
+<p>An <code>AbstractContainerScreen</code> typically requires three parameters: the container menu being opened (represented by the generic <code>T</code>), the player inventory (only for the display name), and the title of the screen itself. Within here, a number of positioning fields can be set:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>imageWidth</code></td>
+<td align="left">The width of the texture used for the background. This is typically inside a PNG of 256 x 256 and defaults to 176.</td>
+</tr>
+<tr>
+<td align="center"><code>imageHeight</code></td>
+<td align="left">The width of the texture used for the background. This is typically inside a PNG of 256 x 256 and defaults to 166.</td>
+</tr>
+<tr>
+<td align="center"><code>titleLabelX</code></td>
+<td align="left">The relative x coordinate of where the screen title will be rendered.</td>
+</tr>
+<tr>
+<td align="center"><code>titleLabelY</code></td>
+<td align="left">The relative y coordinate of where the screen title will be rendered.</td>
+</tr>
+<tr>
+<td align="center"><code>inventoryLabelX</code></td>
+<td align="left">The relative x coordinate of where the player inventory name will be rendered.</td>
+</tr>
+<tr>
+<td align="center"><code>inventoryLabelY</code></td>
+<td align="left">The relative y coordinate of where the player inventory name will be rendered.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>In a previous section, it mentioned that precomputed relative coordinates should be set in the <code>#init</code> method. This still remains true, as the values mentioned here are not precomputed coordinates but static values and relativized coordinates.</p>
+<p>The image values are static and non changing as they represent the background texture size. To make things easier when rendering, two additional values (<code>leftPos</code> and <code>topPos</code>) are precomputed in the <code>#init</code> method which marks the top left corner of where the background will be rendered. The label coordinates are relative to these values.</p>
+<p>The <code>leftPos</code> and <code>topPos</code> is also used as a convenient way to render the background as they already represent the position to pass into the <code>#blit</code> method.</p>
+</blockquote>
+<pre><code class="language-java">// In some AbstractContainerScreen subclass
+public MyContainerScreen(MyMenu menu, Inventory playerInventory, Component title) {
+    super(menu, playerInventory, title);
+
+    this.titleLabelX = 10;
+    this.inventoryLabelX = 10;
+
+    /*
+     * If the &#39;imageHeight&#39; is changed, &#39;inventoryLabelY&#39; must also be
+     * changed as the value depends on the &#39;imageHeight&#39; value.
+     */
+}
+</code></pre>
+<h3 id="menu-access">Menu Access</h3>
+<p>As the menu is passed into the screen, any values that were within the menu and synced (either through slots, data slots, or a custom system) can now be accessed through the <code>menu</code> field.</p>
+<h3 id="container-tick">Container Tick</h3>
+<p>Container screens tick within the <code>#tick</code> method when the player is alive and looking at the screen via <code>#containerTick</code>. This essentially takes the place of <code>#tick</code> within container screens, with its most common usage being to tick the recipe book.</p>
+<pre><code class="language-java">// In some AbstractContainerScreen subclass
+@Override
+protected void containerTick() {
+    super.containerTick();
+
+    // Tick things here
+}
+</code></pre>
+<h3 id="rendering-the-container-screen">Rendering the Container Screen</h3>
+<p>The container screen is rendered across three methods: <code>#renderBg</code>, which renders the background textures, <code>#renderLabels</code>, which renders any text on top of the background, and <code>#render</code> which encompass the previous two methods in addition to providing a grayed out background and tooltips.</p>
+<p>Starting with <code>#render</code>, the most common override (and typically the only case) adds the background, calls the super to render the container screen, and finally renders the tooltips on top of it.</p>
+<pre><code class="language-java">// In some AbstractContainerScreen subclass
+@Override
+public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+    this.renderBackground(graphics);
+    super.render(graphics, mouseX, mouseY, partialTick);
+
+    /*
+     * This method is added by the container screen to render
+     * the tooltip of the hovered slot.
+     */
+    this.renderTooltip(graphics, mouseX, mouseY);
+}
+</code></pre>
+<p>Within the super, <code>#renderBg</code> is called to render the background of the screen. The most standard representation uses three method calls: two for setup and one to draw the background texture.</p>
+<pre><code class="language-java">// In some AbstractContainerScreen subclass
+
+// The location of the background texture (assets/&lt;namespace&gt;/&lt;path&gt;)
+private static final ResourceLocation BACKGROUND_LOCATION = new ResourceLocation(MOD_ID, &quot;textures/gui/container/my_container_screen.png&quot;);
+
+@Override
+protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
+    /*
+     * Renders the background texture to the screen. &#39;leftPos&#39; and
+     * &#39;topPos&#39; should already represent the top left corner of where
+     * the texture should be rendered as it was precomputed from the
+     * &#39;imageWidth&#39; and &#39;imageHeight&#39;. The two zeros represent the
+     * integer u/v coordinates inside the 256 x 256 PNG file.
+     */
+    graphics.blit(BACKGROUND_LOCATION, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
+}
+</code></pre>
+<p>Finally, <code>#renderLabels</code> is called to render any text above the background, but below the tooltips. This simply calls uses the font to draw the associated components.</p>
+<pre><code class="language-java">// In some AbstractContainerScreen subclass
+@Override
+protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
+    super.renderLabels(graphics, mouseX, mouseY);
+
+    // Assume we have some Component &#39;label&#39;
+    // &#39;label&#39; is drawn at &#39;labelX&#39; and &#39;labelY&#39;
+    graphics.drawString(this.font, this.label, this.labelX, this.labelY, 0x404040);
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>When rendering the label, you do <strong>not</strong> need to specify the <code>leftPos</code> and <code>topPos</code> offset. Those have already been translated within the <code>PoseStack</code> so everything within this method is drawn relative to those coordinates.</p>
+</blockquote>
+<h2 id="registering-an-abstractcontainerscreen">Registering an AbstractContainerScreen</h2>
+<p>To use an <code>AbstractContainerScreen</code> with a menu, it needs to be registered. This can be done by calling <code>MenuScreens#register</code> within the <code>FMLClientSetupEvent</code> on the <a href="../concepts/events.html#mod-event-bus"><strong>mod event bus</strong></a>.</p>
+<pre><code class="language-java">// Event is listened to on the mod event bus
+private void clientSetup(FMLClientSetupEvent event) {
+    event.enqueueWork(
+        // Assume RegistryObject&lt;MenuType&lt;MyMenu&gt;&gt; MY_MENU
+        // Assume MyContainerScreen&lt;MyMenu&gt; which takes in three parameters
+        () -&gt; MenuScreens.register(MY_MENU.get(), MyContainerScreen::new)
+    );
+}
+</code></pre>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p><code>MenuScreens#register</code> is not thread-safe, so it needs to be called inside <code>#enqueueWork</code> provided by the parallel dispatch event.</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

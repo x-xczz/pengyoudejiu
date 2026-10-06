@@ -1,0 +1,465 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Codecs · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a class="current" href="codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/datastorage/codecs/">查看官方原文（联网）</a></div><h1 id="codecs">Codecs</h1>
+<p>Codecs are a serialization tool from Mojang&#39;s <a href="https://github.com/Mojang/DataFixerUpper">DataFixerUpper</a> used to describe how objects can be transformed between different formats, such as <code>JsonElement</code>s for JSON and <code>Tag</code>s for NBT.</p>
+<h2 id="using-codecs">Using Codecs</h2>
+<p>Codecs are primarily used to encode, or serialize, Java objects to some data format type and decode, or deserialize, formatted data objects back to its associated Java type. This is typically accomplished using <code>Codec#encodeStart</code> and <code>Codec#parse</code>, respectively.</p>
+<h3 id="dynamicops">DynamicOps</h3>
+<p>To determine what intermediate file format to encode and decode to, both <code>#encodeStart</code> and <code>#parse</code> require a <code>DynamicOps</code> instance to define the data within that format.</p>
+<p>The <a href="https://github.com/Mojang/DataFixerUpper">DataFixerUpper</a> library contains <code>JsonOps</code> to codec JSON data stored in <a href="https://github.com/google/gson"><code>Gson</code>&#39;s</a> <code>JsonElement</code> instances. <code>JsonOps</code> supports two versions of <code>JsonElement</code> serialization: <code>JsonOps#INSTANCE</code> which defines a standard JSON file, and <code>JsonOps#COMPRESSED</code> which allows data to be compressed into a single string.</p>
+<pre><code class="language-java">// Let exampleCodec represent a Codec&lt;ExampleJavaObject&gt;
+// Let exampleObject be a ExampleJavaObject
+// Let exampleJson be a JsonElement
+
+// Encode Java object to regular JsonElement
+exampleCodec.encodeStart(JsonOps.INSTANCE, exampleObject);
+
+// Encode Java object to compressed JsonElement
+exampleCodec.encodeStart(JsonOps.COMPRESSED, exampleObject);
+
+// Decode JsonElement into Java object
+// Assume JsonElement was parsed normally
+exampleCodec.parse(JsonOps.INSTANCE, exampleJson);
+</code></pre>
+<p>Minecraft also provides <code>NbtOps</code> to codec NBT data stored in <code>Tag</code> instances. This can be referenced using <code>NbtOps#INSTANCE</code>.</p>
+<pre><code class="language-java">// Let exampleCodec represent a Codec&lt;ExampleJavaObject&gt;
+// Let exampleObject be a ExampleJavaObject
+// Let exampleNbt be a Tag
+
+// Encode Java object to Tag
+exampleCodec.encodeStart(JsonOps.INSTANCE, exampleObject);
+
+// Decode Tag into Java object
+exampleCodec.parse(JsonOps.INSTANCE, exampleNbt);
+</code></pre>
+<h4 id="format-conversion">Format Conversion</h4>
+<p><code>DynamicOps</code> can also be used separately to convert between two different encoded formats. This can be done using <code>#convertTo</code> and supplying the <code>DynamicOps</code> format and the encoded object to convert.</p>
+<pre><code class="language-java">// Convert Tag to JsonElement
+// Let exampleTag be a Tag
+JsonElement convertedJson = NbtOps.INSTANCE.convertTo(JsonOps.INSTANCE, exampleTag);
+</code></pre>
+<h3 id="dataresult">DataResult</h3>
+<p>Encoded or decoded data using codecs return a <code>DataResult</code> which holds the converted instance or some error data depending on whether the conversion was successful. When the conversion is successful, the <code>Optional</code> supplied by <code>#result</code> will contain the successfully converted object. If the conversion fails, the <code>Optional</code> supplied by <code>#error</code> will contain the <code>PartialResult</code>, which holds the error message and a partially converted object depending on the codec.</p>
+<p>Additionally, there are many methods on <code>DataResult</code> that can be used to transform the result or error into the desired format. For example, <code>#resultOrPartial</code> will return an <code>Optional</code> containing the result on success, and the partially converted object on failure. The method takes in a string consumer to determine how to report the error message if present.</p>
+<pre><code class="language-java">// Let exampleCodec represent a Codec&lt;ExampleJavaObject&gt;
+// Let exampleJson be a JsonElement
+
+// Decode JsonElement into Java object
+DataResult&lt;ExampleJavaObject&gt; result = exampleCodec.parse(JsonOps.INSTANCE, exampleJson);
+
+result
+  // Get result or partial on error, report error message
+  .resultOrPartial(errorMessage -&gt; /* Do something with error message */)
+  // If result or partial is present, do something
+  .ifPresent(decodedObject -&gt; /* Do something with decoded object */);
+</code></pre>
+<h2 id="existing-codecs">Existing Codecs</h2>
+<h3 id="primitives">Primitives</h3>
+<p>The <code>Codec</code> class contains static instances of codecs for certain defined primitives.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Codec</th>
+<th align="left">Java Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>BOOL</code></td>
+<td align="left"><code>Boolean</code></td>
+</tr>
+<tr>
+<td align="center"><code>BYTE</code></td>
+<td align="left"><code>Byte</code></td>
+</tr>
+<tr>
+<td align="center"><code>SHORT</code></td>
+<td align="left"><code>Short</code></td>
+</tr>
+<tr>
+<td align="center"><code>INT</code></td>
+<td align="left"><code>Integer</code></td>
+</tr>
+<tr>
+<td align="center"><code>LONG</code></td>
+<td align="left"><code>Long</code></td>
+</tr>
+<tr>
+<td align="center"><code>FLOAT</code></td>
+<td align="left"><code>Float</code></td>
+</tr>
+<tr>
+<td align="center"><code>DOUBLE</code></td>
+<td align="left"><code>Double</code></td>
+</tr>
+<tr>
+<td align="center"><code>STRING</code></td>
+<td align="left"><code>String</code></td>
+</tr>
+<tr>
+<td align="center"><code>BYTE_BUFFER</code></td>
+<td align="left"><code>ByteBuffer</code></td>
+</tr>
+<tr>
+<td align="center"><code>INT_STREAM</code></td>
+<td align="left"><code>IntStream</code></td>
+</tr>
+<tr>
+<td align="center"><code>LONG_STREAM</code></td>
+<td align="left"><code>LongStream</code></td>
+</tr>
+<tr>
+<td align="center"><code>PASSTHROUGH</code></td>
+<td align="left"><code>Dynamic&lt;?&gt;</code>*</td>
+</tr>
+<tr>
+<td align="center"><code>EMPTY</code></td>
+<td align="left"><code>Unit</code>**</td>
+</tr>
+</tbody></table>
+<p>* <code>Dynamic</code> is an object which holds a value encoded in a supported <code>DynamicOps</code> format. These are typically used to convert encoded object formats into other encoded object formats.</p>
+<p>** <code>Unit</code> is an object used to represent <code>null</code> objects.</p>
+<h3 id="vanilla-and-forge">Vanilla and Forge</h3>
+<p>Minecraft and Forge define many codecs for objects that are frequently encoded and decoded. Some examples include <code>ResourceLocation#CODEC</code> for <code>ResourceLocation</code>s, <code>ExtraCodecs#INSTANT_ISO8601</code> for <code>Instant</code>s in the <code>DateTimeFormatter#ISO_INSTANT</code> format, and <code>CompoundTag#CODEC</code> for <code>CompoundTag</code>s.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p><code>CompoundTag</code>s cannot decode lists of numbers from JSON using <code>JsonOps</code>. <code>JsonOps</code>, when converting, sets a number to its most narrow type. <code>ListTag</code>s force a specific type for its data, so numbers with different types (e.g. <code>64</code> would be <code>byte</code>, <code>384</code> would be <code>short</code>) will throw an error on conversion.</p>
+</blockquote>
+<p>Vanilla and Forge registries also have codecs for the type of object the registry contains (e.g. <code>Registry#BLOCK</code> or <code>ForgeRegistries#BLOCKS</code> have a <code>Codec&lt;Block&gt;</code>). <code>Registry#byNameCodec</code> and <code>IForgeRegistry#getCodec</code> will encode the registry object to their registry name, or an integer identifier if compressed. Vanilla registries also have a <code>Registry#holderByNameCodec</code> which encodes to a registry name and decodes to the registry object wrapped in a <code>Holder</code>.</p>
+<h2 id="creating-codecs">Creating Codecs</h2>
+<p>Codecs can be created for encoding and decoding any object. For understanding purposes, the equivalent encoded JSON will be shown.</p>
+<h3 id="records">Records</h3>
+<p>Codecs can define objects through the use of records. Each record codec defines any object with explicit named fields. There are many ways to create a record codec, but the simplest is via <code>RecordCodecBuilder#create</code>.</p>
+<p><code>RecordCodecBuilder#create</code> takes in a function which defines an <code>Instance</code> and returns an application (<code>App</code>) of the object. A correlation can be drawn to creating a class <em>instance</em> and the constructors used to <em>apply</em> the class to the constructed object.</p>
+<pre><code class="language-java">// Some object to create a codec for
+public class SomeObject {
+
+  public SomeObject(String s, int i, boolean b) { /* ... */ }
+
+  public String s() { /* ... */ }
+
+  public int i() { /* ... */ }
+
+  public boolean b() { /* ... */ }
+}
+</code></pre>
+<h4 id="fields">Fields</h4>
+<p>An <code>Instance</code> can define up to 16 fields using <code>#group</code>. Each field must be an application defining the instance the object is being made for and the type of the object. The simplest way to meet this requirement is by taking a <code>Codec</code>, setting the name of the field to decode from, and setting the getter used to encode the field.</p>
+<p>A field can be created from a <code>Codec</code> using <code>#fieldOf</code>, if the field is required, or <code>#optionalFieldOf</code>, if the field is wrapped in an <code>Optional</code> or defaulted. Either method requires a string containing the name of the field in the encoded object. The getter used to encode the field can then be set using <code>#forGetter</code>, taking in a function which given the object, returns the field data.</p>
+<p>From there, the resulting product can be applied via <code>#apply</code> to define how the instance should construct the object for the application. For ease of convenience, the grouped fields should be listed in the same order they appear in the constructor such that the function can simply be a constructor method reference.</p>
+<pre><code class="language-java">public static final Codec&lt;SomeObject&gt; RECORD_CODEC = RecordCodecBuilder.create(instance -&gt; // Given an instance
+  instance.group( // Define the fields within the instance
+    Codec.STRING.fieldOf(&quot;s&quot;).forGetter(SomeObject::s), // String
+    Codec.INT.optionalFieldOf(&quot;i&quot;, 0).forGetter(SomeObject::i), // Integer, defaults to 0 if field not present
+    Codec.BOOL.fieldOf(&quot;b&quot;).forGetter(SomeObject::b) // Boolean
+  ).apply(instance, SomeObject::new) // Define how to create the object
+);
+</code></pre>
+<pre><code class="language-js">// Encoded SomeObject
+{
+  &quot;s&quot;: &quot;value&quot;,
+  &quot;i&quot;: 5,
+  &quot;b&quot;: false
+}
+
+// Another encoded SomeObject
+{
+  &quot;s&quot;: &quot;value2&quot;,
+  // i is omitted, defaults to 0
+  &quot;b&quot;: true
+}
+</code></pre>
+<h3 id="transformers">Transformers</h3>
+<p>Codecs can be transformed into equivalent, or partially equivalent, representations through mapping methods. Each mapping method takes in two functions: one to transform the current type into the new type, and one to transform the new type back to the current type. This is done through the <code>#xmap</code> function.</p>
+<pre><code class="language-java">// A class
+public class ClassA {
+
+  public ClassB toB() { /* ... */ }
+}
+
+// Another equivalent class
+public class ClassB {
+
+  public ClassA toA() { /* ... */ }
+}
+
+// Assume there is some codec A_CODEC
+public static final Codec&lt;ClassB&gt; B_CODEC = A_CODEC.xmap(ClassA::toB, ClassB::toA);
+</code></pre>
+<p>If a type is partially equivalent, meaning that there are some restrictions during conversion, there are mapping functions which return a <code>DataResult</code> which can be used to return an error state whenever an exception or invalid state is reached.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Is A Fully Equivalent to B</th>
+<th align="center">Is B Fully Equivalent to A</th>
+<th align="left">Transform Method</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Yes</td>
+<td align="center">Yes</td>
+<td align="left"><code>#xmap</code></td>
+</tr>
+<tr>
+<td align="center">Yes</td>
+<td align="center">No</td>
+<td align="left"><code>#flatComapMap</code></td>
+</tr>
+<tr>
+<td align="center">No</td>
+<td align="center">Yes</td>
+<td align="left"><code>#comapFlatMap</code></td>
+</tr>
+<tr>
+<td align="center">No</td>
+<td align="center">No</td>
+<td align="left"><code>#flatXMap</code></td>
+</tr>
+</tbody></table>
+<pre><code class="language-java">// Given an string codec to convert to a integer
+// Not all strings can become integers (A is not fully equivalent to B)
+// All integers can become strings (B is fully equivalent to A)
+public static final Codec&lt;Integer&gt; INT_CODEC = Codec.STRING.comapFlatMap(
+  s -&gt; { // Return data result containing error on failure
+    try {
+      return DataResult.success(Integer.valueOf(s));
+    } catch (NumberFormatException e) {
+      return DataResult.error(s + &quot; is not an integer.&quot;);
+    }
+  },
+  Integer::toString // Regular function
+);
+</code></pre>
+<pre><code class="language-js">// Will return 5
+&quot;5&quot;
+
+// Will error, not an integer
+&quot;value&quot;
+</code></pre>
+<h4 id="range-codecs">Range Codecs</h4>
+<p>Range codecs are an implementation of <code>#flatXMap</code> which returns an error <code>DataResult</code> if the value is not inclusively between the set minimum and maximum. The value is still provided as a partial result if outside the bounds. There are implementations for integers, floats, and doubles via <code>#intRange</code>, <code>#floatRange</code>, and <code>#doubleRange</code> respectively.</p>
+<pre><code class="language-java">public static final Codec&lt;Integer&gt; RANGE_CODEC = Codec.intRange(0, 4); 
+</code></pre>
+<pre><code class="language-js">// Will be valid, inside [0, 4]
+4
+
+// Will error, outside [0, 4]
+5
+</code></pre>
+<h3 id="defaults">Defaults</h3>
+<p>If the result of encoding or decoding fails, a default value can be supplied instead via <code>Codec#orElse</code> or <code>Codec#orElseGet</code>.</p>
+<pre><code class="language-java">public static final Codec&lt;Integer&gt; DEFAULT_CODEC = Codec.INT.orElse(0); // Can also be a supplied value via #orElseGet
+</code></pre>
+<pre><code class="language-js">// Not an integer, defaults to 0
+&quot;value&quot;
+</code></pre>
+<h3 id="unit">Unit</h3>
+<p>A codec which supplies an in-code value and encodes to nothing can be represented using <code>Codec#unit</code>. This is useful if a codec uses a non-encodable entry within the data object.</p>
+<pre><code class="language-java">public static final Codec&lt;IForgeRegistry&lt;Block&gt;&gt; UNIT_CODEC = Codec.unit(
+  () -&gt; ForgeRegistries.BLOCKS // Can also be a raw value
+);
+</code></pre>
+<pre><code class="language-js">// Nothing here, will return block registry codec
+</code></pre>
+<h3 id="list">List</h3>
+<p>A codec for a list of objects can be generated from an object codec via <code>Codec#listOf</code>.</p>
+<pre><code class="language-java">// BlockPos#CODEC is a Codec&lt;BlockPos&gt;
+public static final Codec&lt;List&lt;BlockPos&gt;&gt; LIST_CODEC = BlockPos.CODEC.listOf();
+</code></pre>
+<pre><code class="language-js">// Encoded List&lt;BlockPos&gt;
+[
+  [1, 2, 3], // BlockPos(1, 2, 3)
+  [4, 5, 6], // BlockPos(4, 5, 6)
+  [7, 8, 9]  // BlockPos(7, 8, 9)
+]
+</code></pre>
+<p>List objects decoded using a list codec are stored in an <strong>immutable</strong> list. If a mutable list is needed, a <a href="#transformer-codecs">transformer</a> should be applied to the list codec.</p>
+<h3 id="map">Map</h3>
+<p>A codec for a map of keys and value objects can be generated from two codecs via <code>Codec#unboundedMap</code>. Unbounded maps can specify any string-based or string-transformed value to be a key.</p>
+<pre><code class="language-java">// BlockPos#CODEC is a Codec&lt;BlockPos&gt;
+public static final Codec&lt;Map&lt;String, BlockPos&gt;&gt; MAP_CODEC = Codec.unboundedMap(Codec.STRING, BlockPos.CODEC);
+</code></pre>
+<pre><code class="language-js">// Encoded Map&lt;String, BlockPos&gt;
+{
+  &quot;key1&quot;: [1, 2, 3], // key1 -&gt; BlockPos(1, 2, 3)
+  &quot;key2&quot;: [4, 5, 6], // key2 -&gt; BlockPos(4, 5, 6)
+  &quot;key3&quot;: [7, 8, 9]  // key3 -&gt; BlockPos(7, 8, 9)
+}
+</code></pre>
+<p>Map objects decoded using a unbounded map codec are stored in an <strong>immutable</strong> map. If a mutable map is needed, a <a href="#transformer-codecs">transformer</a> should be applied to the map codec.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>Unbounded maps only support keys that encode/decode to/from strings. A key-value <a href="#pair">pair</a> list codec can be used to get around this restriction.</p>
+</blockquote>
+<h3 id="pair">Pair</h3>
+<p>A codec for pairs of objects can be generated from two codecs via <code>Codec#pair</code>.</p>
+<p>A pair codec decodes objects by first decoding the left object in the pair, then taking the remaining part of the encoded object and decodes the right object from that. As such, the codecs must either express something about the encoded object after decoding (such as <a href="#records">records</a>), or they have to be augmented into a <code>MapCodec</code> and transformed into a regular codec via <code>#codec</code>. This can typically done by making the codec a <a href="#fields">field</a> of some object.</p>
+<pre><code class="language-java">public static final Codec&lt;Pair&lt;Integer, String&gt;&gt; PAIR_CODEC = Codec.pair(
+  Codec.INT.fieldOf(&quot;left&quot;).codec(),
+  Codec.STRING.fieldOf(&quot;right&quot;).codec()
+);
+</code></pre>
+<pre><code class="language-js">// Encoded Pair&lt;Integer, String&gt;
+{
+  &quot;left&quot;: 5,       // fieldOf looks up &#39;left&#39; key for left object
+  &quot;right&quot;: &quot;value&quot; // fieldOf looks up &#39;right&#39; key for right object
+}
+</code></pre>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>A map codec with a non-string key can be encoded/decoded using a list of key-value pairs applied with a <a href="#transformer-codecs">transformer</a>.</p>
+</blockquote>
+<h3 id="either">Either</h3>
+<p>A codec for two different methods of encoding/decoding some object data can be generated from two codecs via <code>Codec#either</code>.</p>
+<p>An either codec attempts to decode the object using the first codec. If it fails, it attempts to decode using the second codec. If that also fails, then the <code>DataResult</code> will only contain the error from the second codec failure.</p>
+<pre><code class="language-java">public static final Codec&lt;Either&lt;Integer, String&gt;&gt; EITHER_CODEC = Codec.either(
+  Codec.INT,
+  Codec.STRING
+);
+</code></pre>
+<pre><code class="language-js">// Encoded Either$Left&lt;Integer, String&gt;
+5
+
+// Encoded Either$Right&lt;Integer, String&gt;
+&quot;value&quot;
+</code></pre>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>This can be used in conjunction with a <a href="#transformer-codecs">transformer</a> to get a specific object from two different methods of encoding.</p>
+</blockquote>
+<h3 id="dispatch">Dispatch</h3>
+<p>Codecs can have subcodecs which can decode a particular object based upon some specified type via <code>Codec#dispatch</code>. This is typically used in registries which contain codecs, such as rule tests or block placers.</p>
+<p>A dispatch codec first attempts to get the encoded type from some string key (usually <code>type</code>). From there, the type is decoded, calling a getter for the specific codec used to decode the actual object. If the <code>DynamicOps</code> used to decode the object compresses its maps, or the object codec itself is not augmented into a <code>MapCodec</code> (such as records or fielded primitives), then the object needs to be stored within a <code>value</code> key. Otherwise, the object is decoded at the same level as the rest of the data.</p>
+<pre><code class="language-java">// Define our object
+public abstract class ExampleObject {
+
+  // Define the method used to specify the object type for encoding
+  public abstract Codec&lt;? extends ExampleObject&gt; type();
+}
+
+// Create simple object which stores a string
+public class StringObject extends ExampleObject {
+
+  public StringObject(String s) { /* ... */ }
+
+  public String s() { /* ... */ }
+
+  public Codec&lt;? extends ExampleObject&gt; type() {
+    // A registered registry object
+    // &quot;string&quot;:
+    //   Codec.STRING.xmap(StringObject::new, StringObject::s)
+    return STRING_OBJECT_CODEC.get();
+  }
+}
+
+// Create complex object which stores a string and integer
+public class ComplexObject extends ExampleObject {
+
+  public ComplexObject(String s, int i) { /* ... */ }
+
+  public String s() { /* ... */ }
+
+  public int i() { /* ... */ }
+
+  public Codec&lt;? extends ExampleObject&gt; type() {
+    // A registered registry object
+    // &quot;complex&quot;:
+    //   RecordCodecBuilder.create(instance -&gt;
+    //     instance.group(
+    //       Codec.STRING.fieldOf(&quot;s&quot;).forGetter(ComplexObject::s),
+    //       Codec.INT.fieldOf(&quot;i&quot;).forGetter(ComplexObject::i)
+    //     ).apply(instance, ComplexObject::new)
+    //   )
+    return COMPLEX_OBJECT_CODEC.get();
+  }
+}
+
+// Assume there is an IForgeRegistry&lt;Codec&lt;? extends ExampleObject&gt;&gt; DISPATCH
+public static final Codec&lt;ExampleObject&gt; = DISPATCH.getCodec() // Gets Codec&lt;Codec&lt;? extends ExampleObject&gt;&gt;
+  .dispatch(
+    ExampleObject::type, // Get the codec from the specific object
+    Function.identity() // Get the codec from the registry
+  );
+</code></pre>
+<pre><code class="language-js">// Simple object
+{
+  &quot;type&quot;: &quot;string&quot;, // For StringObject
+  &quot;value&quot;: &quot;value&quot; // Codec type is not augmented from MapCodec, needs field
+}
+
+// Complex object
+{
+  &quot;type&quot;: &quot;complex&quot;, // For ComplexObject
+
+  // Codec type is augmented from MapCodec, can be inlined
+  &quot;s&quot;: &quot;value&quot;,
+  &quot;i&quot;: 0
+}
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

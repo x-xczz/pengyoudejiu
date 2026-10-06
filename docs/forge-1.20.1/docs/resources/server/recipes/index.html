@@ -1,0 +1,149 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Recipes · Forge 1.20.1</title><link rel="stylesheet" href="../../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../../items/index.html" title="items/index.md">Items</a>
+<a href="../../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../index.html" title="resources/server/index.md">Datapacks</a>
+<a class="current" href="index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/server/recipes/">查看官方原文（联网）</a></div><h1 id="recipes">Recipes</h1>
+<p>Recipes are a way to transform some number of objects into other objects within a Minecraft world. Although the vanilla system deals purely with item transformations, the system as a whole can be expanded to use any object the programmer creates.</p>
+<h2 id="data-driven-recipes">Data-Driven Recipes</h2>
+<p>Most recipe implementations within vanilla are data driven via JSON. This means that a mod is not necessary to create a new recipe, only a <a href="https://minecraft.wiki/w/Data_pack">Data pack</a>. A full list on how to create and put these recipes within the mod&#39;s <code>resources</code> folder can be found on the <a href="https://minecraft.wiki/w/Recipe">Minecraft Wiki</a>.</p>
+<p>A recipe can be obtained within the Recipe Book as a reward for completing an <a href="../advancements.html">advancement</a>. Recipe advancements always have <code>minecraft:recipes/root</code> as their parent, to not to appear on the advancement screen. The default criteria to gain the recipe advancement is a check if the user has unlocked the recipe from using it once or receiving it through a command like <code>/recipe</code>:</p>
+<pre><code class="language-js">// Within some recipe advancement json
+&quot;has_the_recipe&quot;: { // Criteria label
+  // Succeeds if examplemod:example_recipe is used
+  &quot;trigger&quot;: &quot;minecraft:recipe_unlocked&quot;,
+  &quot;conditions&quot;: {
+    &quot;recipe&quot;: &quot;examplemod:example_recipe&quot;
+  }
+}
+//...
+&quot;requirements&quot;: [
+  [
+    &quot;has_the_recipe&quot;
+    // ... Other criteria labels to be ORed against to unlock recipe
+  ]
+]
+</code></pre>
+<p>Data-driven recipes and their unlocking advancement can be <a href="../../../datagen/server/recipes.html">generated</a> via <code>RecipeProvider</code>.</p>
+<h2 id="recipe-manager">Recipe Manager</h2>
+<p>Recipes are loaded and stored via the <code>RecipeManager</code>. Any operations relating to getting available recipe(s) are handled by this manager. There are two important methods to know of:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>getRecipeFor</code></td>
+<td align="left">Gets the first recipe that matches the current input.</td>
+</tr>
+<tr>
+<td align="center"><code>getRecipesFor</code></td>
+<td align="left">Gets all recipes that match the current input.</td>
+</tr>
+</tbody></table>
+<p>Each method takes in a <code>RecipeType</code>, which denotes what method is being applied to use the recipe (crafting, smelting, etc.), a <code>Container</code> which holds the configuration of the inputs, and the current level which is passed to <code>Recipe#matches</code> along with the container.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Forge provides the <code>RecipeWrapper</code> utility class which extends <code>Container</code> for wrapping around <code>IItemHandler</code>s and passing them to methods which requires a <code>Container</code> parameter.</p>
+<pre><code class="language-java">// Within some method with IItemHandlerModifiable handler
+recipeManger.getRecipeFor(RecipeType.CRAFTING, new RecipeWrapper(handler), level);
+</code></pre>
+</blockquote>
+<h2 id="additional-features">Additional Features</h2>
+<p>Forge provides some additional behavior to the recipe schema and its implementations for greater control of the system.</p>
+<h3 id="recipe-itemstack-result">Recipe ItemStack Result</h3>
+<p>Except for <code>minecraft:stonecutting</code> recipes, all vanilla recipe serializers expand the <code>result</code> tag to take in a full <code>ItemStack</code> as a <code>JsonObject</code> instead of just the item name and amount in some cases.</p>
+<pre><code class="language-js">// In some recipe JSON
+&quot;result&quot;: {
+  // The name of the registry item to give as a result
+  &quot;item&quot;: &quot;examplemod:example_item&quot;,
+  // The number of items to return
+  &quot;count&quot;: 4,
+  // The tag data of the stack, can also be a string
+  &quot;nbt&quot;: {
+      // Add tag data here
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>The <code>nbt</code> tag can alternatively be a string containing a stringified NBT (or SNBT) for data which cannot be properly represented as a JSON object (such as <code>IntArrayTag</code>s).</p>
+</blockquote>
+<h3 id="conditional-recipes">Conditional Recipes</h3>
+<p>Recipes and their unlocking advancement can be <a href="../conditional.html#implementations">loaded conditionally and defaulted</a> depending on what information is present (mod loaded, item exists, etc.).</p>
+<h3 id="larger-crafting-grids">Larger Crafting Grids</h3>
+<p>By default, vanilla declares a maximum width and height for a crafting grid to be a 3x3 square. This can be expanded by calling <code>ShapedRecipe#setCraftingSize</code> with the new width and height in <code>FMLCommonSetupEvent</code>.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p><code>ShapedRecipe#setCraftingSize</code> is <strong>NOT</strong> thread-safe. As such, it should be enqueued to the synchronous work queue via <code>FMLCommonSetupEvent#enqueueWork</code>.</p>
+</blockquote>
+<p>Larger crafting grids in recipes can be <a href="../../../datagen/server/recipes.html">data generated</a>.</p>
+<h3 id="ingredient-types">Ingredient Types</h3>
+<p>A few additional <a href="./ingredients.html#forge-types">ingredient types</a> are added to allow recipes to have inputs which check tag data or combine multiple ingredients into a single input checker.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

@@ -1,0 +1,48 @@
+# Eclipse 生成的文件
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# IntelliJ IDEA 生成的文件
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# Gradle 缓存与构建输出
+build
+.gradle
+
+# 其他开发环境文件与运行目录
+eclipse
+run
+
+# Forge MDK 附带的更新日志文件
+forge*changelog.txt
+
+# 数据生成运行目录、本地 Maven 发布目录与运行日志
+/run-data/
+/mcmodsrepo/
+/logs/
+/crash-reports/
+*.log
+
+# 原始音乐素材仅本地保留；游戏所需 OGG 仍需提交
+/src/main/resources/*.mp4
+/src/main/resources/*.mp3
+
+# 本地工具配置、系统文件与私密凭据
+/.codex/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+Thumbs.db
+.DS_Store

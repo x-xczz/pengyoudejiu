@@ -1,0 +1,184 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>BlockEntities · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a class="current" href="index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/blockentities/">查看官方原文（联网）</a></div><h1 id="blockentities">BlockEntities</h1>
+<p><code>BlockEntities</code> are like simplified <code>Entities</code> that are bound to a Block.
+They are used to store dynamic data, execute tick based tasks, and dynamic rendering.
+Some examples from vanilla Minecraft would be handling of inventories on chests, smelting logic on furnaces, or area effects on beacons.
+More advanced examples exist in mods, such as quarries, sorting machines, pipes, and displays.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p><code>BlockEntities</code> aren&#39;t a solution for everything and they can cause lag when used wrongly.
+When possible, try to avoid them.</p>
+</blockquote>
+<h2 id="registering">Registering</h2>
+<p>Block Entities are created and removed dynamically and as such are not registry objects on their own.</p>
+<p>In order to create a <code>BlockEntity</code>, you need to extend the <code>BlockEntity</code> class. As such, another object is registered instead to easily create and refer to the <em>type</em> of the dynamic object. For a <code>BlockEntity</code>, these are known as <code>BlockEntityType</code>s.</p>
+<p>A <code>BlockEntityType</code> can be <a href="../concepts/registries.html#methods-for-registering">registered</a> like any other registry object. To construct a <code>BlockEntityType</code>, its builder form can be used via <code>BlockEntityType$Builder#of</code>. This takes in two arguments: a <code>BlockEntityType$BlockEntitySupplier</code> which takes in a <code>BlockPos</code> and <code>BlockState</code> to create a new instance of the associated <code>BlockEntity</code>, and a varargs of <code>Block</code>s which this <code>BlockEntity</code> can be attached to. Building the <code>BlockEntityType</code> is done by calling <code>BlockEntityType$Builder#build</code>. This takes in a <code>Type</code> which represents the type-safe reference used to refer to this registry object in a <code>DataFixer</code>. Since <code>DataFixer</code>s are an optional system to use for mods, this can be passed as <code>null</code>.</p>
+<pre><code class="language-java">// For some DeferredRegister&lt;BlockEntityType&lt;?&gt;&gt; REGISTER
+public static final RegistryObject&lt;BlockEntityType&lt;MyBE&gt;&gt; MY_BE = REGISTER.register(&quot;mybe&quot;, () -&gt; BlockEntityType.Builder.of(MyBE::new, validBlocks).build(null));
+
+// In MyBE, a BlockEntity subclass
+public MyBE(BlockPos pos, BlockState state) {
+  super(MY_BE.get(), pos, state);
+}
+</code></pre>
+<h2 id="creating-a-blockentity">Creating a <code>BlockEntity</code></h2>
+<p>To create a <code>BlockEntity</code> and attach it to a <code>Block</code>, the <code>EntityBlock</code> interface must be implemented on your <code>Block</code> subclass. The method <code>EntityBlock#newBlockEntity(BlockPos, BlockState)</code> must be implemented and return a new instance of your <code>BlockEntity</code>.</p>
+<h2 id="storing-data-within-your-blockentity">Storing Data within your <code>BlockEntity</code></h2>
+<p>In order to save data, override the following two methods:</p>
+<pre><code class="language-java">BlockEntity#saveAdditional(CompoundTag tag)
+
+BlockEntity#load(CompoundTag tag)
+</code></pre>
+<p>These methods are called whenever the <code>LevelChunk</code> containing the <code>BlockEntity</code> gets loaded from/saved to a tag.
+Use them to read and write to the fields in your block entity class.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+</blockquote>
+<pre><code>	Whenever your data changes, you need to call `BlockEntity#setChanged`; otherwise, the `LevelChunk` containing your `BlockEntity` might be skipped while the level is saved.
+</code></pre>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+</blockquote>
+<pre><code>	It is important that you call the `super` methods!
+
+The tag names `id`, `x`, `y`, `z`, `ForgeData` and `ForgeCaps` are reserved by the `super` methods.
+</code></pre>
+<h2 id="ticking-blockentities">Ticking <code>BlockEntities</code></h2>
+<p>If you need a ticking <code>BlockEntity</code>, for example to keep track of the progress during a smelting process, another method must be implemented and overridden within <code>EntityBlock</code>: <code>EntityBlock#getTicker(Level, BlockState, BlockEntityType)</code>. This can implement different tickers depending on which logical side the user is on, or just implement one general ticker. In either case, a <code>BlockEntityTicker</code> must be returned. Since this is a functional interface, it can just take in a method representing the ticker instead:</p>
+<pre><code class="language-java">// Inside some Block subclass
+@Nullable
+@Override
+public &lt;T extends BlockEntity&gt; BlockEntityTicker&lt;T&gt; getTicker(Level level, BlockState state, BlockEntityType&lt;T&gt; type) {
+  return type == MyBlockEntityTypes.MYBE.get() ? MyBlockEntity::tick : null;
+}
+
+// Inside MyBlockEntity
+public static void tick(Level level, BlockPos pos, BlockState state, MyBlockEntity blockEntity) {
+  // Do stuff
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>This method is called each tick; therefore, you should avoid having complicated calculations in here. If possible, you should make more complex calculations every X ticks. (The amount of ticks in a second may be lower then 20 (twenty) but won&#39;t be higher)</p>
+</blockquote>
+<h2 id="synchronizing-the-data-to-the-client">Synchronizing the Data to the Client</h2>
+<p>There are three ways of syncing data to the client: synchronizing on chunk load, on block updates, and with a custom network message.</p>
+<h3 id="synchronizing-on-levelchunk-load">Synchronizing on LevelChunk Load</h3>
+<p>For this you need to override</p>
+<pre><code class="language-java">BlockEntity#getUpdateTag()
+
+IForgeBlockEntity#handleUpdateTag(CompoundTag tag)
+</code></pre>
+<p>Again, this is pretty simple, the first method collects the data that should be sent to the client,
+while the second one processes that data. If your <code>BlockEntity</code> doesn&#39;t contain much data, you might be able to use the methods out of the <a href="#storing-data-within-your-blockentity">Storing Data within your <code>BlockEntity</code></a> section.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Synchronizing excessive/useless data for block entities can lead to network congestion. You should optimize your network usage by sending only the information the client needs when the client needs it. For instance, it is more often than not unnecessary to send the inventory of a block entity in the update tag, as this can be synchronized via its <a href="../gui/menus.html"><code>AbstractContainerMenu</code></a>.</p>
+</blockquote>
+<h3 id="synchronizing-on-block-update">Synchronizing on Block Update</h3>
+<p>This method is a bit more complicated, but again you just need to override two or three methods.
+Here is a tiny example implementation of it:</p>
+<pre><code class="language-java">@Override
+public CompoundTag getUpdateTag() {
+  CompoundTag tag = new CompoundTag();
+  //Write your data into the tag
+  return tag;
+}
+
+@Override
+public Packet&lt;ClientGamePacketListener&gt; getUpdatePacket() {
+  // Will get tag from #getUpdateTag
+  return ClientboundBlockEntityDataPacket.create(this);
+}
+
+// Can override IForgeBlockEntity#onDataPacket. By default, this will defer to the #load.
+</code></pre>
+<p>The static constructors <code>ClientboundBlockEntityDataPacket#create</code> takes:</p>
+<ul>
+<li>The <code>BlockEntity</code>.</li>
+<li>An optional function to get the <code>CompoundTag</code> from the <code>BlockEntity</code>. By default, this uses <code>BlockEntity#getUpdateTag</code>.</li>
+</ul>
+<p>Now, to send the packet, an update notification must be given on the server.</p>
+<pre><code class="language-java">Level#sendBlockUpdated(BlockPos pos, BlockState oldState, BlockState newState, int flags)
+</code></pre>
+<p>The <code>pos</code> should be your <code>BlockEntity</code>&#39;s position.
+For <code>oldState</code> and <code>newState</code>, you can pass the current <code>BlockState</code> at that position.
+<code>flags</code> is a bitmask that should contain <code>2</code>, which will sync the changes to the client. See <code>Block</code> for more info as well as the rest of the flags. The flag <code>2</code> is equivalent to <code>Block#UPDATE_CLIENTS</code>.</p>
+<h3 id="synchronizing-using-a-custom-network-message">Synchronizing Using a Custom Network Message</h3>
+<p>This way of synchronizing is probably the most complicated but is usually the most optimized,
+as you can make sure that only the data you need to be synchronized is actually synchronized.
+You should first check out the <a href="../networking/index.html"><code>Networking</code></a> section and especially <a href="../networking/simpleimpl.html"><code>SimpleImpl</code></a> before attempting this.
+Once you&#39;ve created your custom network message, you can send it to all users that have the <code>BlockEntity</code> loaded with <code>SimpleChannel#send(PacketDistributor$PacketTarget, MSG)</code>.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>It is important that you do safety checks, the <code>BlockEntity</code> might already be destroyed/replaced when the message arrives at the player! You should also check if the chunk is loaded (<code>Level#hasChunkAt(BlockPos)</code>).</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

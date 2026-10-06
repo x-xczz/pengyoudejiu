@@ -1,0 +1,12 @@
+{
+  "music_disc.dance_song": {
+    "subtitle": "subtitles.examplemod.dance_song",
+    "sounds": [
+      {
+        "name": "examplemod:records/dance_song",
+        "stream": true,
+        "attenuation_distance": 16
+      }
+    ]
+  }
+}

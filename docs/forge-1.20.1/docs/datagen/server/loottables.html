@@ -1,0 +1,167 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Loot Table Generation · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../index.html" title="datagen/index.md">Data Generators</a>
+<a href="../client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a class="current" href="loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/datagen/server/loottables/">查看官方原文（联网）</a></div><h1 id="loot-table-generation">Loot Table Generation</h1>
+<p><a href="../../resources/server/loottables.html">Loot tables</a> can be generated for a mod by constructing a new <code>LootTableProvider</code> and providing <code>LootTableProvider$SubProviderEntry</code>s. The provider must be <a href="../index.html#data-providers">added</a> to the <code>DataGenerator</code>.</p>
+<pre><code class="language-java">// On the MOD event bus
+@SubscribeEvent
+public void gatherData(GatherDataEvent event) {
+    event.getGenerator().addProvider(
+        // Tell generator to run only when server data are generating
+        event.includeServer(),
+        output -&gt; new MyLootTableProvider(
+          output,
+          // Specify registry names of tables that are required to generate, or can leave empty
+          Collections.emptySet(),
+          // Sub providers which generate the loot
+          List.of(subProvider1, subProvider2, /*...*/)
+        )
+    );
+}
+</code></pre>
+<h2 id="loottablesubprovider"><code>LootTableSubProvider</code></h2>
+<p>Each <code>LootTableProvider$SubProviderEntry</code> takes in a supplied <code>LootTableSubProvider</code>, which generates the loot table, for a given <code>LootContextParamSet</code>. The <code>LootTableSubProvider</code> contains a method which takes in the writer (<code>BiConsumer&lt;ResourceLocation, LootTable.Builder&gt;</code>) to generate a table.</p>
+<pre><code class="language-java">public class ExampleSubProvider implements LootTableSubProvider {
+
+  // Used to create a factory method for the wrapping Supplier
+  public ExampleSubProvider() {}
+
+  // The method used to generate the loot tables
+  @Override
+  public void generate(BiConsumer&lt;ResourceLocation, LootTable.Builder&gt; writer) {
+    // Generate loot tables here by calling writer#accept
+  }
+}
+</code></pre>
+<p>The table can then be added to <code>LootTableProvider#getTables</code> for any available <code>LootContextParamSet</code>:</p>
+<pre><code class="language-java">// In the list passed into the LootTableProvider constructor
+new LootTableProvider.SubProviderEntry(
+  ExampleSubProvider::new,
+  // Loot table generator for the &#39;empty&#39; param set
+  LootContextParamSets.EMPTY
+)
+</code></pre>
+<h3 id="blocklootsubprovider-and-entitylootsubprovider-subclasses"><code>BlockLootSubProvider</code> and <code>EntityLootSubProvider</code> Subclasses</h3>
+<p>For <code>LootContextParamSets#BLOCK</code> and <code>#ENTITY</code>, there are special types (<code>BlockLootSubProvider</code> and <code>EntityLootSubProvider</code> respectively) which provide additional helper methods for creating and validating that there are loot tables.</p>
+<p>The <code>BlockLootSubProvider</code>&#39;s constructor takes in a list of items, which are explosion resistant to determine whether the loot table can be generated if a block is exploded, and a <code>FeatureFlagSet</code>, which determines whether the block is enabled so that a loot table is generated for it.</p>
+<pre><code class="language-java">// In some BlockLootSubProvider subclass
+public MyBlockLootSubProvider() {
+  super(Collections.emptySet(), FeatureFlags.REGISTRY.allFlags());
+}
+</code></pre>
+<p>The <code>EntityLootSubProvider</code>&#39;s constructor takes in a <code>FeatureFlagSet</code>, which determines whether the entity type is enabled so that a loot table is generated for it.</p>
+<pre><code class="language-java">// In some EntityLootSubProvider subclass
+public MyEntityLootSubProvider() {
+  super(FeatureFlags.REGISTRY.allFlags());
+}
+</code></pre>
+<p>To use them, all registered objects must be supplied to either <code>BlockLootSubProvider#getKnownBlocks</code> and <code>EntityLootSubProvider#getKnownEntityTypes</code> respectively. These methods are to make sure all objects within the iterable has a loot table.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>If <code>DeferredRegister</code> is being used to register a mod&#39;s objects, then the <code>#getKnown*</code> methods can be supplied the entries via <code>DeferredRegister#getEntries</code>:</p>
+<pre><code class="language-java">// In some BlockLootSubProvider subclass for some DeferredRegister BLOCK_REGISTRAR
+@Override
+protected Iterable&lt;Block&gt; getKnownBlocks() {
+  return BLOCK_REGISTRAR.getEntries() // Get all registered entries
+    .stream() // Stream the wrapped objects
+    .flatMap(RegistryObject::stream) // Get the object if available
+    ::iterator; // Create the iterable
+}
+</code></pre>
+</blockquote>
+<p>The loot tables themselves can be added by implementing the <code>#generate</code> method.</p>
+<pre><code class="language-java">// In some BlockLootSubProvider subclass
+@Override
+public void generate() {
+  // Add loot tables here
+}
+</code></pre>
+<h2 id="loot-table-builders">Loot Table Builders</h2>
+<p>To generate loot tables, they are accepted by the <code>LootTableSubProvider</code> as a <code>LootTable$Builder</code>. Afterwards, the specified <code>LootContextParamSet</code> is set in the <code>LootTableProvider$SubProviderEntry</code> and then built via <code>#build</code>. Before being built, the builder can specify entries, conditions, and modifiers which affect how the loot table functions.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>The functionality of loot tables is so expansive that it will not be covered by this documentation in its entirety. Instead, a brief description of each component will be mentioned. The specific subtypes of each component can be found using an IDE. Their implementations will be left as an exercise to the reader.</p>
+</blockquote>
+<h3 id="loottable">LootTable</h3>
+<p>Loot tables are the base object and can be transformed into the required <code>LootTable$Builder</code> using <code>LootTable#lootTable</code>. The loot table can be built with a list of pools (via <code>#withPool</code>) applied in the order they are specified along with functions (via <code>#apply</code>) to modify the resulting items of those pools.</p>
+<h3 id="lootpool">LootPool</h3>
+<p>Loot pools represents a group to perform operations and can generate a  <code>LootPool$Builder</code> using <code>LootPool#lootPool</code>. Each loot pool can specify the entries (via <code>#add</code>) which define the operations in the pool, the conditions (via <code>#when</code>) which define if the operations in the pool should be performed, and functions (via <code>#apply</code>) to modify the resulting items of the entries. Each pool can be executed as many times as specified (via <code>#setRolls</code>). Additionally, bonus executions can be specified (via <code>#setBonusRolls</code>) which is modified by the luck of the executor.</p>
+<h3 id="lootpoolentrycontainer">LootPoolEntryContainer</h3>
+<p>Loot entries define the operations to occur when selected, typically generating items. Each entry has an associated, <a href="../../concepts/registries.html#registries-that-arent-forge-registries">registered</a> <code>LootPoolEntryType</code>. They also have their own associated builders which subtype <code>LootPoolEntryContainer$Builder</code>. Multiple entries can execute at the same time (via <code>#append</code>) or sequentially until one fails (via <code>#then</code>). Additionally, entries can default to another entry on failure (via <code>#otherwise</code>).</p>
+<h3 id="lootitemcondition">LootItemCondition</h3>
+<p>Loot conditions define requirements which need to be met for some operation to execute. Each condition has an associated, <a href="../../concepts/registries.html#registries-that-arent-forge-registries">registered</a> <code>LootItemConditionType</code>. They also have their own associated builders which subtype <code>LootItemCondition$Builder</code>. By default, all loot conditions specified must return true for an operation to execute. Loot conditions can also be specified such that only one must return true instead (via <code>#or</code>). Additionally, the resulting output of a condition can be inverted (via <code>#invert</code>).</p>
+<h3 id="lootitemfunction">LootItemFunction</h3>
+<p>Loot functions modify the result of an execution before passing it to the output. Each function has an associated, <a href="../../concepts/registries.html#registries-that-arent-forge-registries">registered</a> <code>LootItemFunctionType</code>. They also have their own associated builders which subtype <code>LootItemFunction$Builder</code>.</p>
+<h4 id="nbtprovider">NbtProvider</h4>
+<p>NBT providers are a special type of functions defined by <code>CopyNbtFunction</code>. They define where to pull tag information from. Each provider has an associated, <a href="../../concepts/registries.html#registries-that-arent-forge-registries">registered</a> <code>LootNbtProviderType</code>.</p>
+<h3 id="numberprovider">NumberProvider</h3>
+<p>Number providers determine how many times a loot pool executes. Each provider has an associated, <a href="../../concepts/registries.html#registries-that-arent-forge-registries">registered</a> <code>LootNumberProviderType</code>.</p>
+<h4 id="scoreboardnameprovider">ScoreboardNameProvider</h4>
+<p>Scoreboard providers are a special type of number providers defined by <code>ScoreboardValue</code>. They define the name of the scoreboard to pull the number of rolls to execute from. Each provider has an associated, <a href="../../concepts/registries.html#registries-that-arent-forge-registries">registered</a> <code>LootScoreProviderType</code>.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

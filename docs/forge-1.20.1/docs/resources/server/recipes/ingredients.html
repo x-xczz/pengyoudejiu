@@ -1,0 +1,230 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Ingredients · Forge 1.20.1</title><link rel="stylesheet" href="../../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../../items/index.html" title="items/index.md">Items</a>
+<a href="../../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../index.html" title="resources/server/index.md">Datapacks</a>
+<a href="index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a class="current" href="ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/server/recipes/ingredients/">查看官方原文（联网）</a></div><h1 id="ingredients">Ingredients</h1>
+<p><code>Ingredient</code>s are predicate handlers for item-based inputs which check whether a certain <code>ItemStack</code> meets the condition to be a valid input in a recipe. All <a href="https://minecraft.wiki/w/Recipe#List_of_recipe_types">vanilla recipes</a> that take inputs use an <code>Ingredient</code> or a list of <code>Ingredient</code>s, which is then merged into a single <code>Ingredient</code>.</p>
+<h2 id="custom-ingredients">Custom Ingredients</h2>
+<p>Custom ingredients can be specified by setting <code>type</code> to the name of the <a href="#iingredientserializer">ingredient&#39;s serializer</a>, with the exception of <a href="#compoundingredient">compound ingredients</a>. When no type is specified, <code>type</code> defaults to the vanilla ingredient <code>minecraft:item</code>. Custom ingredients can also easily be used in <a href="../../../datagen/server/recipes.html">data generation</a>.</p>
+<h3 id="forge-types">Forge Types</h3>
+<p>Forge provides a few additional <code>Ingredient</code> types for programmers to implement. </p>
+<h4 id="compoundingredient">CompoundIngredient</h4>
+<p>Though they are functionally identical, Compound ingredients replaces the way one would implement a list of ingredients would in a recipe. They work as a set OR where the passed in stack must be within at least one of the supplied ingredients. This change was made to allow custom ingredients to work correctly within lists. As such, <strong>no type</strong> needs to be specified.</p>
+<pre><code class="language-js">// For some input
+[
+  // At least one of these ingredients must match to succeed
+  {
+    // Ingredient
+  },
+  {
+    // Custom ingredient
+    &quot;type&quot;: &quot;examplemod:example_ingredient&quot;
+  }
+]
+</code></pre>
+<h4 id="strictnbtingredient">StrictNBTIngredient</h4>
+<p><code>StrictNBTIngredient</code>s compare the item, damage, and the share tags (as defined by <code>IForgeItem#getShareTag</code>) on an <code>ItemStack</code> for exact equivalency. This can be used by specifying the <code>type</code> as <code>forge:nbt</code>.</p>
+<pre><code class="language-js">// For some input
+{
+  &quot;type&quot;: &quot;forge:nbt&quot;,
+  &quot;item&quot;: &quot;examplemod:example_item&quot;,
+  &quot;nbt&quot;: {
+    // Add nbt data (must match exactly what is on the stack)
+  }
+}
+</code></pre>
+<h3 id="partialnbtingredient">PartialNBTIngredient</h3>
+<p><code>PartialNBTIngredient</code>s are a looser version of <a href="#strictnbtingredient"><code>StrictNBTIngredient</code></a> as they compare against a single or set of items and only keys specified within the share tag (as defined by <code>IForgeItem#getShareTag</code>). This can be used by specifying the <code>type</code> as <code>forge:partial_nbt</code>.</p>
+<pre><code class="language-js">// For some input
+{
+  &quot;type&quot;: &quot;forge:partial_nbt&quot;,
+
+  // Either &#39;item&#39; or &#39;items&#39; must be specified
+  // If both are specified, only &#39;item&#39; will be read
+  &quot;item&quot;: &quot;examplemod:example_item&quot;,
+  &quot;items&quot;: [
+    &quot;examplemod:example_item&quot;,
+    &quot;examplemod:example_item2&quot;
+    // ...
+  ],
+
+  &quot;nbt&quot;: {
+    // Checks only for equivalency on &#39;key1&#39; and &#39;key2&#39;
+    // All other keys in the stack will not be checked
+    &quot;key1&quot;: &quot;data1&quot;,
+    &quot;key2&quot;: {
+      // Data 2
+    }
+  }
+}
+</code></pre>
+<h3 id="intersectioningredient">IntersectionIngredient</h3>
+<p><code>IntersectionIngredient</code>s work as a set AND where the passed in stack must match all supplied ingredients. There must be at least two ingredients supplied to this. This can be used by specifying the <code>type</code> as <code>forge:intersection</code>.</p>
+<pre><code class="language-js">// For some input
+{
+  &quot;type&quot;: &quot;forge:intersection&quot;,
+
+  // All of these ingredients must return true to succeed
+  &quot;children&quot;: [
+    {
+      // Ingredient 1
+    },
+    {
+      // Ingredient 2
+    }
+    // ...
+  ]
+}
+</code></pre>
+<h3 id="differenceingredient">DifferenceIngredient</h3>
+<p><code>DifferenceIngredient</code>s work as a set subtraction (SUB) where the passed in stack must match the first ingredient but must not match the second ingredient. This can be used by specifying the <code>type</code> as <code>forge:difference</code>.</p>
+<pre><code class="language-js">// For some input
+{
+  &quot;type&quot;: &quot;forge:difference&quot;,
+  &quot;base&quot;: {
+    // Ingredient the stack is in
+  },
+  &quot;subtracted&quot;: {
+    // Ingredient the stack is NOT in
+  }
+}
+</code></pre>
+<h2 id="creating-custom-ingredients">Creating Custom Ingredients</h2>
+<p>Custom ingredients can be created by implementing <code>IIngredientSerializer</code> for the created <code>Ingredient</code> subclass.</p>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>Custom ingredients should subclass <code>AbstractIngredient</code> as it provides some useful abstractions for ease of implementation.</p>
+</blockquote>
+<h3 id="ingredient-subclass">Ingredient Subclass</h3>
+<p>There are three important methods to implement for each ingredient subclass:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">getSerializer</td>
+<td align="left">Returns the <a href="#iingredientserializer">serializer</a> used to read and write the ingredient.</td>
+</tr>
+<tr>
+<td align="center">test</td>
+<td align="left">Returns true if the input is valid for this ingredient.</td>
+</tr>
+<tr>
+<td align="center">isSimple</td>
+<td align="left">Returns false if the ingredient matches on the stack&#39;s tag. <code>AbstractIngredient</code> subclasses will need to define this behavior, while <code>Ingredient</code> subclasses return <code>true</code> by default.</td>
+</tr>
+</tbody></table>
+<p>All other defined methods are left as an exercise to the reader to use as required for the ingredient subclass.</p>
+<h3 id="iingredientserializer">IIngredientSerializer</h3>
+<p><code>IIngredientSerializer</code> subtypes must implement three methods:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">parse (JSON)</td>
+<td align="left">Converts a <code>JsonObject</code> to an <code>Ingredient</code>.</td>
+</tr>
+<tr>
+<td align="center">parse (Network)</td>
+<td align="left">Reads the network buffer to decode an <code>Ingredient</code>.</td>
+</tr>
+<tr>
+<td align="center">write</td>
+<td align="left">Writes an <code>Ingredient</code> to the network buffer.</td>
+</tr>
+</tbody></table>
+<p>Additionally, <code>Ingredient</code> subclasses should implement <code>Ingredient#toJson</code> for use with <a href="../../../datagen/server/recipes.html">data generation</a>. <code>AbstractIngredient</code> subclasses make <code>#toJson</code> an abstract method requiring the method to be implemented.</p>
+<p>Afterwards, a static instance should be declared to hold the initialized serializer and then registered using <code>CraftingHelper#register</code> either during the <code>RegisterEvent</code> for <code>RecipeSerializer</code>s or during <code>FMLCommonSetupEvent</code>. The <code>Ingredient</code> subclass return the static instance of the serializer in <code>Ingredient#getSerializer</code>.</p>
+<pre><code class="language-java">// In some serializer class
+public static final ExampleIngredientSerializer INSTANCE = new ExampleIngredientSerializer();
+
+// In some handler class
+public void registerSerializers(RegisterEvent event) {
+  event.register(ForgeRegistries.Keys.RECIPE_SERIALIZERS,
+    helper -&gt; CraftingHelper.register(registryName, INSTANCE)
+  );
+}
+
+// In some ingredient subclass
+@Override
+public IIngredientSerializer&lt;? extends Ingredient&gt; getSerializer() {
+  return INSTANCE;
+}
+</code></pre>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>If using <code>FMLCommonSetupEvent</code> to register an ingredient serializer, it must be enqueued to the synchronous work queue via <code>FMLCommonSetupEvent#enqueueWork</code> as <code>CraftingHelper#register</code> is not thread-safe.</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

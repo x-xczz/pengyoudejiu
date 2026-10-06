@@ -1,0 +1,231 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Registries · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a class="current" href="registries.html" title="concepts/registries.md">Registries</a>
+<a href="sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="events.html" title="concepts/events.md">Events</a>
+<a href="lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="resources.html" title="concepts/resources.md">Resources</a>
+<a href="internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/concepts/registries/">查看官方原文（联网）</a></div><h1 id="registries">Registries</h1>
+<p>Registration is the process of taking the objects of a mod (such as items, blocks, sounds, etc.) and making them known to the game. Registering things is important, as without registration the game will simply not know about these objects, which will cause unexplainable behaviors and crashes. </p>
+<p>Most things that require registration in the game are handled by the Forge registries. A registry is an object similar to a map that assigns values to keys. Forge uses registries with <a href="./resources.html#resourcelocation"><code>ResourceLocation</code></a> keys to register objects. This allows the <code>ResourceLocation</code> to act as the &quot;registry name&quot; for objects.</p>
+<p>Every type of registrable object has its own registry. To see all registries wrapped by Forge, see the <code>ForgeRegistries</code> class. All registry names within a registry must be unique. However, names in different registries will not collide. For example, there&#39;s a <code>Block</code> registry, and an <code>Item</code> registry. A <code>Block</code> and an <code>Item</code> may be registered with the same name <code>example:thing</code> without colliding; however, if two different <code>Block</code>s or <code>Item</code>s were registered with the same exact name, the second object will override the first.</p>
+<h2 id="methods-for-registering">Methods for Registering</h2>
+<p>There are two proper ways to register objects: the <code>DeferredRegister</code> class, and the <code>RegisterEvent</code> lifecycle event.</p>
+<h3 id="deferredregister">DeferredRegister</h3>
+<p><code>DeferredRegister</code> is the recommended way to register objects. It allows the use and convenience of static initializers while avoiding the issues associated with it. It simply maintains a list of suppliers for entries and registers the objects from those suppliers during <code>RegisterEvent</code>.</p>
+<p>An example of a mod registering a custom block:</p>
+<pre><code class="language-java">private static final DeferredRegister&lt;Block&gt; BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+
+public static final RegistryObject&lt;Block&gt; ROCK_BLOCK = BLOCKS.register(&quot;rock&quot;, () -&gt; new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
+
+public ExampleMod() {
+  BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+}
+</code></pre>
+<h3 id="registerevent"><code>RegisterEvent</code></h3>
+<p><code>RegisterEvent</code> is the second way to register objects. This <a href="./events.html">event</a> is fired for each registry after the mod constructors and before the loading of configs. Objects are registered using <code>#register</code> by passing in the registry key, the name of the registry object, and the object itself. There is an additional <code>#register</code> overload which takes in a consumed helper to register an object with a given name. It is recommended to use this method to avoid unnecessary object creation.</p>
+<p>Here is an example: (the event handler is registered on the <em>mod event bus</em>)</p>
+<pre><code class="language-java">@SubscribeEvent
+public void register(RegisterEvent event) {
+  event.register(ForgeRegistries.Keys.BLOCKS,
+    helper -&gt; {
+      helper.register(new ResourceLocation(MODID, &quot;example_block_1&quot;), new Block(...));
+      helper.register(new ResourceLocation(MODID, &quot;example_block_2&quot;), new Block(...));
+      helper.register(new ResourceLocation(MODID, &quot;example_block_3&quot;), new Block(...));
+      // ...
+    }
+  );
+}
+</code></pre>
+<h3 id="registries-that-arent-forge-registries">Registries that aren&#39;t Forge Registries</h3>
+<p>Not all registries are wrapped by Forge. These can be static registries, like <code>LootItemConditionType</code>, which are safe to use. There are also dynamic registries, like <code>ConfiguredFeature</code> and some other worldgen registries, which are typically represented in JSON. <code>DeferredRegister#create</code> has an overload which allows modders to specify the registry key of which vanilla registry to create a <code>RegistryObject</code> for. The registry method and attaching to the mod event bus is the same as other <code>DeferredRegister</code>s.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Dynamic registry objects can <strong>only</strong> be registered through data files (e.g. JSON). They <strong>cannot</strong> be registered in-code.</p>
+</blockquote>
+<pre><code class="language-java">private static final DeferredRegister&lt;LootItemConditionType&gt; REGISTER = DeferredRegister.create(Registries.LOOT_CONDITION_TYPE, &quot;examplemod&quot;);
+
+public static final RegistryObject&lt;LootItemConditionType&gt; EXAMPLE_LOOT_ITEM_CONDITION_TYPE = REGISTER.register(&quot;example_loot_item_condition_type&quot;, () -&gt; new LootItemConditionType(...));
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Some classes cannot by themselves be registered. Instead, <code>*Type</code> classes are registered, and used in the formers&#39; constructors. For example, <a href="../blockentities/index.html"><code>BlockEntity</code></a> has <code>BlockEntityType</code>, and <code>Entity</code> has <code>EntityType</code>. These <code>*Type</code> classes are factories that simply create the containing type on demand. </p>
+<p>These factories are created through the use of their <code>*Type$Builder</code> classes. An example: (<code>REGISTER</code> refers to a <code>DeferredRegister&lt;BlockEntityType&gt;</code>)</p>
+<pre><code class="language-java">public static final RegistryObject&lt;BlockEntityType&lt;ExampleBlockEntity&gt;&gt; EXAMPLE_BLOCK_ENTITY = REGISTER.register(
+  &quot;example_block_entity&quot;, () -&gt; BlockEntityType.Builder.of(ExampleBlockEntity::new, EXAMPLE_BLOCK.get()).build(null)
+);
+</code></pre>
+</blockquote>
+<h2 id="referencing-registered-objects">Referencing Registered Objects</h2>
+<p>Registered objects should not be stored in fields when they are created and registered. They are to be always newly created and registered whenever <code>RegisterEvent</code> is fired for that registry. This is to allow dynamic loading and unloading of mods in a future version of Forge.</p>
+<p>Registered objects must always be referenced through a <code>RegistryObject</code> or a field with <code>@ObjectHolder</code>.</p>
+<h3 id="using-registryobjects">Using RegistryObjects</h3>
+<p><code>RegistryObject</code>s can be used to retrieve references to registered objects once they are available. These are used by <code>DeferredRegister</code> to return a reference to the registered objects. Their references are updated after <code>RegisterEvent</code> is called for their registry, along with the <code>@ObjectHolder</code> annotations.</p>
+<p>To get a <code>RegistryObject</code>, call <code>RegistryObject#create</code> with a <code>ResourceLocation</code> and the <code>IForgeRegistry</code> of the registrable object. Custom registries can also be used by supplying the registry name instead. Store the <code>RegistryObject</code> in a <code>public static final</code> field, and call <code>#get</code> whenever you need the registered object.</p>
+<p>An example of using <code>RegistryObject</code>:</p>
+<pre><code class="language-java">public static final RegistryObject&lt;Item&gt; BOW = RegistryObject.create(new ResourceLocation(&quot;minecraft:bow&quot;), ForgeRegistries.ITEMS);
+
+// assume that &#39;neomagicae:mana_type&#39; is a valid registry, and &#39;neomagicae:coffeinum&#39; is a valid object within that registry
+public static final RegistryObject&lt;ManaType&gt; COFFEINUM = RegistryObject.create(new ResourceLocation(&quot;neomagicae&quot;, &quot;coffeinum&quot;), new ResourceLocation(&quot;neomagicae&quot;, &quot;mana_type&quot;), &quot;neomagicae&quot;); 
+</code></pre>
+<h3 id="using-objectholder">Using @ObjectHolder</h3>
+<p>Registered objects from registries can be injected into the <code>public static</code> fields by annotating classes or fields with <code>@ObjectHolder</code> and supplying enough information to construct a <code>ResourceLocation</code> to identify a specific object in a specific registry.</p>
+<p>The rules for <code>@ObjectHolder</code> are as follows:</p>
+<ul>
+<li>If the class is annotated with <code>@ObjectHolder</code>, its value will be the default namespace for all fields within if not explicitly defined</li>
+<li>If the class is annotated with <code>@Mod</code>, the modid will be the default namespace for all annotated fields within if not explicitly defined</li>
+<li>A field is considered for injection if:<ul>
+<li>it has at least the modifiers <code>public static</code>;</li>
+<li>the <strong>field</strong> is annotated with <code>@ObjectHolder</code>, and:<ul>
+<li>the name value is explicitly defined; and</li>
+<li>the registry name value is explicitly defined</li>
+</ul>
+</li>
+<li><em>A compile-time exception is thrown if a field does not have a corresponding registry or name.</em></li>
+</ul>
+</li>
+<li><em>An exception is thrown if the resulting <code>ResourceLocation</code> is incomplete or invalid (non-valid characters in path)</em></li>
+<li>If no other errors or exceptions occur, the field will be injected</li>
+<li>If all of the above rules do not apply, no action will be taken (and a message may be logged)</li>
+</ul>
+<p><code>@ObjectHolder</code>-annotated fields are injected with their values after <code>RegisterEvent</code> is fired for their registry, along with the <code>RegistryObject</code>s.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>If the object does not exist in the registry when it is to be injected, a debug message will be logged and no value will be injected.</p>
+</blockquote>
+<p>As these rules are rather complicated, here are some examples:</p>
+<pre><code class="language-java">class Holder {
+  @ObjectHolder(registryName = &quot;minecraft:enchantment&quot;, value = &quot;minecraft:flame&quot;)
+  public static final Enchantment flame = null;     // Annotation present. [public static] is required. [final] is optional.
+                                                    // Registry name is explicitly defined: &quot;minecraft:enchantment&quot;
+                                                    // Resource location is explicitly defined: &quot;minecraft:flame&quot;
+                                                    // To inject: &quot;minecraft:flame&quot; from the [Enchantment] registry
+
+  public static final Biome ice_flat = null;        // No annotation on the field.
+                                                    // Therefore, the field is ignored.
+
+  @ObjectHolder(&quot;minecraft:creeper&quot;)
+  public static Entity creeper = null;              // Annotation present. [public static] is required.
+                                                    // The registry has not been specified on the field.
+                                                    // Therefore, THIS WILL PRODUCE A COMPILE-TIME EXCEPTION.
+
+  @ObjectHolder(registryName = &quot;potion&quot;)
+  public static final Potion levitation = null;     // Annotation present. [public static] is required. [final] is optional.
+                                                    // Registry name is explicitly defined: &quot;minecraft:potion&quot;
+                                                    // Resource location is not specified on the field
+                                                    // Therefore, THIS WILL PRODUCE A COMPILE-TIME EXCEPTION.
+}
+</code></pre>
+<h2 id="creating-custom-forge-registries">Creating Custom Forge Registries</h2>
+<p>Custom registries can usually just be a simple map of key to value. This is a common style; however, it forces a hard dependency on the registry being present. It also requires that any data that needs to be synced between sides must be done manually. Custom Forge Registries provide a simple alternative for creating soft dependents along with better management and automatic syncing between sides (unless told otherwise). Since the objects also use a Forge registry, registration becomes standardized in the same way.</p>
+<p>Custom Forge Registries are created with the help of a <code>RegistryBuilder</code>, through either <code>NewRegistryEvent</code> or the <code>DeferredRegister</code>. The <code>RegistryBuilder</code> class takes various parameters (such as the registry&#39;s name, id range, and various callbacks for different events happening on the registry). New registries are registered to the <code>RegistryManager</code> after <code>NewRegistryEvent</code> finishes firing.</p>
+<p>Any newly created registry should use its associated <a href="#methods-for-registering">registration method</a> to register the associated objects.</p>
+<h3 id="using-newregistryevent">Using NewRegistryEvent</h3>
+<p>When using <code>NewRegistryEvent</code>, calling <code>#create</code> with a <code>RegistryBuilder</code> will return a supplier-wrapped registry. The supplied registry can be accessed after <code>NewRegistryEvent</code> has finished posting to the mod event bus. Getting the custom registry from the supplier before <code>NewRegistryEvent</code> finishes firing will result in a <code>null</code> value.</p>
+<h4 id="new-datapack-registries">New Datapack Registries</h4>
+<p>New datapack registries can be added using the <code>DataPackRegistryEvent$NewRegistry</code> event on the mod event bus. The registry is created via <code>#dataPackRegistry</code> by passing in the <code>ResourceKey</code> representing the registry name and the <code>Codec</code> used to encode and decode the data from JSON. An optional <code>Codec</code> can be provided to sync the datapack registry to the client.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>Datapack Registries cannot be created with <code>DeferredRegister</code>. They can only be created through the event.</p>
+</blockquote>
+<h3 id="with-deferredregister">With DeferredRegister</h3>
+<p>The <code>DeferredRegister</code> method is once again another wrapper around the above event. Once a <code>DeferredRegister</code> is created in a constant field using the <code>#create</code> overload which takes in the registry name and the mod id, the registry can be constructed via <code>DeferredRegister#makeRegistry</code>. This takes in  a supplied <code>RegistryBuilder</code> containing any additional configurations. The method already populates <code>#setName</code> by default. Since this method can be returned at any time, a supplied version of an <code>IForgeRegistry</code> is returned instead. Getting the custom registry from the supplier before <code>NewRegistryEvent</code> is fired will result in a <code>null</code> value.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p><code>DeferredRegister#makeRegistry</code> must be called before the <code>DeferredRegister</code> is added to the mod event bus via <code>#register</code>. <code>#makeRegistry</code> also uses the <code>#register</code> method to create the registry during <code>NewRegistryEvent</code>.</p>
+</blockquote>
+<h2 id="handling-missing-entries">Handling Missing Entries</h2>
+<p>There are cases where certain registry objects will cease to exist whenever a mod is updated or, more likely, removed. It is possible to specify actions to handle the missing mapping through the third of the registry events: <code>MissingMappingsEvent</code>. Within this event, a list of missing mappings can be obtained either by <code>#getMappings</code> given a registry key and mod id or all mappings via <code>#getAllMappings</code> given a registry key.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p><code>MissingMappingsEvent</code> is fired on the <strong>Forge</strong> event bus.</p>
+</blockquote>
+<p>For each <code>Mapping</code>, one of four mapping types can be selected to handle the missing entry:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Action</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">IGNORE</td>
+<td align="left">Ignores the missing entry and abandons the mapping.</td>
+</tr>
+<tr>
+<td align="center">WARN</td>
+<td align="left">Generates a warning in the log.</td>
+</tr>
+<tr>
+<td align="center">FAIL</td>
+<td align="left">Prevents the world from loading.</td>
+</tr>
+<tr>
+<td align="center">REMAP</td>
+<td align="left">Remaps the entry to an already registered, non-null object.</td>
+</tr>
+</tbody></table>
+<p>If no action is specified, then the default action will occur by notifying the user about the missing entry and whether they still would like to load the world. All actions besides remapping will prevent any other registry object from taking the place of the existing id in case the associated entry ever gets added back into the game.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

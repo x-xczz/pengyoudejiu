@@ -1,0 +1,10 @@
+{
+  "version": "1.20.1",
+  "snapshotDate": "2026-10-05",
+  "pageCount": 70,
+  "website": "https://docs.minecraftforge.net/en/1.20.1/",
+  "source": "https://github.com/MinecraftForge/Documentation/tree/1.20.1",
+  "archiveUrl": "https://codeload.github.com/MinecraftForge/Documentation/zip/refs/heads/1.20.1",
+  "archiveSha256": "5b9eb72d980ae6e19903b62182a2e57f4f95f7fd8591234ce047b89fbc07affd",
+  "format": "Original Markdown plus locally generated static HTML"
+}

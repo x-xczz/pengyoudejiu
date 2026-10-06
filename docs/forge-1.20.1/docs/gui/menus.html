@@ -1,0 +1,348 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Menus · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a class="current" href="menus.html" title="gui/menus.md">Menus</a>
+<a href="screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/gui/menus/">查看官方原文（联网）</a></div><h1 id="menus">Menus</h1>
+<p>Menus are one type of backend for Graphical User Interfaces, or GUIs; they handle the logic involved in interacting with some represented data holder. Menus themselves are not data holders. They are views which allow to user to indirectly modify the internal data holder state. As such, a data holder should not be directly coupled to any menu, instead passing in the data references to invoke and modify.</p>
+<h2 id="menutype"><code>MenuType</code></h2>
+<p>Menus are created and removed dynamically and as such are not registry objects. As such, another factory object is registered instead to easily create and refer to the <em>type</em> of the menu. For a menu, these are <code>MenuType</code>s.</p>
+<p><code>MenuType</code>s must be <a href="../concepts/registries.html#methods-for-registering">registered</a>.</p>
+<h3 id="menusupplier"><code>MenuSupplier</code></h3>
+<p>A <code>MenuType</code> is created by passing in a <code>MenuSupplier</code> and a <code>FeatureFlagSet</code> to its constructor. A <code>MenuSupplier</code> represents a function which takes in the id of the container and the inventory of the player viewing the menu, and returns a newly created <a href="#abstractcontainermenu"><code>AbstractContainerMenu</code></a>.</p>
+<pre><code class="language-java">// For some DeferredRegister&lt;MenuType&lt;?&gt;&gt; REGISTER
+public static final RegistryObject&lt;MenuType&lt;MyMenu&gt;&gt; MY_MENU = REGISTER.register(&quot;my_menu&quot;, () -&gt; new MenuType(MyMenu::new, FeatureFlags.DEFAULT_FLAGS));
+
+// In MyMenu, an AbstractContainerMenu subclass
+public MyMenu(int containerId, Inventory playerInv) {
+  super(MY_MENU.get(), containerId);
+  // ...
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>The container identifier is unique for an individual player. This means that the same container id on two different players will represent two different menus, even if they are viewing the same data holder.</p>
+</blockquote>
+<p>The <code>MenuSupplier</code> is usually responsible for creating a menu on the client with dummy data references used to store and interact with the synced information from the server data holder.</p>
+<h3 id="icontainerfactory"><code>IContainerFactory</code></h3>
+<p>If additional information is needed on the client (e.g. the position of the data holder in the world), then the subclass <code>IContainerFactory</code> can be used instead. In addition to the container id and the player inventory, this also provides a <code>FriendlyByteBuf</code> which can store additional information that was sent from the server. A <code>MenuType</code> can be created using an <code>IContainerFactory</code> via <code>IForgeMenuType#create</code>.</p>
+<pre><code class="language-java">// For some DeferredRegister&lt;MenuType&lt;?&gt;&gt; REGISTER
+public static final RegistryObject&lt;MenuType&lt;MyMenuExtra&gt;&gt; MY_MENU_EXTRA = REGISTER.register(&quot;my_menu_extra&quot;, () -&gt; IForgeMenuType.create(MyMenu::new));
+
+// In MyMenuExtra, an AbstractContainerMenu subclass
+public MyMenuExtra(int containerId, Inventory playerInv, FriendlyByteBuf extraData) {
+  super(MY_MENU_EXTRA.get(), containerId);
+  // Store extra data from buffer
+  // ...
+}
+</code></pre>
+<h2 id="abstractcontainermenu"><code>AbstractContainerMenu</code></h2>
+<p>All menus are extended from <code>AbstractContainerMenu</code>. A menu takes in two parameters, the <a href="#menutype"><code>MenuType</code></a>, which represents the type of the menu itself, and the container id, which represents the unique identifier of the menu for the current accessor.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>The player can only have 100 unique menus open at once.</p>
+</blockquote>
+<p>Each menu should contain two constructors: one used to initialize the menu on the server and one used to initialize the menu on the client. The constructor used to initialize the menu on the client is the one supplied to the <code>MenuType</code>. Any fields that the server menu constructor contains should have some default for the client menu constructor.</p>
+<pre><code class="language-java">// Client menu constructor
+public MyMenu(int containerId, Inventory playerInventory) {
+  this(containerId, playerInventory);
+}
+
+// Server menu constructor
+public MyMenu(int containerId, Inventory playerInventory) {
+  // ...
+}
+</code></pre>
+<p>Each menu implementation must implement two methods: <code>#stillValid</code> and <a href="#quickmovestack"><code>#quickMoveStack</code></a>.</p>
+<h3 id="stillvalid-and-containerlevelaccess"><code>#stillValid</code> and <code>ContainerLevelAccess</code></h3>
+<p><code>#stillValid</code> determines whether the menu should remain open for a given player. This is typically directed to the static <code>#stillValid</code> which takes in a <code>ContainerLevelAccess</code>, the player, and the <code>Block</code> this menu is attached to. The client menu must always return <code>true</code> for this method, which the static <code>#stillValid</code> does default to. This implementation checks whether the player is within eight blocks of where the data storage object is located.</p>
+<p>A <code>ContainerLevelAccess</code> supplies the current level and location of the block within an enclosed scope. When constructing the menu on the server, a new access can be created by calling <code>ContainerLevelAccess#create</code>. The client menu constructor can pass in <code>ContainerLevelAccess#NULL</code>, which will do nothing.</p>
+<pre><code class="language-java">// Client menu constructor
+public MyMenuAccess(int containerId, Inventory playerInventory) {
+  this(containerId, playerInventory, ContainerLevelAccess.NULL);
+}
+
+// Server menu constructor
+public MyMenuAccess(int containerId, Inventory playerInventory, ContainerLevelAccess access) {
+  // ...
+}
+
+// Assume this menu is attached to RegistryObject&lt;Block&gt; MY_BLOCK
+@Override
+public boolean stillValid(Player player) {
+  return AbstractContainerMenu.stillValid(this.access, player, MY_BLOCK.get());
+}
+</code></pre>
+<h3 id="data-synchronization">Data Synchronization</h3>
+<p>Some data needs to be present on both the server and the client to display to the player. To do this, the menu implements a basic layer of data synchronization such that whenever the current data does not match the data last synced to the client. For players, this is checked every tick.</p>
+<p>Minecraft supports two forms of data synchronization by default: <code>ItemStack</code>s via <code>Slot</code>s and integers via <code>DataSlot</code>s. <code>Slot</code>s and <code>DataSlot</code>s are views which hold references to data storages that can be be modified by the player in a screen, assuming the action is valid. These can be added to a menu within the constructor through <code>#addSlot</code> and <code>#addDataSlot</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Since <code>Container</code>s used by <code>Slot</code>s are deprecated by Forge in favor of using the <a href="../datastorage/capabilities.html#forge-provided-capabilities"><code>IItemHandler</code> capability</a>, the rest of the explanation will revolve around using the capability variant: <code>SlotItemHandler</code>.</p>
+</blockquote>
+<p>A <code>SlotItemHandler</code> contains four parameters: the <code>IItemHandler</code> representing the inventory the stacks are within, the index of the stack this slot is specifically representing, and the x and y position of where the top-left position of the slot will render on the screen relative to <code>AbstractContainerScreen#leftPos</code> and <code>#topPos</code>. The client menu constructor should always supply an empty instance of an inventory of the same size.</p>
+<p>In most cases, any slots the menu contains is first added, followed by the player&#39;s inventory, and finally concluded with the player&#39;s hotbar. To access any individual <code>Slot</code> from the menu, the index must be calculated based upon the order of which slots were added.</p>
+<p>A <code>DataSlot</code> is an abstract class which should implement a getter and setter to reference the data stored in the data storage object. The client menu constructor should always supply a new instance via <code>DataSlot#standalone</code>.</p>
+<p>These, along with slots, should be recreated every time a new menu is initialized.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>Although a <code>DataSlot</code> stores an integer, it is effectively limited to a <strong>short</strong> (-32768 to 32767) because of how it sends the value across the network. The 16 high-order bits of the integer are ignored.</p>
+</blockquote>
+<pre><code class="language-java">// Assume we have an inventory from a data object of size 5
+// Assume we have a DataSlot constructed on each initialization of the server menu
+
+// Client menu constructor
+public MyMenuAccess(int containerId, Inventory playerInventory) {
+  this(containerId, playerInventory, new ItemStackHandler(5), DataSlot.standalone());
+}
+
+// Server menu constructor
+public MyMenuAccess(int containerId, Inventory playerInventory, IItemHandler dataInventory, DataSlot dataSingle) {
+  // Check if the data inventory size is some fixed value
+  // Then, add slots for data inventory
+  this.addSlot(new SlotItemHandler(dataInventory, /*...*/));
+
+  // Add slots for player inventory
+  this.addSlot(new Slot(playerInventory, /*...*/));
+
+  // Add data slots for handled integers
+  this.addDataSlot(dataSingle);
+
+  // ...
+}
+</code></pre>
+<h4 id="containerdata"><code>ContainerData</code></h4>
+<p>If multiple integers need to be synced to the client, a <code>ContainerData</code> can be used to reference the integers instead. This interface functions as an index lookup such that each index represents a different integer. <code>ContainerData</code>s can also be constructed in the data object itself if the <code>ContainerData</code> is added to the menu through <code>#addDataSlots</code>. The method creates a new <code>DataSlot</code> for the amount of data specified by the interface. The client menu constructor should always supply a new instance via <code>SimpleContainerData</code>.</p>
+<pre><code class="language-java">// Assume we have a ContainerData of size 3
+
+// Client menu constructor
+public MyMenuAccess(int containerId, Inventory playerInventory) {
+  this(containerId, playerInventory, new SimpleContainerData(3));
+}
+
+// Server menu constructor
+public MyMenuAccess(int containerId, Inventory playerInventory, ContainerData dataMultiple) {
+  // Check if the ContainerData size is some fixed value
+  checkContainerDataCount(dataMultiple, 3);
+
+  // Add data slots for handled integers
+  this.addDataSlots(dataMultiple);
+
+  // ...
+}
+</code></pre>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>As <code>ContainerData</code> delegates to <code>DataSlot</code>s, these are also limited to a <strong>short</strong> (-32768 to 32767).</p>
+</blockquote>
+<h4 id="quickmovestack"><code>#quickMoveStack</code></h4>
+<p><code>#quickMoveStack</code> is the second method that must be implemented by any menu. This method is called whenever a stack has been shift-clicked, or quick moved, out of its current slot until the stack has been fully moved out of its previous slot or there is no other place for the stack to go. The method returns a copy of the stack in the slot being quick moved.</p>
+<p>Stacks are typically moved between slots using <code>#moveItemStackTo</code>, which moves the stack into the first available slot. It takes in the stack to be moved, the first slot index (inclusive) to try and move the stack to, the last slot index (exclusive), and whether to check the slots from first to last (when <code>false</code>) or from last to first (when <code>true</code>).</p>
+<p>Across Minecraft implementations, this method is fairly consistent in its logic:</p>
+<pre><code class="language-java">// Assume we have a data inventory of size 5
+// The inventory has 4 inputs (index 1 - 4) which outputs to a result slot (index 0)
+// We also have the 27 player inventory slots and the 9 hotbar slots
+// As such, the actual slots are indexed like so:
+//   - Data Inventory: Result (0), Inputs (1 - 4)
+//   - Player Inventory (5 - 31)
+//   - Player Hotbar (32 - 40)
+@Override
+public ItemStack quickMoveStack(Player player, int quickMovedSlotIndex) {
+  // The quick moved slot stack
+  ItemStack quickMovedStack = ItemStack.EMPTY;
+  // The quick moved slot
+  Slot quickMovedSlot = this.slots.get(quickMovedSlotIndex) 
+  
+   // If the slot is in the valid range and the slot is not empty
+  if (quickMovedSlot != null &amp;&amp; quickMovedSlot.hasItem()) {
+    // Get the raw stack to move
+    ItemStack rawStack = quickMovedSlot.getItem(); 
+    // Set the slot stack to a copy of the raw stack
+    quickMovedStack = rawStack.copy();
+
+    /*
+    The following quick move logic can be simplified to if in data inventory,
+    try to move to player inventory/hotbar and vice versa for containers
+    that cannot transform data (e.g. chests).
+    */
+
+    // If the quick move was performed on the data inventory result slot
+    if (quickMovedSlotIndex == 0) {
+      // Try to move the result slot into the player inventory/hotbar
+      if (!this.moveItemStackTo(rawStack, 5, 41, true)) {
+        // If cannot move, no longer quick move
+        return ItemStack.EMPTY;
+      }
+
+      // Perform logic on result slot quick move
+      slot.onQuickCraft(rawStack, quickMovedStack);
+    }
+    // Else if the quick move was performed on the player inventory or hotbar slot
+    else if (quickMovedSlotIndex &gt;= 5 &amp;&amp; quickMovedSlotIndex &lt; 41) {
+      // Try to move the inventory/hotbar slot into the data inventory input slots
+      if (!this.moveItemStackTo(rawStack, 1, 5, false)) {
+        // If cannot move and in player inventory slot, try to move to hotbar
+        if (quickMovedSlotIndex &lt; 32) {
+          if (!this.moveItemStackTo(rawStack, 32, 41, false)) {
+            // If cannot move, no longer quick move
+            return ItemStack.EMPTY;
+          }
+        }
+        // Else try to move hotbar into player inventory slot
+        else if (!this.moveItemStackTo(rawStack, 5, 32, false)) {
+          // If cannot move, no longer quick move
+          return ItemStack.EMPTY;
+        }
+      }
+    }
+    // Else if the quick move was performed on the data inventory input slots, try to move to player inventory/hotbar
+    else if (!this.moveItemStackTo(rawStack, 5, 41, false)) {
+      // If cannot move, no longer quick move
+      return ItemStack.EMPTY;
+    }
+
+    if (rawStack.isEmpty()) {
+      // If the raw stack has completely moved out of the slot, set the slot to the empty stack
+      quickMovedSlot.set(ItemStack.EMPTY);
+    } else {
+      // Otherwise, notify the slot that that the stack count has changed
+      quickMovedSlot.setChanged();
+    }
+
+    /*
+    The following if statement and Slot#onTake call can be removed if the
+    menu does not represent a container that can transform stacks (e.g.
+    chests).
+    */
+    if (rawStack.getCount() == quickMovedStack.getCount()) {
+      // If the raw stack was not able to be moved to another slot, no longer quick move
+      return ItemStack.EMPTY;
+    }
+    // Execute logic on what to do post move with the remaining stack
+    quickMovedSlot.onTake(player, rawStack);
+  }
+
+  return quickMovedStack; // Return the slot stack
+}
+</code></pre>
+<h2 id="opening-a-menu">Opening a Menu</h2>
+<p>Once a menu type has been registered, the menu itself has been finished, and a <a href="./screens.html">screen</a> has been attached, a menu can then be opened by the player. Menus can be opened by calling <code>NetworkHooks#openScreen</code> on the logical server. The method takes in the player opening the menu, the <code>MenuProvider</code> of the server side menu, and optionally a <code>FriendlyByteBuf</code> if extra data needs to be synced to the client.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p><code>NetworkHooks#openScreen</code> with the <code>FriendlyByteBuf</code> parameter should only be used if a menu type was created using an <a href="#icontainerfactory"><code>IContainerFactory</code></a>.</p>
+</blockquote>
+<h4 id="menuprovider"><code>MenuProvider</code></h4>
+<p>A <code>MenuProvider</code> is an interface that contains two methods: <code>#createMenu</code>, which creates the server instance of the menu, and <code>#getDisplayName</code>, which returns a component containing the title of the menu to pass to the <a href="./screens.html">screen</a>. The <code>#createMenu</code> method contains three parameter: the container id of the menu, the inventory of the player who opened the menu, and the player who opened the menu.</p>
+<p>A <code>MenuProvider</code> can easily be created using <code>SimpleMenuProvider</code>, which takes in a method reference to create the server menu and the title of the menu.</p>
+<pre><code class="language-java">// In some implementation
+NetworkHooks.openScreen(serverPlayer, new SimpleMenuProvider(
+  (containerId, playerInventory, player) -&gt; new MyMenu(containerId, playerInventory),
+  Component.translatable(&quot;menu.title.examplemod.mymenu&quot;)
+));
+</code></pre>
+<h3 id="common-implementations">Common Implementations</h3>
+<p>Menus are typically opened on a player interaction of some kind (e.g. when a block or entity is right-clicked).</p>
+<h4 id="block-implementation">Block Implementation</h4>
+<p>Blocks typically implement a menu by overriding <code>BlockBehaviour#use</code>. If on the logical client, the interaction returns <code>InteractionResult#SUCCESS</code>. Otherwise, it opens the menu and returns <code>InteractionResult#CONSUME</code>.</p>
+<p>The <code>MenuProvider</code> should be implemented by overriding <code>BlockBehaviour#getMenuProvider</code>. Vanilla methods use this to view the menu in spectator mode.</p>
+<pre><code class="language-java">// In some Block subclass
+@Override
+public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
+  return new SimpleMenuProvider(/* ... */);
+}
+
+@Override
+public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
+  if (!level.isClientSide &amp;&amp; player instanceof ServerPlayer serverPlayer) {
+    NetworkHooks.openScreen(serverPlayer, state.getMenuProvider(level, pos));
+  }
+  return InteractionResult.sidedSuccess(level.isClientSide);
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>This is the simplest way to implement the logic, not the only way. If you want the block to only open the menu under certain conditions, then some data will need to be synced to the client beforehand to return <code>InteractionResult#PASS</code> or <code>#FAIL</code> if the conditions are not met.</p>
+</blockquote>
+<h4 id="mob-implementation">Mob Implementation</h4>
+<p>Mobs typically implement a menu by overriding <code>Mob#mobInteract</code>. This is done similarly to the block implementation with the only difference being that the <code>Mob</code> itself should implement <code>MenuProvider</code> to support spectator mode viewing.</p>
+<pre><code class="language-java">public class MyMob extends Mob implements MenuProvider {
+  // ...
+
+  @Override
+  public InteractionResult mobInteract(Player player, InteractionHand hand) {
+    if (!this.level.isClientSide &amp;&amp; player instanceof ServerPlayer serverPlayer) {
+      NetworkHooks.openScreen(serverPlayer, this);
+    }
+    return InteractionResult.sidedSuccess(this.level.isClientSide);
+  }
+}
+</code></pre>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Once again, this is the simplest way to implement the logic, not the only way.</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

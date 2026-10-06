@@ -1,0 +1,109 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pull Request Guidelines · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="index.html" title="forgedev/index.md">Getting Started</a>
+<a class="current" href="prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/forgedev/prguidelines/">查看官方原文（联网）</a></div><h1 id="pull-request-guidelines">Pull Request Guidelines</h1>
+<p>Mods are built on top of Forge, but there are some things that Forge does not support, and that limits what mods can do.<br>When modders run into something like that, they can make a change to Forge to support it, and submit that change as a Pull Request on Github.</p>
+<p>To make the best use of both your and the Forge team&#39;s time, it is recommended to follow some rough guidelines when preparing a Pull Request. The following points are the most important aspects to keep in mind when it comes to writing a good Pull Request.</p>
+<h2 id="what-exactly-is-forge">What Exactly is Forge?</h2>
+<p>At a high level, Forge is a mod compatibility layer on top of Minecraft.<br>Early mods edited Minecraft&#39;s code directly (like coremods do now), but they ran into conflicts with each other when they edited the same things. They also ran into issues when one mod changed behavior in ways that the other mods could not anticipate (like coremods do now), causing mysterious issues and lots of headaches.  </p>
+<p>By using something like Forge, mods can centralize common changes and avoid conflicts.<br>Forge also includes supporting structures for common mod features like Capabilities, Registries, and others that allow mods to work together better.</p>
+<p>When writing a good Forge Pull Request, you also have to know what Forge is at a lower level.<br>There are two main types of code in Forge: Minecraft patches, and Forge code.</p>
+<h2 id="patches">Patches</h2>
+<p>Patches are applied as direct changes to Minecraft&#39;s source code, and aim to be as minimal as possible.<br>Every time Minecraft code changes, all the Forge patches need to be looked over carefully and applied correctly to the new code.<br>This means that large patches that change lots of things are difficult to maintain, so Forge aims to avoid those and keep patches as small as possible.<br>In addition to making sure the code makes sense, reviews for patches will focus on minimizing the size.</p>
+<p>There are many strategies to make small patches, and reviews will often point out better methods to do things.<br>Forge patches often insert a single line that fires an event or a code hook, which affects the code after it if the event meets some condition.<br>This allows most of the code to exist outside of the patch, which keeps the patch small and simple.</p>
+<p>For more detailed information about creating patches, <a href="https://github.com/MinecraftForge/MinecraftForge/wiki/If-you-want-to-contribute-to-Forge#conventions-for-coding-patches-for-a-minecraft-class-javapatch">see the GitHub wiki</a>.</p>
+<h2 id="forge-code">Forge Code</h2>
+<p>Aside from the patches, Forge code is just normal Java code. It can be event code, compatibility features, or anything else that is not directly editing Minecraft code.
+When Minecraft updates, Forge code has to update just like everything else. However, it is much easier because it is not directly entangled in the Minecraft code.</p>
+<p>Because this code stands on its own, there is no size restriction like there is with the patches.</p>
+<p>In addition to making sure the code makes sense, reviews will focus on making the code clean: with proper formatting and Java documentation.</p>
+<h2 id="explain-yourself">Explain Yourself</h2>
+<p>All Pull Requests need to answer the question: why is this necessary?<br>Any code added to Forge needs to be maintained, and more code means more potential for bugs, so solid justification is needed for adding code.</p>
+<p>A common Pull Request issue is offering no explanation, or giving cryptic examples for how the Pull Request might theoretically be used.
+This only delays the Pull Request process.<br>A clear explanation for the general case is good, but also give a concrete example of how your mod needs this Pull Request.</p>
+<p>Sometimes there is better way to do what you wanted, or a way to do it without a Pull Request at all. Code changes can not be accepted until those possibilities have been completely ruled out.</p>
+<h2 id="show-that-it-works">Show that it Works</h2>
+<p>The code you submit to Forge should work perfectly, and it is up to you to convince the reviewers that it does.  </p>
+<p>One of the best ways to do that is to add an example mod or JUnit test to Forge that makes use of your new code and shows it working.  </p>
+<p>To set up and run a Forge Environment with the example mods, see <a href="./index.html">this guide</a>.</p>
+<h2 id="breaking-changes-in-forge">Breaking Changes in Forge</h2>
+<p>Forge cannot make changes that break the mods that depend on it.<br>This means that Pull Requests have to ensure that they do not break binary compatibility with previous Forge versions.<br>A change that breaks binary compatibility is called a Breaking Change.</p>
+<p>There are some exceptions to this:</p>
+<ul>
+<li>Forge accepts Breaking Changes at the beginning of new Minecraft versions, where Minecraft itself already causes Breaking Changes for modders.  </li>
+<li>Sometimes an emergency breaking change is required outside of that time window, but it is rare and can cause dependency headaches for everyone in the modded Minecraft community.</li>
+</ul>
+<p>Outside of those exceptional times, Pull Requests with breaking changes are not accepted. They must be adapted to support the old behavior or wait for the next Minecraft version.</p>
+<h2 id="be-patient-civil-and-empathetic">Be Patient, Civil, and Empathetic</h2>
+<p>When submitting Pull Requests, you will often have to survive code review and make several changes before it is the best Pull Request possible.<br>Keep in mind that code review is not judgement against you. Bugs in your code are not personal. Nobody is perfect, and that is why we are working together. </p>
+<p>Negativity will not help. Threatening to give up on your Pull Request and write a coremod instead will just make people upset and make the modded ecosystem worse.<br>It is important that while working together you assume the best intentions of the people who are reviewing your Pull Request and not take things personally.</p>
+<h2 id="review">Review</h2>
+<p>If you do your best to understand the slow and perfectionistic nature of the Pull Request process, we will do our best to understand your point of view as well.</p>
+<p>After your Pull Request has been reviewed and cleaned up to the best of everyone&#39;s ability, it will be marked for a final review by Lex, who has the final say on what is included in the project or not.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

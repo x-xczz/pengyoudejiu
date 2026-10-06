@@ -1,0 +1,183 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sound Definition Generation · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../index.html" title="datagen/index.md">Data Generators</a>
+<a href="modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a class="current" href="sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/datagen/client/sounds/">查看官方原文（联网）</a></div><h1 id="sound-definition-generation">Sound Definition Generation</h1>
+<p>The <code>sounds.json</code> file can be generated for a mod by subclassing <code>SoundDefinitionsProvider</code> and implementing <code>#registerSounds</code>. After implementation, the provider must be <a href="../index.html#data-providers">added</a> to the <code>DataGenerator</code>.</p>
+<pre><code class="language-java">// On the MOD event bus
+@SubscribeEvent
+public void gatherData(GatherDataEvent event) {
+    event.getGenerator().addProvider(
+        // Tell generator to run only when client assets are generating
+        event.includeClient(),
+        output -&gt; new MySoundDefinitionsProvider(output, MOD_ID, event.getExistingFileHelper())
+    );
+}
+</code></pre>
+<h2 id="adding-a-sound">Adding a Sound</h2>
+<p>A sound definition can be generated by specifying the sound name and definition via <code>#add</code>. The sound name can either be provided from a <a href="../../gameeffects/sounds.html#creating-sound-events"><code>SoundEvent</code></a>, <code>ResourceLocation</code>, or string.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>The sound name supplied will always assume the namespace is the mod id supplied to the constructor of the provider. There is no validation performed on the namespace of the sound name!</p>
+</blockquote>
+<h3 id="sounddefinition"><code>SoundDefinition</code></h3>
+<p>The <code>SoundDefinition</code> can be created using <code>#definition</code>. The definition contains the data to define a sound instance.</p>
+<p>A definition specifies a few methods:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>with</code></td>
+<td align="left">Adds a sound(s) which may be played when the definition is selected.</td>
+</tr>
+<tr>
+<td align="center"><code>subtitle</code></td>
+<td align="left">Sets the translation key of the definition.</td>
+</tr>
+<tr>
+<td align="center"><code>replace</code></td>
+<td align="left">When <code>true</code>, removes the sounds already defined by other <code>sounds.json</code> for this definition instead of appending to it.</td>
+</tr>
+</tbody></table>
+<h3 id="sounddefinitionsound"><code>SoundDefinition$Sound</code></h3>
+<p>A sound supplied to the <code>SoundDefinition</code> can be specified using <code>SoundDefinitionsProvider#sound</code>. These methods take in the reference of the sound and a <code>SoundType</code> if specified.</p>
+<p>The <code>SoundType</code> can be one of two values:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Sound Type</th>
+<th align="left">Definition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>SOUND</code></td>
+<td align="left">Specifies a reference to the sound located at <code>assets/&lt;namespace&gt;/sounds/&lt;path&gt;.ogg</code>.</td>
+</tr>
+<tr>
+<td align="center"><code>EVENT</code></td>
+<td align="left">Specifies a reference to the name of another sound defined by the <code>sounds.json</code>.</td>
+</tr>
+</tbody></table>
+<p>Each <code>Sound</code> created from <code>SoundDefinitionsProvider#sound</code> can specify additional configurations on how to load and play the sound provided:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>volume</code></td>
+<td align="left">Sets the volume scale of the sound, must be greater than <code>0</code>.</td>
+</tr>
+<tr>
+<td align="center"><code>pitch</code></td>
+<td align="left">Sets the pitch scale of the sound, must be greater than <code>0</code>.</td>
+</tr>
+<tr>
+<td align="center"><code>weight</code></td>
+<td align="left">Sets the likelihood of the sound getting played when the sound is selected.</td>
+</tr>
+<tr>
+<td align="center"><code>stream</code></td>
+<td align="left">When <code>true</code>, reads the sound from file instead of loading the sound into memory. Recommended for long sounds: background music, music discs, etc.</td>
+</tr>
+<tr>
+<td align="center"><code>attenuationDistance</code></td>
+<td align="left">Sets the number of blocks the sound can be heard from.</td>
+</tr>
+<tr>
+<td align="center"><code>preload</code></td>
+<td align="left">When <code>true</code>, immediately loads the sound into memory as soon as the resource pack is loaded.</td>
+</tr>
+</tbody></table>
+<pre><code class="language-java">// In some SoundDefinitionsProvider#registerSounds
+this.add(EXAMPLE_SOUND_EVENT, definition()
+  .subtitle(&quot;sound.examplemod.example_sound&quot;) // Set translation key
+  .with(
+    sound(new ResourceLocation(MODID, &quot;example_sound_1&quot;)) // Set first sound
+      .weight(4) // Has a 4 / 5 = 80% chance of playing
+      .volume(0.5), // Scales all volumes called on this sound by half
+    sound(new ResourceLocation(MODID, &quot;example_sound_2&quot;)) // Set second sound
+      .stream() // Streams the sound
+  )
+);
+
+this.add(EXAMPLE_SOUND_EVENT_2, definition()
+  .subtitle(&quot;sound.examplemod.example_sound&quot;) // Set translation key
+  .with(
+    sound(EXAMPLE_SOUND_EVENT.getLocation(), SoundType.EVENT) // Adds sounds from &#39;EXAMPLE_SOUND_EVENT&#39;
+      .pitch(0.5) // Scales all pitches called on this sound by half
+  )
+);
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

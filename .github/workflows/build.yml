@@ -1,0 +1,45 @@
+name: 构建与回归测试
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: 检出源码
+        uses: actions/checkout@v4
+      - name: 配置 Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: 配置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: 配置 Gradle 缓存
+        uses: gradle/actions/setup-gradle@v4
+      - name: 检查音乐资源与示例清理
+        run: node --test tests/music-import.test.cjs tests/cleanup.test.cjs
+      - name: 检查动画数学曲线
+        run: |
+          mkdir -p build/dance-motion-tests
+          javac -encoding UTF-8 -d build/dance-motion-tests src/main/java/com/example/examplemod/dance/DanceMotion.java src/test/java/com/example/examplemod/dance/DanceMotionTest.java
+          java -cp build/dance-motion-tests com.example.examplemod.dance.DanceMotionTest
+      - name: 构建并运行游戏回归测试
+        run: |
+          chmod +x gradlew
+          ./gradlew --no-daemon build runGameTestServer
+      - name: 保存可安装的 Mod
+        uses: actions/upload-artifact@v4
+        with:
+          name: pengyoudejiu
+          path: build/libs/pengyoudejiu-*.jar
+          if-no-files-found: error

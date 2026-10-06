@@ -1,0 +1,257 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Configuration · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a class="current" href="config.html" title="misc/config.md">Configuration</a>
+<a href="keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/misc/config/">查看官方原文（联网）</a></div><h1 id="configuration">Configuration</h1>
+<p>Configurations define settings and consumer preferences that can be applied to a mod instance. Forge uses a configuration system using <a href="https://toml.io/">TOML</a> files and read with <a href="https://github.com/TheElectronWill/night-config">NightConfig</a>.</p>
+<h2 id="creating-a-configuration">Creating a Configuration</h2>
+<p>A configuration can be created using a subtype of <code>IConfigSpec</code>. Forge implements the type via <code>ForgeConfigSpec</code> and enables its construction through <code>ForgeConfigSpec$Builder</code>. The builder can separate the config values into sections via <code>Builder#push</code> to create a section and <code>Builder#pop</code> to leave a section. Afterwards, the configuration can be built using one of two methods:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>build</code></td>
+<td align="left">Creates the <code>ForgeConfigSpec</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>configure</code></td>
+<td align="left">Creates a pair of the class holding the config values and the <code>ForgeConfigSpec</code>.</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p><code>ForgeConfigSpec$Builder#configure</code> is typically used with a <code>static</code> block and a class that takes in <code>ForgeConfigSpec$Builder</code> as part of its constructor to attach and hold the values:</p>
+<pre><code class="language-java">// In some config class
+ExampleConfig(ForgeConfigSpec.Builder builder) {
+  // Define values here in final fields
+}
+
+// Somewhere the constructor is accessible
+static {
+  Pair&lt;ExampleConfig, ForgeConfigSpec&gt; pair = new ForgeConfigSpec.Builder()
+    .configure(ExampleConfig::new);
+  // Store pair values in some constant field
+}
+</code></pre>
+</blockquote>
+<p>Each config value can be supplied with additional context to provide additional behavior. Contexts must be defined before the config value is fully built:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>comment</code></td>
+<td align="left">Provides a description of what the config value does. Can provide multiple strings for a multiline comment.</td>
+</tr>
+<tr>
+<td align="left"><code>translation</code></td>
+<td align="left">Provides a translation key for the name of the config value.</td>
+</tr>
+<tr>
+<td align="left"><code>worldRestart</code></td>
+<td align="left">The world must be restarted before the config value can be changed.</td>
+</tr>
+</tbody></table>
+<h3 id="configvalue">ConfigValue</h3>
+<p>Config values can be built with the provided contexts (if defined) using any of the <code>#define</code> methods.</p>
+<p>All config value methods take in at least two components:</p>
+<ul>
+<li>A path representing the name of the variable: a <code>.</code> separated string representing the sections the config value is in</li>
+<li>The default value when no valid configuration is present</li>
+</ul>
+<p>The <code>ConfigValue</code> specific methods take in two additional components:</p>
+<ul>
+<li>A validator to make sure the deserialized object is valid</li>
+<li>A class representing the data type of the config value</li>
+</ul>
+<pre><code class="language-java">// For some ForgeConfigSpec$Builder builder
+ConfigValue&lt;T&gt; value = builder.comment(&quot;Comment&quot;)
+  .define(&quot;config_value_name&quot;, defaultValue);
+</code></pre>
+<p>The values themselves can be obtained using <code>ConfigValue#get</code>. The values are additionally cached to prevent multiple readings from files.</p>
+<h4 id="additional-config-value-types">Additional Config Value Types</h4>
+<ul>
+<li><strong>Range Values</strong><ul>
+<li>Description: Value must be between the defined bounds</li>
+<li>Class Type: <code>Comparable&lt;T&gt;</code></li>
+<li>Method Name: <code>#defineInRange</code></li>
+<li>Additional Components:<ul>
+<li>The minimum and maximum the config value may be</li>
+<li>A class representing the data type of the config value</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p><code>DoubleValue</code>s, <code>IntValue</code>s, and <code>LongValue</code>s are range values which specify the class as <code>Double</code>, <code>Integer</code>, and <code>Long</code> respectively.</p>
+</blockquote>
+<ul>
+<li><p><strong>Whitelisted Values</strong></p>
+<ul>
+<li>Description: Value must be in supplied collection</li>
+<li>Class Type: <code>T</code></li>
+<li>Method Name: <code>#defineInList</code></li>
+<li>Additional Components:<ul>
+<li>A collection of the allowed values the configuration can be</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>List Values</strong></p>
+<ul>
+<li>Description: Value is a list of entries</li>
+<li>Class Type: <code>List&lt;T&gt;</code></li>
+<li>Method Name: <code>#defineList</code>, <code>#defineListAllowEmpty</code> if list can be empty</li>
+<li>Additional Components:<ul>
+<li>A validator to make sure a deserialized element from the list is valid</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Enum Values</strong></p>
+<ul>
+<li>Description: An enum value in the supplied collection</li>
+<li>Class Type: <code>Enum&lt;T&gt;</code></li>
+<li>Method Name: <code>#defineEnum</code></li>
+<li>Additional Components:<ul>
+<li>A getter to convert a string or integer into an enum</li>
+<li>A collection of the allowed values the configuration can be</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Boolean Values</strong></p>
+<ul>
+<li>Description: A <code>boolean</code> value</li>
+<li>Class Type: <code>Boolean</code></li>
+<li>Method Name: <code>#define</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="registering-a-configuration">Registering a Configuration</h2>
+<p>Once a <code>ForgeConfigSpec</code> has been built, it must be registered to allow Forge to load, track, and sync the configuration settings as required. Configurations should be registered in the mod constructor via <code>ModLoadingContext#registerConfig</code>. A configuration can be registered with a given type representing the side the config belongs to, the <code>ForgeConfigSpec</code>, and optionally a specific file name for the configuration.</p>
+<pre><code class="language-java">// In the mod constructor with a ForgeConfigSpec CONFIG
+ModLoadingContext.get().registerConfig(Type.COMMON, CONFIG);
+</code></pre>
+<p>Here is a list of the available configuration types:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Loaded</th>
+<th align="center">Synced to Client</th>
+<th align="center">Client Location</th>
+<th align="center">Server Location</th>
+<th align="left">Default File Suffix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">CLIENT</td>
+<td align="center">Client Side Only</td>
+<td align="center">No</td>
+<td align="center"><code>.minecraft/config</code></td>
+<td align="center">N/A</td>
+<td align="left"><code>-client</code></td>
+</tr>
+<tr>
+<td align="center">COMMON</td>
+<td align="center">On Both Sides</td>
+<td align="center">No</td>
+<td align="center"><code>.minecraft/config</code></td>
+<td align="center"><code>&lt;server_folder&gt;/config</code></td>
+<td align="left"><code>-common</code></td>
+</tr>
+<tr>
+<td align="center">SERVER</td>
+<td align="center">Server Side Only</td>
+<td align="center">Yes</td>
+<td align="center"><code>.minecraft/saves/&lt;level_name&gt;/serverconfig</code></td>
+<td align="center"><code>&lt;server_folder&gt;/world/serverconfig</code></td>
+<td align="left"><code>-server</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>TIP</strong></p>
+<p>Forge documents the <a href="https://github.com/MinecraftForge/MinecraftForge/blob/c3e0b071a268b02537f9d79ef8e7cd9b100db416/fmlcore/src/main/java/net/minecraftforge/fml/config/ModConfig.java#L108-L136">config types</a> within their codebase.</p>
+</blockquote>
+<h2 id="configuration-events">Configuration Events</h2>
+<p>Operations that occur whenever a config is loaded or reloaded can be done using the <code>ModConfigEvent$Loading</code> and <code>ModConfigEvent$Reloading</code> events. The events must be <a href="../concepts/events.html#creating-an-event-handler">registered</a> to the mod event bus.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>These events are called for all configurations for the mod; the <code>ModConfig</code> object provided should be used to denote which configuration is being loaded or reloaded.</p>
+</blockquote>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

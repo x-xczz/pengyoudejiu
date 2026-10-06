@@ -1,0 +1,138 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Advancement Generation · Forge 1.20.1</title><link rel="stylesheet" href="../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../items/index.html" title="items/index.md">Items</a>
+<a href="../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../index.html" title="datagen/index.md">Data Generators</a>
+<a href="../client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a class="current" href="advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/datagen/server/advancements/">查看官方原文（联网）</a></div><h1 id="advancement-generation">Advancement Generation</h1>
+<p><a href="../../resources/server/advancements.html">Advancements</a> can be generated for a mod by constructing a new <code>AdvancementProvider</code> and providing <code>AdvancementSubProvider</code>s. Advancements can either be created and supplied manually or, for convenience, created using <code>Advancement$Builder</code>. The provider must be <a href="../index.html#data-providers">added</a> to the <code>DataGenerator</code>.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>Forge provides an extension for the <code>AdvancementProvider</code> called <code>ForgeAdvancementProvider</code> which integrates better for generating advancements. So, this documentation will use <code>ForgeAdvancementProvider</code> along with the sub provider interface <code>ForgeAdvancementProvider$AdvancementGenerator</code>.</p>
+</blockquote>
+<pre><code class="language-java">// On the MOD event bus
+@SubscribeEvent
+public void gatherData(GatherDataEvent event) {
+    event.getGenerator().addProvider(
+        // Tell generator to run only when server data are generating
+        event.includeServer(),
+        output -&gt; new ForgeAdvancementProvider(
+          output,
+          event.getLookupProvider(),
+          event.getExistingFileHelper(),
+          // Sub providers which generate the advancements
+          List.of(subProvider1, subProvider2, /*...*/)
+        )
+    );
+}
+</code></pre>
+<h2 id="forgeadvancementprovideradvancementgenerator"><code>ForgeAdvancementProvider$AdvancementGenerator</code></h2>
+<p>A <code>ForgeAdvancementProvider$AdvancementGenerator</code> is responsible for generating advancements, containing a method which takes in a registry lookup, the writer (<code>Consumer&lt;Advancement&gt;</code>), and the existing file helper..</p>
+<pre><code class="language-java">// In some subclass of ForgeAdvancementProvider$AdvancementGenerator or as a lambda reference
+
+@Override
+public void generate(HolderLookup.Provider registries, Consumer&lt;Advancement&gt; writer, ExistingFileHelper existingFileHelper) {
+  // Build advancements here
+}
+</code></pre>
+<h2 id="advancementbuilder"><code>Advancement$Builder</code></h2>
+<p><code>Advancement$Builder</code> is a convenience implementation for creating <code>Advancement</code>s to generate. It allows the definition of the parent advancement, the display information, the rewards when the advancement has been completed, and the requirements to unlock the advancement. Only the requirements need to be specified to create an <code>Advancement</code>.</p>
+<p>Although not required, there are a number of methods that are important to know of:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>parent</code></td>
+<td align="left">Sets the advancement which this advancement is directly linked to. Can either specify the name of the advancement or the advancement itself if its generated by the modder.</td>
+</tr>
+<tr>
+<td align="center"><code>display</code></td>
+<td align="left">Sets the information to display to the chat, toast, and advancement screen.</td>
+</tr>
+<tr>
+<td align="center"><code>rewards</code></td>
+<td align="left">Sets the rewards obtained when this advancement is completed.</td>
+</tr>
+<tr>
+<td align="center"><code>addCriterion</code></td>
+<td align="left">Adds a condition to the advancement.</td>
+</tr>
+<tr>
+<td align="center"><code>requirements</code></td>
+<td align="left">Specifies if the conditions must all return true or at least one must return true. An additional overload can be used to mix-and-match those operations.</td>
+</tr>
+</tbody></table>
+<p>Once an <code>Advancement$Builder</code> is ready to be built, the <code>#save</code> method should be called which takes in the writer, the registry name of the advancement, and the file helper used to check whether the supplied parent exists.</p>
+<pre><code class="language-java">// In some ForgeAdvancementProvider$AdvancementGenerator#generate(registries, writer, existingFileHelper)
+Advancement example = Advancement.Builder.advancement()
+  .addCriterion(&quot;example_criterion&quot;, triggerInstance) // How the advancement is unlocked
+  .save(writer, name, existingFileHelper); // Add data to builder
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

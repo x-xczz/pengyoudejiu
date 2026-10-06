@@ -1,0 +1,157 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Access Transformers · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a class="current" href="accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/advanced/accesstransformers/">查看官方原文（联网）</a></div><h1 id="access-transformers">Access Transformers</h1>
+<p>Access Transformers (ATs for short) allow for widening the visibility and modifying the <code>final</code> flags of classes, methods, and fields. They allow modders to access and modify otherwise inaccessible members in classes outside their control.</p>
+<p>The <a href="https://github.com/MinecraftForge/AccessTransformers/blob/master/FMLAT.md">specification document</a> can be viewed on the Minecraft Forge GitHub.</p>
+<h2 id="adding-ats">Adding ATs</h2>
+<p>Adding an Access Transformer to your mod project is as simple as adding a single line into your <code>build.gradle</code>:</p>
+<pre><code class="language-groovy">// This block is where your mappings version is also specified
+minecraft {
+  accessTransformer = file(&#39;src/main/resources/META-INF/accesstransformer.cfg&#39;)
+}
+</code></pre>
+<p>After adding or modifying the Access Transformer, the gradle project must be refreshed for the transformations to take effect.</p>
+<p>During development, the AT file can be anywhere specified by the line above. However, when loading in a non-development environment, Forge will only search for the exact path of <code>META-INF/accesstransformer.cfg</code> in your JAR file.</p>
+<h2 id="comments">Comments</h2>
+<p>All text after a <code>#</code> until the end of the line will be treated as a comment and will not be parsed.</p>
+<h2 id="access-modifiers">Access Modifiers</h2>
+<p>Access modifiers specify to what new member visibility the given target will be transformed to. In decreasing order of visibility:</p>
+<ul>
+<li><code>public</code> - visible to all classes inside and outside its package</li>
+<li><code>protected</code> - visible only to classes inside the package and subclasses</li>
+<li><code>default</code> - visible only to classes inside the package</li>
+<li><code>private</code> - visible only to inside the class</li>
+</ul>
+<p>A special modifier <code>+f</code> and <code>-f</code> can be appended to the aforementioned modifiers to either add or remove respectively the <code>final</code> modifier, which prevents subclassing, method overriding, or field modification when applied.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>Directives only modify the method they directly reference; any overriding methods will not be access-transformed. It is advised to ensure transformed methods do not have non-transformed overrides that restrict the visibility, which will result in the JVM throwing an error.</p>
+<p>Examples of methods that can be safely transformed are <code>private</code> methods, <code>final</code> methods (or methods in <code>final</code> classes), and <code>static</code> methods.</p>
+</blockquote>
+<h2 id="targets-and-directives">Targets and Directives</h2>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>When using Access Transformers on Minecraft classes, the SRG name must be used for fields and methods.</p>
+</blockquote>
+<h3 id="classes">Classes</h3>
+<p>To target classes:</p>
+<pre><code>&lt;access modifier&gt; &lt;fully qualified class name&gt;
+</code></pre>
+<p>Inner classes are denoted by combining the fully qualified name of the outer class and the name of the inner class with a <code>$</code> as separator.</p>
+<h3 id="fields">Fields</h3>
+<p>To target fields:</p>
+<pre><code>&lt;access modifier&gt; &lt;fully qualified class name&gt; &lt;field name&gt;
+</code></pre>
+<h3 id="methods">Methods</h3>
+<p>Targeting methods require a special syntax to denote the method parameters and return type:</p>
+<pre><code>&lt;access modifier&gt; &lt;fully qualified class name&gt; &lt;method name&gt;(&lt;parameter types&gt;)&lt;return type&gt;
+</code></pre>
+<h4 id="specifying-types">Specifying Types</h4>
+<p>Also called &quot;descriptors&quot;: see the <a href="https://docs.oracle.com/javase/specs/jvms/se8/html/jvms-4.html#jvms-4.3.2">Java Virtual Machine Specification, SE 8, sections 4.3.2 and 4.3.3</a> for more technical details.</p>
+<ul>
+<li><code>B</code> - <code>byte</code>, a signed byte</li>
+<li><code>C</code> - <code>char</code>, a Unicode character code point in UTF-16</li>
+<li><code>D</code> - <code>double</code>, a double-precision floating-point value</li>
+<li><code>F</code> - <code>float</code>, a single-precision floating-point value</li>
+<li><code>I</code> - <code>integer</code>, a 32-bit integer</li>
+<li><code>J</code> - <code>long</code>, a 64-bit integer</li>
+<li><code>S</code> - <code>short</code>, a signed short</li>
+<li><code>Z</code> - <code>boolean</code>, a <code>true</code> or <code>false</code> value</li>
+<li><code>[</code> - references one dimension of an array<ul>
+<li>Example: <code>[[S</code> refers to <code>short[][]</code></li>
+</ul>
+</li>
+<li><code>L&lt;class name&gt;;</code> - references a reference type<ul>
+<li>Example: <code>Ljava/lang/String;</code> refers to <code>java.lang.String</code> reference type <em>(note the use of slashes instead of periods)</em></li>
+</ul>
+</li>
+<li><code>(</code> - references a method descriptor, parameters should be supplied here or nothing if no parameters are present</li>
+<li>Example: <code>&lt;method&gt;(I)Z</code> refers to a method that requires an integer argument and returns a boolean</li>
+<li><code>V</code> - indicates a method returns no value, can only be used at the end of a method descriptor<ul>
+<li>Example: <code>&lt;method&gt;()V</code> refers to a method that has no arguments and returns nothing</li>
+</ul>
+</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<pre><code># Makes public the ByteArrayToKeyFunction interface in Crypt
+public net.minecraft.util.Crypt$ByteArrayToKeyFunction
+
+# Makes protected and removes the final modifier from &#39;random&#39; in MinecraftServer
+protected-f net.minecraft.server.MinecraftServer f_129758_ #random
+
+# Makes public the &#39;makeExecutor&#39; method in Util,
+# accepting a String and returns an ExecutorService
+public net.minecraft.Util m_137477_(Ljava/lang/String;)Ljava/util/concurrent/ExecutorService; #makeExecutor
+
+# Makes public the &#39;leastMostToIntArray&#39; method in UUIDUtil,
+# accepting two longs and returning an int[]
+public net.minecraft.core.UUIDUtil m_235872_(JJ)[I #leastMostToIntArray
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

@@ -1,0 +1,154 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SimpleImpl · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="index.html" title="networking/index.md">Networking</a>
+<a class="current" href="simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/networking/simpleimpl/">查看官方原文（联网）</a></div><h1 id="simpleimpl">SimpleImpl</h1>
+<p>SimpleImpl is the name given to the packet system that revolves around the <code>SimpleChannel</code> class. Using this system is by far the easiest way to send custom data between clients and the server.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>First you need to create your <code>SimpleChannel</code> object. We recommend that you do this in a separate class, possibly something like <code>ModidPacketHandler</code>. Create your <code>SimpleChannel</code> as a static field in this class, like so:</p>
+<pre><code class="language-java">private static final String PROTOCOL_VERSION = &quot;1&quot;;
+public static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
+  new ResourceLocation(&quot;mymodid&quot;, &quot;main&quot;),
+  () -&gt; PROTOCOL_VERSION,
+  PROTOCOL_VERSION::equals,
+  PROTOCOL_VERSION::equals
+);
+</code></pre>
+<p>The first argument is a name for the channel. The second argument is a <code>Supplier&lt;String&gt;</code> returning the current network protocol version. The third and fourth arguments respectively are <code>Predicate&lt;String&gt;</code> checking whether an incoming connection protocol version is network-compatible with the client or server, respectively.
+Here, we simply compare with the <code>PROTOCOL_VERSION</code> field directly, meaning that the client and server <code>PROTOCOL_VERSION</code>s must always match or FML will deny login.</p>
+<h2 id="the-version-checker">The Version Checker</h2>
+<p>If your mod does not require the other side to have a specific network channel, or to be a Forge instance at all, you should take care that you properly define your version compatibility checkers (the <code>Predicate&lt;String&gt;</code> parameters) to handle additional &quot;meta-versions&quot; (defined in <code>NetworkRegistry</code>) that can be received by the version checker. These are:</p>
+<ul>
+<li><code>ABSENT</code> - if this channel is missing on the other endpoint. Note that in this case, the endpoint is still a Forge endpoint, and may have other mods.</li>
+<li><code>ACCEPTVANILLA</code> - if the endpoint is a vanilla (or non-Forge) endpoint.</li>
+</ul>
+<p>Returning <code>false</code> for both means that this channel must be present on the other endpoint. If you just copy the code above, this is what it does. Note that these values are also used during the list ping compatibility check, which is responsible for showing the green check / red cross in the multiplayer server select screen.</p>
+<h2 id="registering-packets">Registering Packets</h2>
+<p>Next, we must declare the types of messages that we would like to send and receive. This is done using <code>INSTANCE#registerMessage</code>, which takes 5 parameters:</p>
+<ul>
+<li>The first parameter is the discriminator for the packet. This is a per-channel unique ID for the packet. We recommend you use a local variable to hold the ID, and then call registerMessage using <code>id++</code>. This will guarantee 100% unique IDs.</li>
+<li>The second parameter is the actual packet class <code>MSG</code>.</li>
+<li>The third parameter is a <code>BiConsumer&lt;MSG, FriendlyByteBuf&gt;</code> responsible for encoding the message into the provided <code>FriendlyByteBuf</code>.</li>
+<li>The fourth parameter is a <code>Function&lt;FriendlyByteBuf, MSG&gt;</code> responsible for decoding the message from the provided <code>FriendlyByteBuf</code>.</li>
+<li>The final parameter is a <code>BiConsumer&lt;MSG, Supplier&lt;NetworkEvent.Context&gt;&gt;</code> responsible for handling the message itself.</li>
+</ul>
+<p>The last three parameters can be method references to either static or instance methods in Java. Remember that an instance method <code>MSG#encode(FriendlyByteBuf)</code> still satisfies <code>BiConsumer&lt;MSG, FriendlyByteBuf&gt;</code>; the <code>MSG</code> simply becomes the implicit first argument.</p>
+<h2 id="handling-packets">Handling Packets</h2>
+<p>There are a couple things to highlight in a packet handler. A packet handler has both the message object and the network context available to it. The context allows access to the player that sent the packet (if on the server), and a way to enqueue thread-safe work.</p>
+<pre><code class="language-java">public static void handle(MyMessage msg, Supplier&lt;NetworkEvent.Context&gt; ctx) {
+  ctx.get().enqueueWork(() -&gt; {
+    // Work that needs to be thread-safe (most work)
+    ServerPlayer sender = ctx.get().getSender(); // the client that sent this packet
+    // Do stuff
+  });
+  ctx.get().setPacketHandled(true);
+}
+</code></pre>
+<p>Packets sent from the server to the client should be handled in another class and wrapped via <code>DistExecutor#unsafeRunWhenOn</code>.</p>
+<pre><code class="language-java">// In Packet class
+public static void handle(MyClientMessage msg, Supplier&lt;NetworkEvent.Context&gt; ctx) {
+  ctx.get().enqueueWork(() -&gt;
+    // Make sure it&#39;s only executed on the physical client
+    DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -&gt; () -&gt; ClientPacketHandlerClass.handlePacket(msg, ctx))
+  );
+  ctx.get().setPacketHandled(true);
+}
+
+// In ClientPacketHandlerClass
+public static void handlePacket(MyClientMessage msg, Supplier&lt;NetworkEvent.Context&gt; ctx) {
+  // Do stuff
+}
+</code></pre>
+<p>Note the presence of <code>#setPacketHandled</code>, which is used to tell the network system that the packet has successfully completed handling.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>As of Minecraft 1.8 packets are by default handled on the network thread.</p>
+<p>That means that your handler can <em>not</em> interact with most game objects directly. Forge provides a convenient way to make your code execute on the main thread instead through the supplied <code>NetworkEvent$Context</code>. Simply call <code>NetworkEvent$Context#enqueueWork(Runnable)</code>, which will call the given <code>Runnable</code> on the main thread at the next opportunity.</p>
+</blockquote>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>Be defensive when handling packets on the server. A client could attempt to exploit the packet handling by sending unexpected data.</p>
+<p>A common problem is vulnerability to <strong>arbitrary chunk generation</strong>. This typically happens when the server is trusting a block position sent by a client to access blocks and block entities. When accessing blocks and block entities in unloaded areas of the level, the server will either generate or load this area from disk, then promptly write it to disk. This can be exploited to cause <strong>catastrophic damage</strong> to a server&#39;s performance and storage space without leaving a trace.</p>
+<p>To avoid this problem, a general rule of thumb is to only access blocks and block entities if <code>Level#hasChunkAt</code> is true.</p>
+</blockquote>
+<h2 id="sending-packets">Sending Packets</h2>
+<h3 id="sending-to-the-server">Sending to the Server</h3>
+<p>There is but one way to send a packet to the server. This is because there is only ever <em>one</em> server the client can be connected to at once. To do so, we must again use that <code>SimpleChannel</code> that was defined earlier. Simply call <code>INSTANCE.sendToServer(new MyMessage())</code>. The message will be sent to the handler for its type, if one exists.</p>
+<h3 id="sending-to-clients">Sending to Clients</h3>
+<p>Packets can be sent directly to a client using the <code>SimpleChannel</code>: <code>HANDLER.sendTo(new MyClientMessage(), serverPlayer.connection.getConnection(), NetworkDirection.PLAY_TO_CLIENT)</code>. However, this can be quite inconvenient. Forge has some convenience functions that can be used:</p>
+<pre><code class="language-java">// Send to one player
+INSTANCE.send(PacketDistributor.PLAYER.with(serverPlayer), new MyMessage());
+
+// Send to all players tracking this level chunk
+INSTANCE.send(PacketDistributor.TRACKING_CHUNK.with(levelChunk), new MyMessage());
+
+// Send to all connected players
+INSTANCE.send(PacketDistributor.ALL.noArg(), new MyMessage());
+</code></pre>
+<p>There are additional <code>PacketDistributor</code> types available; check the documentation on the <code>PacketDistributor</code> class for more details.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

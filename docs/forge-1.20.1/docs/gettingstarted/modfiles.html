@@ -1,0 +1,395 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mod Files · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a class="current" href="modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/gettingstarted/modfiles/">查看官方原文（联网）</a></div><h1 id="mod-files">Mod Files</h1>
+<p>The mod files are responsible for determining what mods are packaged into your JAR, what information to display within the &#39;Mods&#39; menu, and how your mod should be loaded in the game.</p>
+<h2 id="modstoml">mods.toml</h2>
+<p>The <code>mods.toml</code> file defines the metadata of your mod(s). It also contains additional information that is displayed within the &#39;Mods&#39; menu and how your mod(s) should be loaded into the game.</p>
+<p>The file uses the <a href="https://toml.io/">Tom&#39;s Obvious Minimal Language, or TOML</a>, format. The file must be stored under the <code>META-INF</code> folder in the resource directory of the source set you are using (<code>src/main/resources/META-INF/mods.toml</code> for the <code>main</code> source set). A <code>mods.toml</code> file may look something like this:</p>
+<pre><code class="language-toml">modLoader=&quot;javafml&quot;
+loaderVersion=&quot;[46,)&quot;
+
+license=&quot;All Rights Reserved&quot;
+issueTrackerURL=&quot;https://github.com/MinecraftForge/MinecraftForge/issues&quot;
+showAsResourcePack=false
+
+[[mods]]
+  modId=&quot;examplemod&quot;
+  version=&quot;1.0.0.0&quot;
+  displayName=&quot;Example Mod&quot;
+  updateJSONURL=&quot;https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json&quot;
+  displayURL=&quot;https://minecraftforge.net&quot;
+  logoFile=&quot;logo.png&quot;
+  credits=&quot;I&#39;d like to thank my mother and father.&quot;
+  authors=&quot;Author&quot;
+  description=&#39;&#39;&#39;
+  Lets you craft dirt into diamonds. This is a traditional mod that has existed for eons. It is ancient. The holy Notch created it. Jeb rainbowfied it. Dinnerbone made it upside down. Etc.
+  &#39;&#39;&#39;
+  displayTest=&quot;MATCH_VERSION&quot;
+
+[[dependencies.examplemod]]
+  modId=&quot;forge&quot;
+  mandatory=true
+  versionRange=&quot;[46,)&quot;
+  ordering=&quot;NONE&quot;
+  side=&quot;BOTH&quot;
+
+[[dependencies.examplemod]]
+  modId=&quot;minecraft&quot;
+  mandatory=true
+  versionRange=&quot;[1.20]&quot;
+  ordering=&quot;NONE&quot;
+  side=&quot;BOTH&quot;
+</code></pre>
+<p><code>mods.toml</code> is broken into three parts: the non-mod-specific properties, which are linked to the mod file; the mod properties, with a section for each mod; and the dependency configurations, with a section for each mod&#39;s or mods&#39; dependencies. Each of the properties associated with the <code>mods.toml</code> file will be explained below, where <code>required</code> means that a value must be specified or an exception will be thrown.</p>
+<h3 id="non-mod-specific-properties">Non-Mod-Specific Properties</h3>
+<p>Non-mod-specific properties are properties associated with the JAR itself, indicating how to load the mod(s) and any additional global metadata.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="center">Default</th>
+<th align="center">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>modLoader</code></td>
+<td align="center">string</td>
+<td align="center"><strong>mandatory</strong></td>
+<td align="center">The language loader used by the mod(s). Can be used to support alternative language structures, such as Kotlin objects for the main file, or different methods of determining the entrypoint, such as an interface or method. Forge provides the Java loader <code>&quot;javafml&quot;</code> and low/no code loader <code>&quot;lowcodefml&quot;</code>.</td>
+<td align="left"><code>&quot;javafml&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>loaderVersion</code></td>
+<td align="center">string</td>
+<td align="center"><strong>mandatory</strong></td>
+<td align="center">The acceptable version range of the language loader, expressed as a <a href="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html">Maven Version Range</a>. For <code>javafml</code> and <code>lowcodefml</code>, the version is the major version of the Forge version.</td>
+<td align="left"><code>&quot;[46,)&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>license</code></td>
+<td align="center">string</td>
+<td align="center"><strong>mandatory</strong></td>
+<td align="center">The license the mod(s) in this JAR are provided under. It is suggested that this is set to the <a href="https://spdx.org/licenses/">SPDX identifier</a> you are using and/or a link to the license. You can visit <a href="https://choosealicense.com/">https://choosealicense.com/</a> to help pick the license you want to use.</td>
+<td align="left"><code>&quot;MIT&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>showAsResourcePack</code></td>
+<td align="center">boolean</td>
+<td align="center"><code>false</code></td>
+<td align="center">When <code>true</code>, the mod(s)&#39;s resources will be displayed as a separate resource pack on the &#39;Resource Packs&#39; menu, rather than being combined with the &#39;Mod resources&#39; pack.</td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>services</code></td>
+<td align="center">array</td>
+<td align="center"><code>[]</code></td>
+<td align="center">An array of services your mod <strong>uses</strong>. This is consumed as part of the created module for the mod from Forge&#39;s implementation of the Java Platform Module System.</td>
+<td align="left"><code>[&quot;net.minecraftforge.forgespi.language.IModLanguageProvider&quot;]</code></td>
+</tr>
+<tr>
+<td align="left"><code>properties</code></td>
+<td align="center">table</td>
+<td align="center"><code>{}</code></td>
+<td align="center">A table of substitution properties. This is used by <code>StringSubstitutor</code> to replace <code>${file.&lt;key&gt;}</code> with its corresponding value. This is currently only used to replace the <code>version</code> in the <a href="#mod-specific-properties">mod-specific properties</a>.</td>
+<td align="left"><code>{ &quot;example&quot; = &quot;1.2.3&quot; }</code> referenced by <code>${file.example}</code></td>
+</tr>
+<tr>
+<td align="left"><code>issueTrackerURL</code></td>
+<td align="center">string</td>
+<td align="center"><em>nothing</em></td>
+<td align="center">A URL representing the place to report and track issues with the mod(s).</td>
+<td align="left"><code>&quot;https://forums.minecraftforge.net/&quot;</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>The <code>services</code> property is functionally equivalent to specifying the <a href="https://docs.oracle.com/javase/specs/jls/se17/html/jls-7.html#jls-7.7.3"><code>uses</code> directive in a module</a>, which allows <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/ServiceLoader.html#load(java.lang.Class)"><em>loading</em></a> a service of a given type.</p>
+</blockquote>
+<h3 id="mod-specific-properties">Mod-Specific Properties</h3>
+<p>Mod-specific properties are tied to the specified mod using the <code>[[mods]]</code> header. This is an <a href="https://toml.io/en/v1.0.0#array-of-tables">array of tables</a>; all key/value properties will be attached to that mod until the next header.</p>
+<pre><code class="language-toml"># Properties for examplemod1
+[[mods]]
+modId = &quot;examplemod1&quot;
+
+# Properties for examplemod2
+[[mods]]
+modId = &quot;examplemod2&quot;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="center">Default</th>
+<th align="center">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>modId</code></td>
+<td align="center">string</td>
+<td align="center"><strong>mandatory</strong></td>
+<td align="center">The unique identifier representing this mod. The id must match <code>^[a-z][a-z0-9_]{1,63}$</code> (a string 2-64 characters; starts with a lowercase letter; made up of lowercase letters, numbers, or underscores).</td>
+<td align="left"><code>&quot;examplemod&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>namespace</code></td>
+<td align="center">string</td>
+<td align="center">value of <code>modId</code></td>
+<td align="center">An override namespace for the mod. The namespace much match <code>^[a-z][a-z0-9_.-]{1,63}$</code> (a string 2-64 characters; starts with a lowercase letter; made up of lowercase letters, numbers, underscores, dots, or dashes). Currently unused.</td>
+<td align="left"><code>&quot;example&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>version</code></td>
+<td align="center">string</td>
+<td align="center"><code>&quot;1&quot;</code></td>
+<td align="center">The version of the mod, preferably in a <a href="./versioning.html">variation of Maven versioning</a>. When set to <code>${file.jarVersion}</code>, it will be replaced with the value of the <code>Implementation-Version</code> property in the JAR&#39;s manifest (displays as <code>0.0NONE</code> in a development environment).</td>
+<td align="left"><code>&quot;1.20-1.0.0.0&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>displayName</code></td>
+<td align="center">string</td>
+<td align="center">value of <code>modId</code></td>
+<td align="center">The pretty name of the mod. Used when representing the mod on a screen (e.g., mod list, mod mismatch).</td>
+<td align="left"><code>&quot;Example Mod&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>description</code></td>
+<td align="center">string</td>
+<td align="center"><code>&quot;MISSING DESCRIPTION&quot;</code></td>
+<td align="center">The description of the mod shown in the mod list screen. It is recommended to use a <a href="https://toml.io/en/v1.0.0#string">multiline literal string</a>.</td>
+<td align="left"><code>&quot;This is an example.&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>logoFile</code></td>
+<td align="center">string</td>
+<td align="center"><em>nothing</em></td>
+<td align="center">The name and extension of an image file used on the mods list screen. The logo must be in the root of the JAR or directly in the root of the source set (e.g., <code>src/main/resources</code> for the main source set).</td>
+<td align="left"><code>&quot;example_logo.png&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>logoBlur</code></td>
+<td align="center">boolean</td>
+<td align="center"><code>true</code></td>
+<td align="center">Whether to use <code>GL_LINEAR*</code> (true) or <code>GL_NEAREST*</code> (false) to render the <code>logoFile</code>.</td>
+<td align="left"><code>false</code></td>
+</tr>
+<tr>
+<td align="left"><code>updateJSONURL</code></td>
+<td align="center">string</td>
+<td align="center"><em>nothing</em></td>
+<td align="center">A URL to a JSON used by the <a href="../misc/updatechecker.html">update checker</a> to make sure the mod you are playing is the latest version.</td>
+<td align="left"><code>&quot;https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>features</code></td>
+<td align="center">table</td>
+<td align="center"><code>{}</code></td>
+<td align="center">See &#39;<a href="#features">features</a>&#39;.</td>
+<td align="left"><code>{ java_version = &quot;17&quot; }</code></td>
+</tr>
+<tr>
+<td align="left"><code>modproperties</code></td>
+<td align="center">table</td>
+<td align="center"><code>{}</code></td>
+<td align="center">A table of key/values associated with this mod. Currently unused by Forge, but is mainly for use by mods.</td>
+<td align="left"><code>{ example = &quot;value&quot; }</code></td>
+</tr>
+<tr>
+<td align="left"><code>modUrl</code></td>
+<td align="center">string</td>
+<td align="center"><em>nothing</em></td>
+<td align="center">A URL to the download page of the mod. Currently unused.</td>
+<td align="left"><code>&quot;https://files.minecraftforge.net/&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>credits</code></td>
+<td align="center">string</td>
+<td align="center"><em>nothing</em></td>
+<td align="center">Credits and acknowledges for the mod shown on the mod list screen.</td>
+<td align="left"><code>&quot;The person over here and there.&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>authors</code></td>
+<td align="center">string</td>
+<td align="center"><em>nothing</em></td>
+<td align="center">The authors of the mod shown on the mod list screen.</td>
+<td align="left"><code>&quot;Example Person&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>displayURL</code></td>
+<td align="center">string</td>
+<td align="center"><em>nothing</em></td>
+<td align="center">A URL to the display page of the mod shown on the mod list screen.</td>
+<td align="left"><code>&quot;https://minecraftforge.net/&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>displayTest</code></td>
+<td align="center">string</td>
+<td align="center"><code>&quot;MATCH_VERSION&quot;</code></td>
+<td align="center">See &#39;<a href="../concepts/sides.html#writing-one-sided-mods">sides</a>&#39;.</td>
+<td align="left"><code>&quot;NONE&quot;</code></td>
+</tr>
+</tbody></table>
+<h4 id="features">Features</h4>
+<p>The features system allows mods to demand that certain settings, software, or hardware are available when loading the system. When a feature is not satisfied, mod loading will fail, informing the user about the requirement. Currently, Forge provides the following features:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Feature</th>
+<th align="center">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>java_version</code></td>
+<td align="center">The acceptable version range of the Java version, expressed as a <a href="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html">Maven Version Range</a>. This should be the supported version used by Minecraft.</td>
+<td align="left"><code>&quot;[17,)&quot;</code></td>
+</tr>
+</tbody></table>
+<h3 id="dependency-configurations">Dependency Configurations</h3>
+<p>Mods can specify their dependencies, which are checked by Forge before loading the mods. These configurations are created using the <a href="https://toml.io/en/v1.0.0#array-of-tables">array of tables</a> <code>[[dependencies.&lt;modid&gt;]]</code> where <code>modid</code> is the identifier of the mod the dependency is for.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Property</th>
+<th align="center">Type</th>
+<th align="center">Default</th>
+<th align="center">Description</th>
+<th align="left">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>modId</code></td>
+<td align="center">string</td>
+<td align="center"><strong>mandatory</strong></td>
+<td align="center">The identifier of the mod added as a dependency.</td>
+<td align="left"><code>&quot;example_library&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>mandatory</code></td>
+<td align="center">boolean</td>
+<td align="center"><strong>mandatory</strong></td>
+<td align="center">Whether the game should crash when this dependency is not met.</td>
+<td align="left"><code>true</code></td>
+</tr>
+<tr>
+<td align="left"><code>versionRange</code></td>
+<td align="center">string</td>
+<td align="center"><code>&quot;&quot;</code></td>
+<td align="center">The acceptable version range of the language loader, expressed as a <a href="https://maven.apache.org/enforcer/enforcer-rules/versionRanges.html">Maven Version Range</a>. An empty string matches any version.</td>
+<td align="left"><code>&quot;[1, 2)&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>ordering</code></td>
+<td align="center">string</td>
+<td align="center"><code>&quot;NONE&quot;</code></td>
+<td align="center">Defines if the mod must load before (<code>&quot;BEFORE&quot;</code>) or after (<code>&quot;AFTER&quot;</code>) this dependency. If the ordering does not matter, return <code>&quot;NONE&quot;</code></td>
+<td align="left"><code>&quot;AFTER&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>side</code></td>
+<td align="center">string</td>
+<td align="center"><code>&quot;BOTH&quot;</code></td>
+<td align="center">The <a href="../concepts/sides.html#different-kinds-of-sides">physical side</a> the dependency must be present on: <code>&quot;CLIENT&quot;</code>, <code>&quot;SERVER&quot;</code>, or <code>&quot;BOTH&quot;</code>.</td>
+<td align="left"><code>&quot;CLIENT&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>referralUrl</code></td>
+<td align="center">string</td>
+<td align="center"><em>nothing</em></td>
+<td align="center">A URL to the download page of the dependency. Currently unused.</td>
+<td align="left"><code>&quot;https://library.example.com/&quot;</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p>The <code>ordering</code> of two mods may cause a crash due to a cyclic dependency: for example, mod A must load <code>&quot;BEFORE&quot;</code> mod B and mod B <code>&quot;BEFORE&quot;</code> mod A.</p>
+</blockquote>
+<h2 id="mod-entrypoints">Mod Entrypoints</h2>
+<p>Now that the <code>mods.toml</code> is filled out, we need to provide an entrypoint to being programming the mod. Entrypoints are essentially the starting point for executing the mod. The entrypoint itself is determined by the language loader used in the <code>mods.toml</code>.</p>
+<h3 id="javafml-and-mod"><code>javafml</code> and <code>@Mod</code></h3>
+<p><code>javafml</code> is a language loader provided by Forge for the Java programming language. The entrypoint is defined using a public class with the <code>@Mod</code> annotation. The value of <code>@Mod</code> must contain one of the mod ids specified within the <code>mods.toml</code>. From there, all initialization logic (e.g., <a href="../concepts/events.html">registering events</a>, <a href="../concepts/registries.html#deferredregister">adding <code>DeferredRegister</code>s</a>) can be specified within the constructor of the class. The mod bus can be obtained from <code>FMLJavaModLoadingContext</code>.</p>
+<pre><code class="language-java">@Mod(&quot;examplemod&quot;) // Must match mods.toml
+public class Example {
+
+  public Example() {
+    // Initialize logic here
+    var modBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+    // ...
+  }
+}
+</code></pre>
+<h3 id="lowcodefml"><code>lowcodefml</code></h3>
+<p><code>lowcodefml</code> is a language loader used as a way to distribute datapacks and resource packs as mods without the need of an in-code entrypoint. It is specified as <code>lowcodefml</code> rather than <code>nocodefml</code> for minor additions in the future that might require minimal coding.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

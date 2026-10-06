@@ -1,0 +1,110 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Non-Datapack Recipes · Forge 1.20.1</title><link rel="stylesheet" href="../../../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../../../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../../../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../../../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../../../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../../../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../../../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../../../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../../../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../../../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../../../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../../../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../../../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../../../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../../../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../../../items/index.html" title="items/index.md">Items</a>
+<a href="../../../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../../../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../../../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../../../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../../../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../../../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a href="../../../gameeffects/particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="../../../gameeffects/sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../../../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../../../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../../../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../../../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../../../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../../../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../../../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../../../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../../../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../../../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../../../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../../../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../../../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../../client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../../client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../../client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../../client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../index.html" title="resources/server/index.md">Datapacks</a>
+<a href="index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a class="current" href="incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../../../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../../../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../../../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../../../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../../../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../../../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../../../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../../../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../../../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../../../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../../../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../../../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../../../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../../../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../../../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../../../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../../../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../../../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../../../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../../../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/resources/server/recipes/incode/">查看官方原文（联网）</a></div><h1 id="non-datapack-recipes">Non-Datapack Recipes</h1>
+<p>Not all recipes are simplistic enough or migrated to using data-driven recipes. Some subsystems still need to be patched within the codebase to provide support for adding new recipes.</p>
+<h2 id="brewing-recipes">Brewing Recipes</h2>
+<p>Brewing is one of the few recipes that still exist in code. Brewing recipes are added as part of a bootstrap within <code>PotionBrewing</code> for their containers, container recipes, and potion mixes. To expand upon the existing system, Forge allows brewing recipes to be added by calling <code>BrewingRecipeRegistry#addRecipe</code> in <code>FMLCommonSetupEvent</code>.</p>
+<blockquote>
+<p><strong>WARNING</strong></p>
+<p><code>BrewingRecipeRegistry#addRecipe</code> must be called within the synchronous work queue via <code>#enqueueWork</code> as the method is not thread-safe.</p>
+</blockquote>
+<p>The default implementation takes in an input ingredient, a catalyst ingredient, and a stack output for a standard implementation. Additionally, an <code>IBrewingRecipe</code> instance can be supplied instead to do the transformations.</p>
+<h3 id="ibrewingrecipe">IBrewingRecipe</h3>
+<p><code>IBrewingRecipe</code> is a pseudo-<a href="./custom.html#recipe"><code>Recipe</code></a> interface that checks whether the input and catalyst is valid and provides the associated output if so. This is provided through <code>#isInput</code>, <code>#isIngredient</code>, and <code>#getOutput</code> respectively. The output method has access to the input and catalyst stacks to construct the result.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>When copying data between <code>ItemStack</code>s or <code>CompoundTag</code>s, make sure to use their respective <code>#copy</code> methods to create unique instances.</p>
+</blockquote>
+<p>There is no wrapper for adding additional potion containers or potion mixes similar to vanilla. A new <code>IBrewingRecipe</code> implementation will need to be added to replicate this behavior.</p>
+<h2 id="anvil-recipes">Anvil Recipes</h2>
+<p>Anvils are responsible for taking a damaged input and given some material or a similar input, remove some of the damage on the input result. As such, its system is not easily data-driven. However, as anvil recipes are an input with some number of materials equals some output when the user has the required experience levels, it can be modified to create a pseudo-recipe system via <code>AnvilUpdateEvent</code>. This takes in the input and materials and allows the modder to specify the output, experience level cost, and number of materials to use for the output. The event can also prevent any output by <a href="../../../concepts/events.html#canceling">canceling</a> it.</p>
+<pre><code class="language-java">// Checks whether the left and right items are correct
+// When true, sets the output, level experience cost, and material amount
+public void updateAnvil(AnvilUpdateEvent event) {
+  if (event.getLeft().is(...) &amp;&amp; event.getRight().is(...)) {
+    event.setOutput(...);
+    event.setCost(...);
+    event.setMaterialCost(...);
+  }
+}
+</code></pre>
+<p>The update event must be <a href="../../../concepts/events.html#creating-an-event-handler">attached</a> to the Forge event bus.</p>
+<h2 id="loom-recipes">Loom Recipes</h2>
+<p>Looms are responsible for applying a dye and pattern (either from the loom or from an item) to a banner. While the banner and the dye must be a <code>BannerItem</code> or <code>DyeItem</code> respectively, custom patterns can be created and applied in the loom. Banner Patterns can be created by <a href="../../../concepts/registries.html#registries-that-arent-forge-registries">registering</a> a <code>BannerPattern</code>.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p><code>BannerPattern</code>s which are in the <code>minecraft:no_item_required</code> tag appear as an option in the loom. Patterns not in this tag must have an accompanying <code>BannerPatternItem</code> to be used along with an associated tag.</p>
+</blockquote>
+<pre><code class="language-java">private static final DeferredRegister&lt;BannerPattern&gt; REGISTER = DeferredRegister.create(Registries.BANNER_PATTERN, &quot;examplemod&quot;);
+
+// Takes in the pattern name to send over the network
+public static final BannerPattern EXAMPLE_PATTERN = REGISTER.register(&quot;example_pattern&quot;, () -&gt; new BannerPattern(&quot;examplemod:ep&quot;));
+</code></pre>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>

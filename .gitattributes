@@ -1,0 +1,14 @@
+# 生成的文件始终使用 LF 换行，因此对这些文件禁用自动 CRLF 转换。
+# 可在此处补充其他文件或路径，避免 Git 仅因换行符变化
+# 就将这些文件标记为已修改。
+src/generated/**/.cache/cache text eol=lf
+src/generated/**/*.json text eol=lf
+
+# 保证 Gradle Wrapper 可以跨平台运行；媒体和测试模板按二进制保存
+/gradlew text eol=lf
+*.bat text eol=crlf
+*.png binary
+*.ogg binary
+*.mp3 binary
+*.mp4 binary
+*.nbt binary

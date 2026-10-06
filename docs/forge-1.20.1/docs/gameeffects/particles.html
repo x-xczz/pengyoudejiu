@@ -1,0 +1,245 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Particles · Forge 1.20.1</title><link rel="stylesheet" href="../../offline.css"></head><body><aside><h2>Forge 1.20.1</h2><small>官方文档 · 离线快照 · 70 篇</small><input id="filter" aria-label="筛选章节" placeholder="筛选章节名称…"><nav><a href="../index.html" title="index.md">MinecraftForge Documentation</a>
+<a href="../contributing.html" title="contributing.md">Contributing to This Documentation</a>
+<a href="../gettingstarted/index.html" title="gettingstarted/index.md">Getting Started with Forge</a>
+<a href="../gettingstarted/modfiles.html" title="gettingstarted/modfiles.md">Mod Files</a>
+<a href="../gettingstarted/structuring.html" title="gettingstarted/structuring.md">Structuring Your Mod</a>
+<a href="../gettingstarted/versioning.html" title="gettingstarted/versioning.md">Versioning</a>
+<a href="../concepts/registries.html" title="concepts/registries.md">Registries</a>
+<a href="../concepts/sides.html" title="concepts/sides.md">Sides in Minecraft</a>
+<a href="../concepts/events.html" title="concepts/events.md">Events</a>
+<a href="../concepts/lifecycle.html" title="concepts/lifecycle.md">Mod Lifecycle</a>
+<a href="../concepts/resources.html" title="concepts/resources.md">Resources</a>
+<a href="../concepts/internationalization.html" title="concepts/internationalization.md">Internationalization and Localization</a>
+<a href="../blocks/index.html" title="blocks/index.md">Blocks</a>
+<a href="../blocks/states.html" title="blocks/states.md">Block States</a>
+<a href="../items/index.html" title="items/index.md">Items</a>
+<a href="../items/bewlr.html" title="items/bewlr.md">BlockEntityWithoutLevelRenderer</a>
+<a href="../networking/index.html" title="networking/index.md">Networking</a>
+<a href="../networking/simpleimpl.html" title="networking/simpleimpl.md">SimpleImpl</a>
+<a href="../networking/entities.html" title="networking/entities.md">Entities</a>
+<a href="../blockentities/index.html" title="blockentities/index.md">BlockEntities</a>
+<a href="../blockentities/ber.html" title="blockentities/ber.md">BlockEntityRenderer</a>
+<a class="current" href="particles.html" title="gameeffects/particles.md">Particles</a>
+<a href="sounds.html" title="gameeffects/sounds.md">Sounds</a>
+<a href="../datastorage/capabilities.html" title="datastorage/capabilities.md">The Capability System</a>
+<a href="../datastorage/saveddata.html" title="datastorage/saveddata.md">Saved Data</a>
+<a href="../datastorage/codecs.html" title="datastorage/codecs.md">Codecs</a>
+<a href="../gui/menus.html" title="gui/menus.md">Menus</a>
+<a href="../gui/screens.html" title="gui/screens.md">Screens</a>
+<a href="../rendering/modelextensions/transforms.html" title="rendering/modelextensions/transforms.md">Root Transforms</a>
+<a href="../rendering/modelextensions/rendertypes.html" title="rendering/modelextensions/rendertypes.md">Render Types</a>
+<a href="../rendering/modelextensions/visibility.html" title="rendering/modelextensions/visibility.md">Part Visibility</a>
+<a href="../rendering/modelextensions/facedata.html" title="rendering/modelextensions/facedata.md">Face Data</a>
+<a href="../rendering/modelloaders/index.html" title="rendering/modelloaders/index.md">Custom Model Loaders</a>
+<a href="../rendering/modelloaders/bakedmodel.html" title="rendering/modelloaders/bakedmodel.md">`BakedModel`</a>
+<a href="../rendering/modelloaders/transform.html" title="rendering/modelloaders/transform.md">Transform</a>
+<a href="../rendering/modelloaders/itemoverrides.html" title="rendering/modelloaders/itemoverrides.md">`ItemOverrides`</a>
+<a href="../resources/client/index.html" title="resources/client/index.md">Resource Packs</a>
+<a href="../resources/client/models/index.html" title="resources/client/models/index.md">Models</a>
+<a href="../resources/client/models/tinting.html" title="resources/client/models/tinting.md">Coloring Textures</a>
+<a href="../resources/client/models/itemproperties.html" title="resources/client/models/itemproperties.md">Item Properties</a>
+<a href="../resources/server/index.html" title="resources/server/index.md">Datapacks</a>
+<a href="../resources/server/recipes/index.html" title="resources/server/recipes/index.md">Recipes</a>
+<a href="../resources/server/recipes/custom.html" title="resources/server/recipes/custom.md">Custom Recipes</a>
+<a href="../resources/server/recipes/ingredients.html" title="resources/server/recipes/ingredients.md">Ingredients</a>
+<a href="../resources/server/recipes/incode.html" title="resources/server/recipes/incode.md">Non-Datapack Recipes</a>
+<a href="../resources/server/loottables.html" title="resources/server/loottables.md">Loot Tables</a>
+<a href="../resources/server/glm.html" title="resources/server/glm.md">Global Loot Modifiers</a>
+<a href="../resources/server/tags.html" title="resources/server/tags.md">Tags</a>
+<a href="../resources/server/advancements.html" title="resources/server/advancements.md">Advancements</a>
+<a href="../resources/server/conditional.html" title="resources/server/conditional.md">Conditionally-Loaded Data</a>
+<a href="../datagen/index.html" title="datagen/index.md">Data Generators</a>
+<a href="../datagen/client/modelproviders.html" title="datagen/client/modelproviders.md">Model Generation</a>
+<a href="../datagen/client/localization.html" title="datagen/client/localization.md">Language Generation</a>
+<a href="../datagen/client/sounds.html" title="datagen/client/sounds.md">Sound Definition Generation</a>
+<a href="../datagen/server/recipes.html" title="datagen/server/recipes.md">Recipe Generation</a>
+<a href="../datagen/server/loottables.html" title="datagen/server/loottables.md">Loot Table Generation</a>
+<a href="../datagen/server/tags.html" title="datagen/server/tags.md">Tag Generation</a>
+<a href="../datagen/server/advancements.html" title="datagen/server/advancements.md">Advancement Generation</a>
+<a href="../datagen/server/glm.html" title="datagen/server/glm.md">Global Loot Modifier Generation</a>
+<a href="../datagen/server/datapackregistries.html" title="datagen/server/datapackregistries.md">Datapack Registry Object Generation</a>
+<a href="../misc/config.html" title="misc/config.md">Configuration</a>
+<a href="../misc/keymappings.html" title="misc/keymappings.md">Key Mappings</a>
+<a href="../misc/gametest.html" title="misc/gametest.md">Game Tests</a>
+<a href="../misc/updatechecker.html" title="misc/updatechecker.md">Forge Update Checker</a>
+<a href="../misc/debugprofiler.html" title="misc/debugprofiler.md">Debug Profiler</a>
+<a href="../advanced/accesstransformers.html" title="advanced/accesstransformers.md">Access Transformers</a>
+<a href="../forgedev/index.html" title="forgedev/index.md">Getting Started</a>
+<a href="../forgedev/prguidelines.html" title="forgedev/prguidelines.md">Pull Request Guidelines</a>
+<a href="../legacy/index.html" title="legacy/index.md">Documentation for Legacy Versions</a>
+<a href="../legacy/porting.html" title="legacy/porting.md">Porting to Minecraft 1.20</a></nav></aside><main><div class="meta"><a href="../../index.html">离线目录</a> · 版本 1.20.1 · 快照日期 2026-10-05 · <a href="https://docs.minecraftforge.net/en/1.20.1/gameeffects/particles/">查看官方原文（联网）</a></div><h1 id="particles">Particles</h1>
+<p>Particles are an effect within the game used as polish to better improve immersion. Their usefulness also requires great caution because of their methods of creation and reference.</p>
+<h2 id="creating-a-particle">Creating a Particle</h2>
+<p>Particles are broken up between its <a href="../concepts/sides.html"><strong>client only</strong></a> implementation to display the particle and its common implementation to reference the particle or sync data from the server.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Class</th>
+<th align="center">Side</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">ParticleType</td>
+<td align="center">BOTH</td>
+<td align="left">The registry object of a particle&#39;s type definition used to reference the particle on either side</td>
+</tr>
+<tr>
+<td align="left">ParticleOptions</td>
+<td align="center">BOTH</td>
+<td align="left">A data holder used to sync information from the network or a command to the associated client(s)</td>
+</tr>
+<tr>
+<td align="left">ParticleProvider</td>
+<td align="center">CLIENT</td>
+<td align="left">A factory registered by the <code>ParticleType</code> used to construct a <code>Particle</code> from the associated <code>ParticleOptions</code>.</td>
+</tr>
+<tr>
+<td align="left">Particle</td>
+<td align="center">CLIENT</td>
+<td align="left">The renderable logic to display on the associated client(s)</td>
+</tr>
+</tbody></table>
+<h3 id="particletype">ParticleType</h3>
+<p>A <code>ParticleType</code> is the registry object defining what a particular particle type is and provides an available reference to the specific particle on both sides. As such, every <code>ParticleType</code> must be <a href="../concepts/registries.html#methods-for-registering">registered</a>.</p>
+<p>Each <code>ParticleType</code> takes in two parameters: an <code>overrideLimiter</code> which determines whether the particle renders regardless of distance, and a <code>ParticleOptions$Deserializer</code> which is used to read the sent <code>ParticleOptions</code> on the client. As the base <code>ParticleType</code> is abstract, a single method needs to be implemented: <code>#codec</code>. This represents how to encode and decode the associated <code>ParticleOptions</code> of the type.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p><code>ParticleType#codec</code> is only used within the biome codec for vanilla implementations.</p>
+</blockquote>
+<p>In most cases, there is no need to have any particle data sent to the client. For these instances, it is easier to create a new instance of <code>SimpleParticleType</code>: an implementation of <code>ParticleType</code> and <code>ParticleOptions</code> which does not send any custom data to the client besides the type. Most vanilla implementations use <code>SimpleParticleType</code> besides redstone dust for coloring and block/item dependent particles.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p>A <code>ParticleType</code> is not needed to make a particle spawn if only referenced on the client. However, it is necessary to use any of the prebuilt logic within <code>ParticleEngine</code> or spawn a particle from the server.</p>
+</blockquote>
+<h3 id="particleoptions">ParticleOptions</h3>
+<p>An <code>ParticleOptions</code> represents the data that each particle takes in. It is also used to send data from particles spawned via the server. All particle spawning methods take in a <code>ParticleOptions</code> such that it knows the type of the particle and the data associated with spawning one.</p>
+<p><code>ParticleOptions</code> is broken down into three methods:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">getType</td>
+<td align="left">Gets the type definition of the particle, or the <code>ParticleType</code></td>
+</tr>
+<tr>
+<td align="left">writeToNetwork</td>
+<td align="left">Writes the particle data to a buffer on the server to send to the client</td>
+</tr>
+<tr>
+<td align="left">writeToString</td>
+<td align="left">Writes the particle data to a string</td>
+</tr>
+</tbody></table>
+<p>These objects are either constructed on the fly as needed, or they are singletons as a result of being a <code>SimpleParticleType</code>.</p>
+<h4 id="particleoptionsdeserializer">ParticleOptions$Deserializer</h4>
+<p>To receive the <code>ParticleOptions</code> on the client, or to reference the data within a command, the particle data must be deserialized via <code>ParticleOptions$Deserializer</code>. Each method within <code>ParticleOptions$Deserializer</code> has a parity encoding method within <code>ParticleOptions</code>:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="center">ParticleOptions Encoder</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">fromCommand</td>
+<td align="center">writeToString</td>
+<td align="left">Decodes a particle data from a string, usually from a command.</td>
+</tr>
+<tr>
+<td align="left">fromNetwork</td>
+<td align="center">writeToNetwork</td>
+<td align="left">Decodes a particle data from a buffer on the client.</td>
+</tr>
+</tbody></table>
+<p>This object, when needing to send custom particle data, is passed into the constructor of the <code>ParticleType</code>.</p>
+<h3 id="particle">Particle</h3>
+<p>A <code>Particle</code> provides the rendering logic needed to draw said data onto the screen. To create any <code>Particle</code>, two methods must be implemented:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Method</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">render</td>
+<td align="left">Renders the particle onto the screen.</td>
+</tr>
+<tr>
+<td align="left">getRenderType</td>
+<td align="left">Gets the render type of the particle.</td>
+</tr>
+</tbody></table>
+<p>A common subclass of <code>Particle</code> to render textures is <code>TextureSheetParticle</code>. While <code>#getRenderType</code> needs to be implemented, whatever the texture sprite is set will be rendered at the particle&#39;s location.</p>
+<h4 id="particlerendertype">ParticleRenderType</h4>
+<p><code>ParticleRenderType</code> is a variation on <code>RenderType</code> which constructs the startup and teardown phase for every particle of that type and then renders them all at once via the <code>Tesselator</code>. There are six different render types a particle can be in.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Render Type</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">TERRAIN_SHEET</td>
+<td align="left">Renders a particle whose texture is located within the available blocks.</td>
+</tr>
+<tr>
+<td align="left">PARTICLE_SHEET_OPAQUE</td>
+<td align="left">Renders a particle whose texture is opaque and located within the available particles.</td>
+</tr>
+<tr>
+<td align="left">PARTICLE_SHEET_TRANSLUCENT</td>
+<td align="left">Renders a particle whose texture is translucent and located within the available particles.</td>
+</tr>
+<tr>
+<td align="left">PARTICLE_SHEET_LIT</td>
+<td align="left">Same as <code>PARTICLE_SHEET_OPAQUE</code> except without using the particle shader.</td>
+</tr>
+<tr>
+<td align="left">CUSTOM</td>
+<td align="left">Provides setup for blending and depth mask but provides no rendering functionality as that would be implemented within <code>Particle#render</code>.</td>
+</tr>
+<tr>
+<td align="left">NO_RENDER</td>
+<td align="left">The particle will never render.</td>
+</tr>
+</tbody></table>
+<p>Implementing a custom render type will be left as an exercise to the reader.</p>
+<h3 id="particleprovider">ParticleProvider</h3>
+<p>Finally, a particle is usually created via an <code>ParticleProvider</code>. A factory has a single method <code>#createParticle</code> which is used to create a particle given the particle data, client level, position, and movement delta. Since a <code>Particle</code> is not beholden to any particular <code>ParticleType</code>, it can be reused in different factories as necessary.</p>
+<p>An <code>ParticleProvider</code> must be registered by subscribing to the <code>RegisterParticleProvidersEvent</code> on the <strong>mod event bus</strong>. Within the event, the factory can be registered via <code>#registerSpecial</code> by supplying an instance of the factory to the method.</p>
+<blockquote>
+<p><strong>IMPORTANT</strong></p>
+<p><code>RegisterParticleProvidersEvent</code> should only be called on the client and thus sided off in some isolated client class, referenced by either <code>DistExecutor</code> or <code>@EventBusSubscriber</code>.</p>
+</blockquote>
+<h4 id="particledescription-spriteset-and-spriteparticleregistration">ParticleDescription, SpriteSet, and SpriteParticleRegistration</h4>
+<p>There are three particle render types that cannot use the above method of registration: <code>PARTICLE_SHEET_OPAQUE</code>, <code>PARTICLE_SHEET_TRANSLUCENT</code>, and <code>PARTICLE_SHEET_LIT</code>. This is because all three of these particle render types use a sprite set that is loaded by the <code>ParticleEngine</code> directly. As such, the textures supplied must be obtained and registered through a different method. This will assume your particle is a subtype of <code>TextureSheetParticle</code> as that is the only vanilla implementation for this logic.</p>
+<p>To add a texture to a particle, a new JSON file must be added to <code>assets/&lt;modid&gt;/particles</code>. This is known as the <code>ParticleDescription</code>. The name of this file will represent the registry name of the <code>ParticleType</code> the factory is being attached to. Each particle JSON is an object. The object stores a single key <code>textures</code> which holds an array of <code>ResourceLocation</code>s. Any <code>&lt;modid&gt;:&lt;path&gt;</code> texture represented here will point to a texture at <code>assets/&lt;modid&gt;/textures/particle/&lt;path&gt;.png</code>.</p>
+<pre><code class="language-js">{
+  &quot;textures&quot;: [
+    // Will point to a texture located in
+    // assets/mymod/textures/particle/particle_texture.png
+    &quot;mymod:particle_texture&quot;,
+    // Textures should by ordered by drawing order
+    // e.g. particle_texture will render first, then particle_texture2
+    //      after some time
+    &quot;mymod:particle_texture2&quot;
+  ]
+}
+</code></pre>
+<p>To reference a particle texture, the subtype of <code>TextureSheetParticle</code> should either take in an <code>SpriteSet</code> or a <code>TextureAtlasSprite</code> obtained from <code>SpriteSet</code>. <code>SpriteSet</code> holds a list of textures which refer to the sprites as defined by our <code>ParticleDescription</code>. <code>SpriteSet</code> has two methods, both of which grab a <code>TextureAtlasSprite</code> in different methods. The first method takes in two integers. The backing implementation allows the sprite to have a texture change as it ages. The second method takes in a <code>Random</code> instance to get a random texture from the sprite set. The sprite can be set within <code>TextureSheetParticle</code> by using one of the helper methods that takes in the <code>SpriteSet</code>: <code>#pickSprite</code> which uses the random method of picking a texture, and <code>#setSpriteFromAge</code> which uses the percentage method of two integers to pick the texture.</p>
+<p>To register these particle textures, a <code>SpriteParticleRegistration</code> needs to be supplied to the <code>RegisterParticleProvidersEvent#registerSpriteSet</code> method. This method takes in an <code>SpriteSet</code> holding the associated sprite set for the particle and creates an <code>ParticleProvider</code> to create the particle. The simplest method of implementation can be done by implementing <code>ParticleProvider</code> on some class and having the constructor take in an <code>SpriteSet</code>. Then the <code>SpriteSet</code> can be passed to the particle as normal.</p>
+<blockquote>
+<p><strong>NOTE</strong></p>
+<p>If you are registering a <code>TextureSheetParticle</code> subtype which only contains one texture, then you can supply a <code>ParticleProvider$Sprite</code> instead to the <code>#registerSprite</code> method, which has essentially the same functional interface method as <code>ParticleProvider</code>.</p>
+</blockquote>
+<h2 id="spawning-a-particle">Spawning a Particle</h2>
+<p>Particles can be spawned from either level instance. However, each side has a specific way to spawn a particle. If on the <code>ClientLevel</code>, <code>#addParticle</code> can be called to spawn a particle or <code>#addAlwaysVisibleParticle</code> can be called to spawn a particle that is visible from any distance. If on the <code>ServerLevel</code>, <code>#sendParticles</code> can be called to send a packet to the client to spawn the particle. Calling the two <code>ClientLevel</code> methods on the server will result in nothing.</p>
+<footer>正文来自 MinecraftForge/Documentation 的 1.20.1 分支，英文原文保留。离线页面只调整排版、提示框与相对链接，不代表官方发布的新版本。<a href="../../LICENSE">原始许可证</a> · 页面内查找请按 Ctrl+F。外部链接仍需网络。</footer></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();for(const a of document.querySelectorAll('nav a'))a.hidden=!(a.textContent+' '+a.title).toLowerCase().includes(q)});</script></body></html>
